@@ -6,18 +6,27 @@
     <description>Recent content on Kalid blog website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 30 Jul 2018 13:26:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Aug 2018 00:08:18 +0800</lastBuildDate>
     
 	<atom:link href="https://dishuihengxin.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Test</title>
-      <link>https://dishuihengxin.github.io/posts/test/</link>
-      <pubDate>Mon, 30 Jul 2018 13:26:08 +0800</pubDate>
+      <title>Test1 content</title>
+      <link>https://dishuihengxin.github.io/posts/test1/</link>
+      <pubDate>Sat, 04 Aug 2018 00:08:18 +0800</pubDate>
       
-      <guid>https://dishuihengxin.github.io/posts/test/</guid>
-      <description></description>
+      <guid>https://dishuihengxin.github.io/posts/test1/</guid>
+      <description>test test</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://dishuihengxin.github.io/about/</link>
+      <pubDate>Fri, 03 Aug 2018 23:30:19 +0800</pubDate>
+      
+      <guid>https://dishuihengxin.github.io/about/</guid>
+      <description> Info  Kalid ShenZhen, China CN  </description>
     </item>
     
   </channel>
