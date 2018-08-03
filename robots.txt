@@ -1,0 +1,6 @@
+# robots.txt for dishuihengxin.github.io
+User-agent: *
+Disallow: /blogs
+Disallow: /talks
+Disallow: /projects
+Disallow: /resume
