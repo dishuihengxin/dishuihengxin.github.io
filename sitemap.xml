@@ -3,13 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dishuihengxin.github.io/posts/git/</loc>
-    <lastmod>2018-08-06T13:19:04+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dishuihengxin.github.io/posts/test1/</loc>
-    <lastmod>2018-08-04T00:08:18+08:00</lastmod>
+    <loc>https://dishuihengxin.github.io/posts/go-introduction/</loc>
+    <lastmod>2018-08-09T22:14:32+08:00</lastmod>
   </url>
   
   <url>
@@ -23,8 +18,26 @@
   </url>
   
   <url>
+    <loc>https://dishuihengxin.github.io/tags/dev-language/</loc>
+    <lastmod>2018-08-09T22:14:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dishuihengxin.github.io/categories/dev-language/</loc>
+    <lastmod>2018-08-09T22:14:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dishuihengxin.github.io/tags/go/</loc>
+    <lastmod>2018-08-09T22:14:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dishuihengxin.github.io/</loc>
-    <lastmod>2018-08-06T13:19:04+08:00</lastmod>
+    <lastmod>2018-08-09T22:14:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -35,26 +48,14 @@
   </url>
   
   <url>
-    <loc>https://dishuihengxin.github.io/tags/one/</loc>
-    <lastmod>2018-08-04T00:08:18+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dishuihengxin.github.io/categories/one/</loc>
-    <lastmod>2018-08-04T00:08:18+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dishuihengxin.github.io/posts/</loc>
-    <lastmod>2018-08-06T13:19:04+08:00</lastmod>
+    <lastmod>2018-08-09T22:14:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dishuihengxin.github.io/tags/</loc>
-    <lastmod>2018-08-03T23:30:19+08:00</lastmod>
+    <lastmod>2018-08-09T22:14:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
