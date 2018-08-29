@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kalid&#39;s blog</title>
-    <link>https://dishuihengxin.github.io/tags/</link>
+    <link>https://kalid.io/tags/</link>
     <description>Recent content in Tags on Kalid&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -10,24 +10,24 @@
     <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
     <lastBuildDate>Tue, 19 Jun 2018 22:14:32 +0800</lastBuildDate>
     
-	<atom:link href="https://dishuihengxin.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kalid.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Go</title>
-      <link>https://dishuihengxin.github.io/tags/go/</link>
+      <link>https://kalid.io/tags/go/</link>
       <pubDate>Tue, 19 Jun 2018 22:14:32 +0800</pubDate>
       <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://dishuihengxin.github.io/tags/go/</guid>
+      <guid>https://kalid.io/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Me</title>
-      <link>https://dishuihengxin.github.io/tags/me/</link>
+      <link>https://kalid.io/tags/me/</link>
       <pubDate>Fri, 03 Aug 2018 23:30:19 +0800</pubDate>
       <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://dishuihengxin.github.io/tags/me/</guid>
+      <guid>https://kalid.io/tags/me/</guid>
       <description></description>
     </item>
     

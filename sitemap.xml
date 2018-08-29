@@ -3,52 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dishuihengxin.github.io/about/</loc>
+    <loc>https://kalid.io/about/</loc>
     <lastmod>2018-08-03T23:30:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dishuihengxin.github.io/posts/go-introduction/</loc>
+    <loc>https://kalid.io/posts/go-introduction/</loc>
     <lastmod>2018-06-19T22:14:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dishuihengxin.github.io/categories/</loc>
+    <loc>https://kalid.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dishuihengxin.github.io/tags/go/</loc>
-    <lastmod>2018-06-19T22:14:32+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dishuihengxin.github.io/categories/go/</loc>
+    <loc>https://kalid.io/tags/go/</loc>
     <lastmod>2018-06-19T22:14:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dishuihengxin.github.io/</loc>
-    <lastmod>2018-08-03T23:30:19+08:00</lastmod>
+    <loc>https://kalid.io/categories/go/</loc>
+    <lastmod>2018-06-19T22:14:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dishuihengxin.github.io/tags/me/</loc>
+    <loc>https://kalid.io/</loc>
     <lastmod>2018-08-03T23:30:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dishuihengxin.github.io/posts/</loc>
+    <loc>https://kalid.io/tags/me/</loc>
+    <lastmod>2018-08-03T23:30:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/posts/</loc>
     <lastmod>2018-06-19T22:14:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dishuihengxin.github.io/tags/</loc>
+    <loc>https://kalid.io/tags/</loc>
     <lastmod>2018-06-19T22:14:32+08:00</lastmod>
     <priority>0</priority>
   </url>

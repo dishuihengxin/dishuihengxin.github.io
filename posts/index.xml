@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Kalid&#39;s blog</title>
-    <link>https://dishuihengxin.github.io/posts/</link>
+    <link>https://kalid.io/posts/</link>
     <description>Recent content in Posts on Kalid&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -10,15 +10,15 @@
     <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
     <lastBuildDate>Tue, 19 Jun 2018 22:14:32 +0800</lastBuildDate>
     
-	<atom:link href="https://dishuihengxin.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kalid.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Go语言介绍</title>
-      <link>https://dishuihengxin.github.io/posts/go-introduction/</link>
+      <link>https://kalid.io/posts/go-introduction/</link>
       <pubDate>Tue, 19 Jun 2018 22:14:32 +0800</pubDate>
       <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://dishuihengxin.github.io/posts/go-introduction/</guid>
+      <guid>https://kalid.io/posts/go-introduction/</guid>
       <description></description>
     </item>
     

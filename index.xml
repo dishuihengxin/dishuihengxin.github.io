@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kalid&#39;s blog</title>
-    <link>https://dishuihengxin.github.io/</link>
+    <link>https://kalid.io/</link>
     <description>Recent content on Kalid&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
@@ -10,24 +10,24 @@
     <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
     <lastBuildDate>Fri, 03 Aug 2018 23:30:19 +0800</lastBuildDate>
     
-	<atom:link href="https://dishuihengxin.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kalid.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About me</title>
-      <link>https://dishuihengxin.github.io/about/</link>
+      <link>https://kalid.io/about/</link>
       <pubDate>Fri, 03 Aug 2018 23:30:19 +0800</pubDate>
       <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://dishuihengxin.github.io/about/</guid>
+      <guid>https://kalid.io/about/</guid>
       <description>Info Kalid (韦世滴) ShenZhen, China CN BIO Kalid is an operation and maintenance engineer,Currently working at Cisystem in ShenZhen.</description>
     </item>
     
     <item>
       <title>Go语言介绍</title>
-      <link>https://dishuihengxin.github.io/posts/go-introduction/</link>
+      <link>https://kalid.io/posts/go-introduction/</link>
       <pubDate>Tue, 19 Jun 2018 22:14:32 +0800</pubDate>
       <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://dishuihengxin.github.io/posts/go-introduction/</guid>
+      <guid>https://kalid.io/posts/go-introduction/</guid>
       <description></description>
     </item>
     
