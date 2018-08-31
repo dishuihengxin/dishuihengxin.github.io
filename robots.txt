@@ -1,0 +1,4 @@
+# robots.txt for kalid.io
+# date: 2018-08-31 14:42:26
+User-agent: *
+Disallow: /blogs
