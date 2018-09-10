@@ -3,13 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kalid.io/posts/quickly-create-a-blog-site-by-hugo/</loc>
+    <lastmod>2018-08-31T16:02:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/posts/markdown-use-commands/</loc>
+    <lastmod>2018-08-31T16:00:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/posts/hugo-install/</loc>
+    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kalid.io/about/</loc>
     <lastmod>2018-08-03T23:30:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kalid.io/posts/go-introduction/</loc>
-    <lastmod>2018-06-19T22:14:32+08:00</lastmod>
+    <loc>https://kalid.io/tags/blog/</loc>
+    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -18,20 +34,14 @@
   </url>
   
   <url>
-    <loc>https://kalid.io/tags/go/</loc>
-    <lastmod>2018-06-19T22:14:32+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/categories/go/</loc>
-    <lastmod>2018-06-19T22:14:32+08:00</lastmod>
+    <loc>https://kalid.io/tags/hugo/</loc>
+    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kalid.io/</loc>
-    <lastmod>2018-08-03T23:30:19+08:00</lastmod>
+    <lastmod>2018-08-31T16:02:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -42,14 +52,26 @@
   </url>
   
   <url>
+    <loc>https://kalid.io/categories/operation/</loc>
+    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kalid.io/posts/</loc>
-    <lastmod>2018-06-19T22:14:32+08:00</lastmod>
+    <lastmod>2018-08-31T16:02:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kalid.io/tags/</loc>
-    <lastmod>2018-06-19T22:14:32+08:00</lastmod>
+    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/website/</loc>
+    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   

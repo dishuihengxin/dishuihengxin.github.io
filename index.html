@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title> Kalid&#39;s blog - kalid 的博客|kalid.io</title>
-  <meta name="description" content="kalid 的博客|kalid.io" />
+  <title> Kalid&#39;s blog - 韦世滴,韦世滴的博客|kalid.io</title>
+  <meta name="description" content="韦世滴,韦世滴的博客|kalid.io" />
   <meta property="og:title" content="Kalid&#39;s blog" />
   <meta name="twitter:title" content="Kalid&#39;s blog" />
   <meta name="author" content="kalid"/>
@@ -18,7 +18,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kalid&#39;s blog" />
 
-  <meta name="generator" content="Hugo 0.41" />
+  <meta name="generator" content="Hugo 0.48" />
   <link rel="canonical" href="https://kalid.io/" />
   <link rel="alternate" href="https://kalid.io/index.xml" type="application/rss+xml" title="Kalid&#39;s blog">
   <script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/jquery-1.12.4.min.js"></script>
@@ -194,7 +194,7 @@ var _hmt = _hmt || [];
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Search kalid-blog</h4>
+          <h4 class="modal-title">Search kalid.io</h4>
         </div>
         <div class="modal-body">
             
@@ -211,13 +211,13 @@ var _hmt = _hmt || [];
 <script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
 
 <script>
-var client = algoliasearch("5CK515X0IK", "7422a2e7ec6e21a36ecb10edd5309d29");
-var index = client.initIndex('dishuihengxin-blog');
-
+var client = algoliasearch("BH1BND3H5X", "ae7801f6762078eda1af301ce96b6113");
+var index = client.initIndex('kalid's blog');
+//initialize autocomplete on search input (ID selector must match)
 autocomplete('#aa-search-input',
 { hint: false}, {
     source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
-    
+    //value to be displayed in input control after user's suggestion selection
     displayKey: 'name',
     
     templates: {
@@ -324,18 +324,14 @@ autocomplete('#aa-search-input',
           
           
             <article class="post-preview">
-              <a href="https://kalid.io/posts/go-introduction/">
-                <h2 class="post-title">Go语言介绍</h2>
-                
-                  <h3 class="post-subtitle">
-                  go语言简单介绍
-                  </h3>
+              <a href="https://kalid.io/posts/quickly-create-a-blog-site-by-hugo/">
+                <h2 class="post-title">Quickly Create a Blog Site by Hugo</h2>
                 
               </a>
 
               <span class="post-meta">
   
-  Posted on June 19, 2018
+  Posted on August 31, 2018
   
   
 </span>
@@ -348,9 +344,65 @@ autocomplete('#aa-search-input',
               </div>
 
               
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kalid.io/posts/markdown-use-commands/">
+                <h2 class="post-title">Markdown Use Commands</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  
+  Posted on August 31, 2018
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  What is MarkDown? Markdown是一种轻量级标记语言，创始人为约翰.格鲁伯(John Gruber)。因为纯文本格式使得更容易可读可写，还可以导出Wor
+                  <a href="https://kalid.io/posts/markdown-use-commands/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://kalid.io/posts/hugo-install/">
+                <h2 class="post-title">Hugo Install Documentation</h2>
+                
+                  <h3 class="post-subtitle">
+                  Hugo Install
+                  </h3>
+                
+              </a>
+
+              <span class="post-meta">
+  
+  Posted on August 31, 2018
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Hugo是一个用Go语言编写的快速而现代的静态网站生成器，简单易用，高效易扩展，轻量易部署，旨在使网站创建再次变得有趣。Hugo仅需要一个二
+                  <a href="https://kalid.io/posts/hugo-install/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
                 <span class="post-meta">
                 
-                  #<a href="https://kalid.io/tags/go/">Go</a>&nbsp;
+                  #<a href="https://kalid.io/tags/hugo/">hugo</a>&nbsp;
+                
+                  #<a href="https://kalid.io/tags/blog/">blog</a>&nbsp;
+                
+                  #<a href="https://kalid.io/tags/website/">website</a>&nbsp;
                 
                 </span>
               
@@ -363,6 +415,8 @@ autocomplete('#aa-search-input',
       <div align="center" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
 
+        
+        
         
         
       </div>
@@ -428,7 +482,7 @@ autocomplete('#aa-search-input',
 
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.41</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/rootsongjc/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.48</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/rootsongjc/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
