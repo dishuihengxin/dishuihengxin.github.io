@@ -215,12 +215,12 @@ var _hmt = _hmt || [];
 
 <script>
 var client = algoliasearch("BH1BND3H5X", "ae7801f6762078eda1af301ce96b6113");
-var index = client.initIndex('kalid's blog');
-//initialize autocomplete on search input (ID selector must match)
+var index = client.initIndex('kalid-blog');
+
 autocomplete('#aa-search-input',
 { hint: false}, {
     source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
-    //value to be displayed in input control after user's suggestion selection
+    
     displayKey: 'name',
     
     templates: {
