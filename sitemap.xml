@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</loc>
+    <lastmod>2018-09-14T11:48:03+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kalid.io/posts/quickly-create-a-blog-site-by-hugo/</loc>
     <lastmod>2018-08-31T16:02:19+08:00</lastmod>
   </url>
@@ -41,7 +46,7 @@
   
   <url>
     <loc>https://kalid.io/</loc>
-    <lastmod>2018-08-31T16:02:19+08:00</lastmod>
+    <lastmod>2018-09-14T11:48:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -59,7 +64,7 @@
   
   <url>
     <loc>https://kalid.io/posts/</loc>
-    <lastmod>2018-08-31T16:02:19+08:00</lastmod>
+    <lastmod>2018-09-14T11:48:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   

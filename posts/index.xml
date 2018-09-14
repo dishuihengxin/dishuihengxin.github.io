@@ -8,10 +8,19 @@
     <language>zh</language>
     <managingEditor>dishuihengxin@gmail.com (kalid)</managingEditor>
     <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
-    <lastBuildDate>Fri, 31 Aug 2018 16:02:19 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Sep 2018 11:48:03 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Connect to Server by USB Serial Port</title>
+      <link>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</link>
+      <pubDate>Fri, 14 Sep 2018 11:48:03 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (kalid)</author>
+      <guid>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</guid>
+      <description>Windows 10 connect to 3G/4G modules by USB-serial comm Port 树莓派开发的硬件上连接的WiFi有问题时，导致不能通过正常的SSH方式连接进去，在实际操作过程中就遇到这个问题，针对这我</description>
+    </item>
     
     <item>
       <title>Quickly Create a Blog Site by Hugo</title>
