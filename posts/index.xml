@@ -19,7 +19,7 @@
       <pubDate>Fri, 14 Sep 2018 11:48:03 +0800</pubDate>
       <author>dishuihengxin@gmail.com (kalid)</author>
       <guid>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</guid>
-      <description>Windows 10 connect to 3G/4G modules by USB-serial comm Port 树莓派开发的硬件上连接的WiFi有问题时，导致不能通过正常的SSH方式连接进去，在实际操作过程中就遇到这个问题，针对这我</description>
+      <description>树莓派开发的硬件上连接的WiFi有问题时，导致不能通过正常的SSH方式连接进去，在实际操作过程中就遇到这个问题，针对这我们可以采用UBS串口</description>
     </item>
     
     <item>
