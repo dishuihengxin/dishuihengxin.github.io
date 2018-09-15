@@ -8,10 +8,19 @@
     <language>zh</language>
     <managingEditor>dishuihengxin@gmail.com (kalid)</managingEditor>
     <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
-    <lastBuildDate>Fri, 31 Aug 2018 15:35:54 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 Aug 2018 16:02:19 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quickly Create a Blog Site by Hugo</title>
+      <link>https://kalid.io/posts/quickly-create-a-blog-site-by-hugo/</link>
+      <pubDate>Fri, 31 Aug 2018 16:02:19 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (kalid)</author>
+      <guid>https://kalid.io/posts/quickly-create-a-blog-site-by-hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hugo Install Documentation</title>
