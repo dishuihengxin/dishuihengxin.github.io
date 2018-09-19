@@ -2,7 +2,7 @@
     {
         "title": "About me",
         "uri": "about",
-        "content": "Info Kalid       ShenZhen  China CN BIO Kalid operation maintenance engineer Currently working Cisystem ShenZhen",
+        "content": "Info Kalid       ShenZhen  China CN BIO I m operation maintenance engineer Currently working Cisystem ShenZhen",
         "objectID": "about",
         "date": "2018-08-03T15:30:19.000Z",
         "tags": [
@@ -33,6 +33,23 @@
         "categories": "operation",
         "description": "USB serial port是一个很好的方式，在紧急情况下是可以很好的利用这个方法进行系统扑救的。",
         "date": "2018-09-14T03:48:03.000Z",
+        "draft": false,
+        "nocomment": true,
+        "postmeta": false,
+        "notoc": true,
+        "seealso": false
+    },
+    {
+        "title": "Git Learning Notes",
+        "uri": "posts/git-learning-notes",
+        "content": "Git       Git     Git  GitHub   Git     Git     OK        Git           git   help    usage    git    version     help    C     c       exec path        html path     man path     info path    p     paginate     no pager     no replace objects     bare     git dir      work tree      namespace       These common Git commands used various situations     start working area  see also  git help tutorial    clone   Clone repository new directory init   Create empty Git repository reinitialize existing one    work current change  see also  git help everyday    add   Add file contents index mv   Move rename file  directory  symlink reset   Reset current HEAD specified state rm   Remove files working tree index    examine history state  see also  git help revisions    bisect   Use binary search find commit introduced bug grep   Print lines matching pattern log   Show commit logs show   Show various types objects status   Show working tree status    grow  mark tweak common history   branch   List  create  delete branches checkout   Switch branches restore working tree files commit   Record changes repository diff   Show changes commits  commit working tree  etc merge   Join two development histories together rebase   Reapply commits top base tip tag   Create  list  delete verify tag object signed GPG    collaborate  see also  git help workflows    fetch   Download objects refs repository pull   Fetch integrate repository local branch push   Update remote refs along associated objects     git help  a git help  g list available subcommands concept guides   See git help git help read specific subcommand concept        PDF              Git",
+        "objectID": "posts/git-learning-notes",
+        "date": "2018-09-19T15:09:38.000Z",
+        "categories": "operation",
+        "description": "Git is a version controller and a very handy tool.",
+        "tags": [
+            "git"
+        ],
         "draft": false,
         "nocomment": true,
         "postmeta": false,
@@ -94,6 +111,25 @@
         ],
         "categories": "operation",
         "description": "快速搭建一个简单大气的hugo博客系统，结合github pages托管，完全免费，让你只专注于写作。",
+        "draft": false,
+        "nocomment": true,
+        "postmeta": false,
+        "notoc": true,
+        "seealso": false
+    },
+    {
+        "title": "Win10搭建和配置VScode+Go的开发环境",
+        "uri": "posts/windows-install-go-with-vscode",
+        "content": "Go         Go        visual studio code     go       Go     Go Github   Go     Go       go",
+        "objectID": "posts/windows-install-go-with-vscode",
+        "date": "2018-09-18T15:02:03.000Z",
+        "tags": [
+            "go",
+            "golang",
+            "vscode"
+        ],
+        "categories": "operation",
+        "description": "windows10快速安装go环境及vscode配置go环境",
         "draft": false,
         "nocomment": true,
         "postmeta": false,
