@@ -8,18 +8,18 @@
     <language>zh</language>
     <managingEditor>dishuihengxin@gmail.com (kalid)</managingEditor>
     <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
-    <lastBuildDate>Tue, 19 Jun 2018 22:14:32 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 18 Sep 2018 23:02:03 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Go语言介绍</title>
-      <link>https://kalid.io/posts/go-introduction/</link>
-      <pubDate>Tue, 19 Jun 2018 22:14:32 +0800</pubDate>
+      <title>Win10搭建和配置VScode&#43;Go的开发环境</title>
+      <link>https://kalid.io/posts/windows-install-go-with-vscode/</link>
+      <pubDate>Tue, 18 Sep 2018 23:02:03 +0800</pubDate>
       <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://kalid.io/posts/go-introduction/</guid>
-      <description></description>
+      <guid>https://kalid.io/posts/windows-install-go-with-vscode/</guid>
+      <description>想要学习Go语言，首先就要先有Go的编译环境，结合visual studio code编译器进行go环境的配置。 Go官方网址 Go Github地址 Go官方文档</description>
     </item>
     
   </channel>

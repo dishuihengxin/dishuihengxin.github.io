@@ -8,10 +8,28 @@
     <language>zh</language>
     <managingEditor>dishuihengxin@gmail.com (kalid)</managingEditor>
     <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
-    <lastBuildDate>Fri, 14 Sep 2018 11:48:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Sep 2018 23:09:38 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Learning Notes</title>
+      <link>https://kalid.io/posts/git-learning-notes/</link>
+      <pubDate>Wed, 19 Sep 2018 23:09:38 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (kalid)</author>
+      <guid>https://kalid.io/posts/git-learning-notes/</guid>
+      <description>Git相关的资源： Git官方网址 Git官方GitHub地址 Git官方文档 Git下载链接 OK，我们先来看一下Git客户端命令集合： git --help usage: git [--version] [--help]</description>
+    </item>
+    
+    <item>
+      <title>Win10搭建和配置VScode&#43;Go的开发环境</title>
+      <link>https://kalid.io/posts/windows-install-go-with-vscode/</link>
+      <pubDate>Tue, 18 Sep 2018 23:02:03 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (kalid)</author>
+      <guid>https://kalid.io/posts/windows-install-go-with-vscode/</guid>
+      <description>想要学习Go语言，首先就要先有Go的编译环境，结合visual studio code编译器进行go环境的配置。 Go官方网址 Go Github地址 Go官方文档</description>
+    </item>
     
     <item>
       <title>Windows 10 使用 USB Serial Port连接树莓派系统</title>
