@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Me on Kalid&#39;s blog</title>
+    <title>Me on Kalid</title>
     <link>https://kalid.io/tags/me/</link>
-    <description>Recent content in Me on Kalid&#39;s blog</description>
+    <description>Recent content in Me on Kalid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <managingEditor>dishuihengxin@gmail.com (kalid)</managingEditor>
-    <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
+    <managingEditor>dishuihengxin@gmail.com (Kalid)</managingEditor>
+    <webMaster>dishuihengxin@gmail.com (Kalid)</webMaster>
     <lastBuildDate>Fri, 03 Aug 2018 23:30:19 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/tags/me/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <title>About me</title>
       <link>https://kalid.io/about/</link>
       <pubDate>Fri, 03 Aug 2018 23:30:19 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (kalid)</author>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
       <guid>https://kalid.io/about/</guid>
       <description>Info Kalid (韦世滴) ShenZhen, China CN BIO I&amp;rsquo;m an operation and maintenance engineer,Currently working at Cisystem in ShenZhen.</description>
     </item>

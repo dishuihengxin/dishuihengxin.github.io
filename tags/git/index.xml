@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on Kalid&#39;s blog</title>
+    <title>Git on Kalid</title>
     <link>https://kalid.io/tags/git/</link>
-    <description>Recent content in Git on Kalid&#39;s blog</description>
+    <description>Recent content in Git on Kalid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <managingEditor>dishuihengxin@gmail.com (kalid)</managingEditor>
-    <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
-    <lastBuildDate>Wed, 19 Sep 2018 23:09:38 +0800</lastBuildDate>
+    <managingEditor>dishuihengxin@gmail.com (Kalid)</managingEditor>
+    <webMaster>dishuihengxin@gmail.com (Kalid)</webMaster>
+    <lastBuildDate>Thu, 11 Oct 2018 14:23:44 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>遵循这些简单的规则，你将成为Git和GitHub大师</title>
+      <link>https://kalid.io/posts/follow-these-rules-for-git/</link>
+      <pubDate>Thu, 11 Oct 2018 14:23:44 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <guid>https://kalid.io/posts/follow-these-rules-for-git/</guid>
+      <description>本文中我不介绍如何创建GitHub仓库或如何使用Git终端进行代码的提交。相反，我将解释为什么每天使用Git和GitHub是如此重要，特别是</description>
+    </item>
+    
+    <item>
       <title>Git Learning Notes</title>
       <link>https://kalid.io/posts/git-learning-notes/</link>
       <pubDate>Wed, 19 Sep 2018 23:09:38 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (kalid)</author>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
       <guid>https://kalid.io/posts/git-learning-notes/</guid>
       <description>Git相关的资源： Git官方网址 Git官方GitHub地址 Git官方文档 Git下载链接 OK，我们先来看一下Git客户端命令集合： git --help usage: git [--version] [--help]</description>
     </item>

@@ -1,68 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Operation on Kalid&#39;s blog</title>
+    <title>Operation on Kalid</title>
     <link>https://kalid.io/categories/operation/</link>
-    <description>Recent content in Operation on Kalid&#39;s blog</description>
+    <description>Recent content in Operation on Kalid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <managingEditor>dishuihengxin@gmail.com (kalid)</managingEditor>
-    <webMaster>dishuihengxin@gmail.com (kalid)</webMaster>
-    <lastBuildDate>Wed, 19 Sep 2018 23:09:38 +0800</lastBuildDate>
+    <managingEditor>dishuihengxin@gmail.com (Kalid)</managingEditor>
+    <webMaster>dishuihengxin@gmail.com (Kalid)</webMaster>
+    <lastBuildDate>Thu, 11 Oct 2018 14:23:44 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/categories/operation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Git Learning Notes</title>
-      <link>https://kalid.io/posts/git-learning-notes/</link>
-      <pubDate>Wed, 19 Sep 2018 23:09:38 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://kalid.io/posts/git-learning-notes/</guid>
-      <description>Git相关的资源： Git官方网址 Git官方GitHub地址 Git官方文档 Git下载链接 OK，我们先来看一下Git客户端命令集合： git --help usage: git [--version] [--help]</description>
+      <title>遵循这些简单的规则，你将成为Git和GitHub大师</title>
+      <link>https://kalid.io/posts/follow-these-rules-for-git/</link>
+      <pubDate>Thu, 11 Oct 2018 14:23:44 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <guid>https://kalid.io/posts/follow-these-rules-for-git/</guid>
+      <description>本文中我不介绍如何创建GitHub仓库或如何使用Git终端进行代码的提交。相反，我将解释为什么每天使用Git和GitHub是如此重要，特别是</description>
     </item>
     
     <item>
-      <title>Win10搭建和配置VScode&#43;Go的开发环境</title>
-      <link>https://kalid.io/posts/windows-install-go-with-vscode/</link>
-      <pubDate>Tue, 18 Sep 2018 23:02:03 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://kalid.io/posts/windows-install-go-with-vscode/</guid>
-      <description>想要学习Go语言，首先就要先有Go的编译环境，结合visual studio code编译器进行go环境的配置。 Go官方网址 Go Github地址 Go官方文档</description>
+      <title>Git Learning Notes</title>
+      <link>https://kalid.io/posts/git-learning-notes/</link>
+      <pubDate>Wed, 19 Sep 2018 23:09:38 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <guid>https://kalid.io/posts/git-learning-notes/</guid>
+      <description>Git相关的资源： Git官方网址 Git官方GitHub地址 Git官方文档 Git下载链接 OK，我们先来看一下Git客户端命令集合： git --help usage: git [--version] [--help]</description>
     </item>
     
     <item>
       <title>Windows 10 使用 USB Serial Port连接树莓派系统</title>
       <link>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</link>
       <pubDate>Fri, 14 Sep 2018 11:48:03 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (kalid)</author>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
       <guid>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</guid>
       <description>树莓派开发的硬件上连接的WiFi有问题时，导致不能通过正常的SSH方式连接进去，在实际操作过程中就遇到这个问题，针对这我们可以采用UBS串口</description>
-    </item>
-    
-    <item>
-      <title>Quickly Create a Blog Site by Hugo</title>
-      <link>https://kalid.io/posts/quickly-create-a-blog-site-by-hugo/</link>
-      <pubDate>Fri, 31 Aug 2018 16:02:19 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://kalid.io/posts/quickly-create-a-blog-site-by-hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Markdown Use Commands</title>
-      <link>https://kalid.io/posts/markdown-use-commands/</link>
-      <pubDate>Fri, 31 Aug 2018 16:00:11 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (kalid)</author>
-      <guid>https://kalid.io/posts/markdown-use-commands/</guid>
-      <description>What is MarkDown? Markdown是一种轻量级标记语言，创始人为约翰.格鲁伯(John Gruber)。因为纯文本格式使得更容易可读可写，还可以导出Wor</description>
     </item>
     
     <item>
       <title>Hugo Install Documentation</title>
       <link>https://kalid.io/posts/hugo-install/</link>
       <pubDate>Fri, 31 Aug 2018 15:35:54 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (kalid)</author>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
       <guid>https://kalid.io/posts/hugo-install/</guid>
       <description>Hugo是一个用Go语言编写的快速而现代的静态网站生成器，简单易用，高效易扩展，轻量易部署，旨在使网站创建再次变得有趣。Hugo仅需要一个二</description>
     </item>
