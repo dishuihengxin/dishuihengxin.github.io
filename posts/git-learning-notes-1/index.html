@@ -5,11 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title> 404 Page not found - 韦世滴的博客|kalid.io</title>
+  <title> Git学习系列笔记(1) - 韦世滴的博客|kalid.io</title>
   <meta name="description" content="韦世滴的博客|kalid.io" />
-  <meta property="og:title" content="404 Page not found" />
-  <meta name="twitter:title" content="404 Page not found" />
-  <meta name="keywords" content="kalid,韦世滴,kubernetes,docker,linux学习" />
+  <meta property="og:title" content="Git学习系列笔记(1)" />
+  <meta name="twitter:title" content="Git学习系列笔记(1)" />
+  <meta name="description" content="Git is a version controller and a very handy tool." />
+  <meta property="og:description" content="Git is a version controller and a very handy tool." />
+  <meta name="twitter:description" content="Git is a version controller and a very handy tool." />
+  <meta name="keywords" content="git，github,韦世滴的博客" />
+
   <meta name="author" content="Kalid"/>
   <link href='https://res.cloudinary.com/kalid/image/upload/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://res.cloudinary.com/kalid/image/upload/blog/img/avatar-icon.png" />
@@ -17,12 +21,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@kalid_io" />
   <meta name="twitter:creator" content="@kalid_io" />
-  <meta property="og:url" content="https://kalid.io/" />
+  <meta property="og:url" content="https://kalid.io/posts/git-learning-notes-1/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kalid" />
 
   <meta name="generator" content="Hugo 0.49.2" />
-  <link rel="canonical" href="https://kalid.io/" />
+  <link rel="canonical" href="https://kalid.io/posts/git-learning-notes-1/" />
   <link rel="alternate" href="https://kalid.io/index.xml" type="application/rss+xml" title="Kalid">
   <script src="https://res.cloudinary.com/kalid/raw/upload/blog/jquery-1.12.4.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -281,19 +285,248 @@ autocomplete('#aa-search-input',
 
 
     
+  
+  
+  
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" ></div>
+  
+
+  <header class="header-section has-img">
     
-  <div role="main" class="container main-content">
-    <div class="text-center">
-      <h1>Whoops, this page doesn&#39;t exist. Move along. (404 error)</h1>
-      <br/>
+      <div class="intro-header big-img">
+        
+        
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-12 col-md-12 col-md-offset-0">
+                
+                <div class="post-heading">
+                
+                  
+                     <h1>Git学习系列笔记(1)</h1>
+                     
+                     
+                  
+                  
+                  
+                    
+                      <hr class="small">
+                      <span class="post-subheading">git的简单介绍和安装</span>
+                    
+                  
+                  
+                    <span class="post-meta">
+  
+  Posted on September 19, 2018
+  
+  
+</span>
+
+
+                  
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
       
-      <img src="https://res.cloudinary.com/kalid/image/upload/blog/img/404.jpg" />
-      
-      <h2>Advice</h2>
-      <p>The original page maybe moved to another place, try to change the child-path near domain name to <a href="/posts">posts</a> or search the page title at search box, or just <a href="/">look around</a>.</p>
-      <p>原文可能并未删除只是移动了链接，请将域名后的子路径改成<a href="/posts">posts</a>试一试，或者在搜索框中搜索文章标题，或者<a href="/">随便看看</a>。</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-md-offset-0">
+            <div class="posts-heading">
+                <h1 align="center">Git学习系列笔记(1)</h1>
+                
+                  
+                    <h2 align="center" class="posts-subheading">git的简单介绍和安装</h2>
+                  
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </header>
+
+
+    
+<div class="container" role="main" itemscope itemtype="http://schema.org/Article">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            
+            
+              
+            
+            
+                
+            
+            <article role="main" class="blog-post" itemprop="articleBody" id="content">
+                
+
+                
+
+<p><a href="https://git-scm.com/">Git</a>是一个免费开源的分布式版本控制系统，旨在快速、高效的处理从小型到大型项目版本管理。最初是因为BitKeeper不再免费提供给Linux社区使用，从而Linux Torvalds用C在一个月内迅速开发出Git给社区对Linux开发代码版本控制器。也是因为Git易于学习、小型便捷和出色的性能，逐渐超越了<a href="http://subversion.apache.org/">Subversion</a>,CVS,ClearCase等SCM工具，可以被使用在任何的操作系统之上，安装也是十分的简单快捷，被越来越多的项目开发者使用，迅速成为最流行、使用最多的分布式版本控制系统。到目前为止，像<a href="https://github.com/">GitHub</a>、<a href="https://bitbucket.org/">Bitbucket</a>、<a href="https://about.gitlab.com/">GitLab</a>等等都是基于Git的基础来实现的。</p>
+
+<p>我相信只要是IT行业者都深知项目版本的管理重要性，所以学习和掌握Git是一件不可言喻的重要。今天就来分享一下自己在学习使用Git的总结，如有理解错误的地方请大家指出，关于Git的知识我会不断的更新和补充，希望对正在学习Git的同学有所帮助。</p>
+
+<p>分布式的优越性不言而喻，有分布式架构，分布式存储，分布式数据库&hellip;，这些词我们也会经常的听到，关于版本控制系统的集中式和分布式的对比，可以移步参看<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374027586935cf69c53637d8458c9aec27dd546a6cd6000">廖雪峰老师的这篇文章</a>,讲的还是蛮不错的。下面就直接切入正题，开始Git的学习之旅。</p>
+
+<h5 id="1-git的二进制安装">1.Git的二进制安装</h5>
+
+<p>Git的安装很简单，目前大多数Linux系统都已经把Git默认安装，这里给常见系统的快速安装方法：</p>
+
+<ul>
+<li><p>Linux系统上安装Git</p>
+
+<ul>
+<li><p><code>Debian/Ubuntu:</code></p>
+
+<pre><code class="language-bash">apt-get install -y git
+</code></pre></li>
+
+<li><p><code>Centos/Redhat:</code></p>
+
+<pre><code class="language-bash">yum install -y git
+</code></pre></li>
+</ul></li>
+</ul>
+
+<p>要想了解更多Linux发行版本安装Git的方法，可以参看官方的安装指导文档<a href="http://git-scm.com/download/linux">http://git-scm.com/download/linux</a>。</p>
+
+<ul>
+<li><p>Window系统上安装Git</p>
+
+<p>可以直接从<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>下载Windows版本的<code>exe</code>文件进行安装Git最新版本，自动安装命令和UI界面。</p></li>
+
+<li><p>Mac系统上安装Git</p>
+
+<p>直接<code>homebrew</code>安装或是在<a href="http://git-scm.com/download/mac">http://git-scm.com/download/mac</a>下载进行安装最新版本。</p></li>
+</ul>
+
+<h5 id="2-源码安装-git-的方法">2.源码安装<code>Git</code>的方法</h5>
+
+<ul>
+<li><code>Centos/Redhat:</code></li>
+</ul>
+
+<pre><code class="language-bash">$ yum update -y 
+$ yum remove git -y
+$ yum install -y dh-autoreconf expat-devel gettext-devel perl-devel zlib-devel asciidoc xmlto docbook2X
+$ wget https://github.com/git/git/archive/v2.20.0.tar.gz
+$ tar xvf v2.20.0.tar.gz
+$ cd git-2.20.0/
+$ make configure
+$ ./configure --prefix=/usr/local/git
+$ make &amp;&amp; make install prefix=/usr/local/git
+$ cp -r /usr/local/git/bin/* /usr/bin/ 
+$ git --version
+git version 2.20.0 
+$ cd ~ &amp;&amp; rm -rf git-2.20.0/ v2.20.0.tar.gz
+</code></pre>
+
+<ul>
+<li><code>Debian/Ubuntu:</code></li>
+</ul>
+
+<pre><code class="language-bash">$ apt-get update -y
+$ apt-get install -y  build-essential libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext autoconf zlib1g-dev 
+$ wget https://github.com/git/git/archive/v2.20.0.tar.gz
+$ tar -xf v2.20.0.tar.gz 
+$ cd git-2.20.0
+$ make configure
+$ ./configure --prefix=/usr/local/git
+$ make &amp;&amp; sudo make install prefix=/usr/local/git
+$ cp -r /usr/local/git/bin/* /usr/bin/   
+$ git --version
+git version 2.20.0
+$ cd .. &amp;&amp; rm -f git-2.20.0/ v2.20.0.tar.gz
+</code></pre>
+
+<p>更多的安装信息可以参看<code>Git</code>官方文档：<a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a>。</p>
+
+<p>相关资源：</p>
+
+<ol>
+<li>Git官方网址：<a href="https://git-scm.com">https://git-scm.com</a></li>
+<li>Git官方Github：<a href="https://github.com/git/git">https://github.com/git/git</a></li>
+<li>Git官方文档：<a href="https://git-scm.com/doc">https://git-scm.com/doc</a></li>
+<li>在线Github学习手册(PDF)：<a href="/books/github-git-cheat-sheet.pdf">github-git-cheat-sheet.pdf</a></li>
+<li>在线Git学习手册(PDF中文版)：<a href="/books/pro-git-book.pdf">pro-git-book.pdf</a></li>
+<li>推荐一个Git的学习课程：<a href="/posts/git-learn-course-recommendation/">玩转Git三剑客</a></li>
+</ol>
+
+                
+                <div class="entry-shang text-center">
+	<p>「真诚赞赏，手留余香」</p>
+	<button class="zs show-zs btn btn-bred">赞赏</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><img src="/img/avatar-icon.png"/>Kalid</span>
+		<p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/alipay-2.png" id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" checked="checked"><span class="zs-alipay"><img src="/img/alipay-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type"><span class="zs-wechat"><img src="/img/wechat-btn.png"/></span></label>
+	</div>
+</div>
+
+                
+            </article>
+
+            <ul class="pager blog-pager">
+                
+                <li class="previous">
+                    <a href="https://kalid.io/posts/git-learning-notes-2/" data-toggle="tooltip" data-placement="top" title="Git学习系列笔记(2)">&larr; Previous Post</a>
+                </li>
+                 
+                <li class="next">
+                    <a href="https://kalid.io/posts/follow-these-rules-for-git/" data-toggle="tooltip" data-placement="top" title="遵循这些简单的规则，你将成为Git和GitHub大师">Next Post &rarr;</a>
+                </li>
+                
+            </ul>
+            
+            
+            
+            
+              
+            </div>
+            
+            
+                
+                
+            
+        </div>
+    </div>
+    </section>
+</div>
 
     
     <footer>

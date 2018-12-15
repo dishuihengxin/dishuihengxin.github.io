@@ -3,23 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kalid.io/posts/git-learn-course-recommendation/</loc>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kalid.io/posts/follow-these-rules-for-git/</loc>
     <lastmod>2018-10-11T14:23:44+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kalid.io/posts/git-learning-notes/</loc>
+    <loc>https://kalid.io/posts/git-learning-notes-1/</loc>
+    <lastmod>2018-09-19T23:09:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/posts/git-learning-notes-2/</loc>
     <lastmod>2018-09-19T23:09:38+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</loc>
-    <lastmod>2018-09-14T11:48:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/posts/hugo-install/</loc>
-    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
+    <lastmod>2018-08-14T11:48:03+08:00</lastmod>
   </url>
   
   <url>
@@ -29,13 +34,7 @@
   
   <url>
     <loc>https://kalid.io/</loc>
-    <lastmod>2018-10-11T14:23:44+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/tags/blog/</loc>
-    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
   </url>
   
   <url>
@@ -45,13 +44,13 @@
   
   <url>
     <loc>https://kalid.io/tags/git/</loc>
-    <lastmod>2018-10-11T14:23:44+08:00</lastmod>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kalid.io/tags/hugo/</loc>
-    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
+    <loc>https://kalid.io/tags/github/</loc>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -63,31 +62,25 @@
   
   <url>
     <loc>https://kalid.io/categories/operation/</loc>
-    <lastmod>2018-10-11T14:23:44+08:00</lastmod>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kalid.io/posts/</loc>
-    <lastmod>2018-10-11T14:23:44+08:00</lastmod>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kalid.io/tags/serial/</loc>
-    <lastmod>2018-09-14T11:48:03+08:00</lastmod>
+    <lastmod>2018-08-14T11:48:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kalid.io/tags/</loc>
-    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/tags/website/</loc>
-    <lastmod>2018-08-31T15:35:54+08:00</lastmod>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -96,8 +89,14 @@
   </url>
   
   <url>
+    <loc>https://kalid.io/tags/%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%8E%A8%E8%8D%90/</loc>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kalid.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</loc>
-    <lastmod>2018-09-14T11:48:03+08:00</lastmod>
+    <lastmod>2018-08-14T11:48:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
