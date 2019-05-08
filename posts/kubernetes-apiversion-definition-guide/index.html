@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="baidu_union_verify" content="d7b4d391560d7416db087b15811e0a1e">
 
-  <title> archives - kalid.io</title>
+  <title> Which Kubernetes apiVersion Should I Use? - kalid.io</title>
   <meta name="description" content="kalid.io" />
-  <meta property="og:title" content="archives" />
-  <meta name="twitter:title" content="archives" />
-  <meta name="keywords" content="kalid,kubernetes,docker,linux学习" />
+  <meta property="og:title" content="Which Kubernetes apiVersion Should I Use?" />
+  <meta name="twitter:title" content="Which Kubernetes apiVersion Should I Use?" />
+  <meta name="description" content="韦世滴的博客" />
+  <meta property="og:description" content="韦世滴的博客" />
+  <meta name="twitter:description" content="韦世滴的博客" />
+  <meta name="keywords" content="kalid,韦世滴的博客" />
+
   <meta name="author" content="Kalid"/>
   <link href='https://res.cloudinary.com/kalid/image/upload/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://res.cloudinary.com/kalid/image/upload/blog/img/avatar-icon.png" />
@@ -18,12 +22,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@kalid_io" />
   <meta name="twitter:creator" content="@kalid_io" />
-  <meta property="og:url" content="https://kalid.io/archives/" />
+  <meta property="og:url" content="https://kalid.io/posts/kubernetes-apiversion-definition-guide/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kalid" />
 
   <meta name="generator" content="Hugo 0.49.2" />
-  <link rel="canonical" href="https://kalid.io/archives/" />
+  <link rel="canonical" href="https://kalid.io/posts/kubernetes-apiversion-definition-guide/" />
   <link rel="alternate" href="https://kalid.io/index.xml" type="application/rss+xml" title="Kalid">
   <script src="https://res.cloudinary.com/kalid/raw/upload/blog/jquery-1.12.4.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -131,8 +135,8 @@ if (!doNotTrack) {
 
 </head>
 
- <body>
-<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
@@ -281,7 +285,7 @@ autocomplete('#aa-search-input',
   </div>
 
 
-
+    
   
   
   
@@ -290,7 +294,7 @@ autocomplete('#aa-search-input',
 
 
   
-    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://res.cloudinary.com/kalid/image/upload/blog/img/about.png" ></div>
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" ></div>
   
 
   <header class="header-section has-img">
@@ -302,20 +306,31 @@ autocomplete('#aa-search-input',
           <div class="row">
               <div class="col-lg-12 col-md-12 col-md-offset-0">
                 
-                <div class="page-heading">
+                <div class="post-heading">
                 
                   
-                     <h1>archives</h1>
+                     <h1>Which Kubernetes apiVersion Should I Use?</h1>
                      
+                     
+                  
+                  
+                  
+                    
+                      <hr class="small">
+                      <span class="post-subheading">Kubernetes Apiversion Definition Guide</span>
+                    
+                  
+                  
                     <span class="post-meta">
+  
+  Posted on January 11, 2019
   
   
 </span>
 
 
-                    
                   
-                  
+                
               </div>
             </div>
           </div>
@@ -328,16 +343,13 @@ autocomplete('#aa-search-input',
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-md-offset-0">
-            <div class="page-heading">
-                <h1 align="center">archives</h1>
+            <div class="posts-heading">
+                <h1 align="center">Which Kubernetes apiVersion Should I Use?</h1>
                 
+                  
+                    <h2 align="center" class="posts-subheading">Kubernetes Apiversion Definition Guide</h2>
+                  
                 
-                  <span class="post-meta">
-  
-  
-</span>
-
-
                 
             </div>
           </div>
@@ -347,86 +359,231 @@ autocomplete('#aa-search-input',
   </header>
 
 
- 
-<main id="container" class="container" role="main">
-    <div id="content" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <article class="archives">
-            <header class="archives-header"></header>
-            <section class="archives-content">
-                <span class="archives-top"></span>
-                <span class="archives-total">                                   
-                    <strong>干的不错，继续加油！</strong>              
-                </span>
+    
+<div class="container" role="main" itemscope itemtype="http://schema.org/Article">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             
-                <div class="archives-item fadeInDown animated">
-                        <div class='archives-info'>                  
-                            <div class="archives-year">
-                                <h3>2018</h3>
-                            </div>                                
-                        </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="12-16">12-16</time>
-                            <a href="https://kalid.io/posts/git-learn-course-recommendation/" title="玩转Git三剑客(学习课程推荐)">玩转Git三剑客(学习课程推荐)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="10-11">10-11</time>
-                            <a href="https://kalid.io/posts/follow-these-rules-for-git/" title="遵循这些简单的规则，你将成为Git和GitHub大师">遵循这些简单的规则，你将成为Git和GitHub大师</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="09-19">09-19</time>
-                            <a href="https://kalid.io/posts/git-learning-notes-2/" title="Git学习系列笔记(2)">Git学习系列笔记(2)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="09-19">09-19</time>
-                            <a href="https://kalid.io/posts/git-learning-notes-1/" title="Git学习系列笔记(1)">Git学习系列笔记(1)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="08-14">08-14</time>
-                            <a href="https://kalid.io/posts/connect-to-server-by-usb-serial-port/" title="Windows 10 使用 USB Serial Port连接树莓派系统">Windows 10 使用 USB Serial Port连接树莓派系统</a>
-                        </div>
-                    </div>
-                </div>
+            
+              
+            
+            
                 
             
-            </section>
-        </article>
-    <div>
-</main>  
-<article role="main" class="blog-post" itemprop="articleBody" id="content">
-        
+            <article role="main" class="blog-post" itemprop="articleBody" id="content">
+                
 
-        
-        
-        <div class="entry-shang text-center">
+                
+
+<p><code>Kubernetes</code> 中对资源对象的定义需要一个 <code>apiVersion</code> 字段。当 <code>Kubernetes</code> 有一个更新可供我们使用的版本时 - 在 <code>API</code> 中更新某些内容 - 即 <code>apiVersion</code> 被创建一个新版本。</p>
+
+<p>然而,官方提供 <code>Kubernetes</code> 文档中对 <code>apiVersion</code> 说明却很少。本文将提供了使用哪个版本的备忘单，解释了每个版本，并为您提供了发布的时间表。</p>
+
+<p>最后更新时间为2018年6月4日。请与我联系以报告不准确之处。</p>
+
+<h3 id="资源对象对应的-apiversion-列表">资源对象对应的 apiversion 列表</h3>
+
+<table>
+<thead>
+<tr>
+<th>kind</th>
+<th>apiversion</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CertificateSigningRequest</td>
+<td>certificates.k8s.io/v1beta1</td>
+</tr>
+
+<tr>
+<td>ClusterRoleBinding</td>
+<td>rbac.authorization.k8s.io/v1</td>
+</tr>
+
+<tr>
+<td>ClusterRole</td>
+<td>rbac.authorization.k8s.io/v1</td>
+</tr>
+
+<tr>
+<td>ComponentStatus</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>ConfigMap</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>ControllerRevision</td>
+<td>apps/v1</td>
+</tr>
+
+<tr>
+<td>CronJob</td>
+<td>batch/v1beta1</td>
+</tr>
+
+<tr>
+<td>DaemonSet</td>
+<td>extensions/v1beta1</td>
+</tr>
+
+<tr>
+<td>Deployment</td>
+<td>extensions/v1beta1</td>
+</tr>
+
+<tr>
+<td>Endpoints</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>Event</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>HorizontalPodAutoscaler</td>
+<td>autoscaling/v1</td>
+</tr>
+
+<tr>
+<td>Ingress</td>
+<td>extensions/v1beta1</td>
+</tr>
+
+<tr>
+<td>Job</td>
+<td>batch/v1</td>
+</tr>
+
+<tr>
+<td>LimitRange</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>Namespace</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>NetworkPolicy</td>
+<td>extensions/v1beta1</td>
+</tr>
+
+<tr>
+<td>Node</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>PersistentVolumeClaim</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>PersistentVolume</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>PodDisruptionBudget</td>
+<td>policy/v1beta1</td>
+</tr>
+
+<tr>
+<td>Pod</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>PodSecurityPolicy</td>
+<td>extensions/v1beta1</td>
+</tr>
+
+<tr>
+<td>PodTemplate</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>ReplicaSet</td>
+<td>extensions/v1beta1</td>
+</tr>
+
+<tr>
+<td>ReplicationController</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>ResourceQuota</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>RoleBinding</td>
+<td>rbac.authorization.k8s.io/v1</td>
+</tr>
+
+<tr>
+<td>Role</td>
+<td>rbac.authorization.k8s.io/v1</td>
+</tr>
+
+<tr>
+<td>Secret</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>ServiceAccount</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>Service</td>
+<td>v1</td>
+</tr>
+
+<tr>
+<td>StatefulSet</td>
+<td>apps/v1</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="apiversion-版本的说明">apiversion 版本的说明</h3>
+
+<ul>
+<li><code>alpha</code> :带有 alpha 字样的 API 版本是 Kubernetes 为开发测试新功能的开发版本。这些版本可能包含错误，并且不保证将来一定可以使用的版本。</li>
+<li><code>beta</code> :该 API 版本是测试版本，说明已经通过 alpha 的功能测试，该功能最终将被纳入 Kubernetes。虽然它的工作方式可能会改变，且定义对象的方式可能会完全改变，但该特征本身很可能以某种形式将其变为 Kubernetes。</li>
+<li><code>stable</code>:不包含 alpha 或 beta 字样的 API 版本是稳定版本。</li>
+<li><code>v1</code>:这是 Kubernetes API 的第一个稳定版本,它包含许多核心对象。</li>
+<li><code>apps/v1</code>:apps 是 Kubernetes 中最常见的 API 组，其中包含许多核心对象 v1,它包括与在 Kubernetes 上运行应用程序相关的功能，如 Deployments,RollingUpdates和 ReplicaSets 等。</li>
+<li><code>autoscaling/v1</code>:该 API 版本允许根据不同的资源使用指标来自动调整 pod 的期望状态。目前仅支持 CPU 扩展，但未来的 alpha 和 beta 版本将允许根据内存使用情况和其他自定义指标进行扩展.</li>
+<li><code>batch/v1</code>:batch API 组包含与批处理和作业类任务（而不是应用类的任务，如无限期运行 Web 服务器）的对象。</li>
+<li><code>batch/v1beta1</code>:batch API 组中批处理对象的新功能测试版本，特别是包括允许在特定时间或周期运行作业的 CronJobs。</li>
+<li><code>certificates.k8s.io/v1beta1</code>:该 API 版本添加了验证网络证书的功能，以便在群集中进行安全通信.可以在<a href="https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/">官方文档</a>上阅读更多的内容。</li>
+<li><code>extensions/v1beta1</code>:该 API 版本包含许多新的 Kubernetes 常用功能,Deployment，DaemonSet，ReplicaSet 和 Ingresses 都在此版本中进行重大更改。请注意，在 Kubernetes 1.6 版本中，其中一些 extensions 组的资源对象被重新分配到其他具体的 API 组（例如 apps）。当这些对象通过并移出 beta  版本时，期望它们在像 apps/v1 的具体 API 组中。 extensions/v1beta1 已被弃用 - 尝试尽可能使用特定的 API 组，这具体取决于使用的 Kubernetes 集群版本。</li>
+<li><code>policy/v1beta1</code>:该 API 版本中增加了设置 pod 中断预算和 pod 安全性新规则的功能。</li>
+<li><code>rbac.authorization.k8s.io/v1</code>:该 API 版本包含了 Kubernetes 基于角色访问控制的额外功能。这有助于保护群集,具体查看<a href="https://kubernetes.io/blog/2017/10/using-rbac-generally-available-18/">官方博客文章</a>。</li>
+</ul>
+
+<h3 id="参考文献">参考文献</h3>
+
+<ol>
+<li><a href="https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-apiversion-definition-guide.html">https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-apiversion-definition-guide.html</a></li>
+</ol>
+
+                
+                <div class="entry-shang text-center">
 	<p>「真诚赞赏，手留余香」</p>
 	<button class="zs show-zs btn btn-bred">赞赏</button>
 </div>
@@ -459,9 +616,38 @@ autocomplete('#aa-search-input',
 	</div>
 </div>
 
-        
-</article>
-<footer>
+                
+            </article>
+
+            <ul class="pager blog-pager">
+                
+                <li class="previous">
+                    <a href="https://kalid.io/posts/kubernetes/k8s-introduction/" data-toggle="tooltip" data-placement="top" title="kubernetes简介">&larr; Previous Post</a>
+                </li>
+                 
+                <li class="next">
+                    <a href="https://kalid.io/posts/kubernetes/kubectl/" data-toggle="tooltip" data-placement="top" title="Kubectl">Next Post &rarr;</a>
+                </li>
+                
+            </ul>
+            
+            
+            
+            
+              
+            </div>
+            
+            
+                
+                
+            
+        </div>
+    </div>
+    </section>
+</div>
+
+    
+    <footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -518,7 +704,7 @@ autocomplete('#aa-search-input',
             
           
           &nbsp;&bull;&nbsp;
-          December 16,2018
+          January 21,2019
           updated
           
             &nbsp;&bull;&nbsp;
@@ -559,7 +745,5 @@ autocomplete('#aa-search-input',
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
-</body>
+  </body>
 </html>
-
-  

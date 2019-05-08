@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="baidu_union_verify" content="d7b4d391560d7416db087b15811e0a1e">
 
-  <title> archives - kalid.io</title>
+  <title> Kubectl - kalid.io</title>
   <meta name="description" content="kalid.io" />
-  <meta property="og:title" content="archives" />
-  <meta name="twitter:title" content="archives" />
-  <meta name="keywords" content="kalid,kubernetes,docker,linux学习" />
+  <meta property="og:title" content="Kubectl" />
+  <meta name="twitter:title" content="Kubectl" />
+  <meta name="description" content="韦世滴的博客" />
+  <meta property="og:description" content="韦世滴的博客" />
+  <meta name="twitter:description" content="韦世滴的博客" />
+  <meta name="keywords" content="kalid,韦世滴的博客" />
+
   <meta name="author" content="Kalid"/>
   <link href='https://res.cloudinary.com/kalid/image/upload/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://res.cloudinary.com/kalid/image/upload/blog/img/avatar-icon.png" />
@@ -18,12 +22,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@kalid_io" />
   <meta name="twitter:creator" content="@kalid_io" />
-  <meta property="og:url" content="https://kalid.io/archives/" />
+  <meta property="og:url" content="https://kalid.io/posts/kubernetes/kubectl/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kalid" />
 
   <meta name="generator" content="Hugo 0.49.2" />
-  <link rel="canonical" href="https://kalid.io/archives/" />
+  <link rel="canonical" href="https://kalid.io/posts/kubernetes/kubectl/" />
   <link rel="alternate" href="https://kalid.io/index.xml" type="application/rss+xml" title="Kalid">
   <script src="https://res.cloudinary.com/kalid/raw/upload/blog/jquery-1.12.4.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -131,8 +135,8 @@ if (!doNotTrack) {
 
 </head>
 
- <body>
-<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
@@ -281,7 +285,7 @@ autocomplete('#aa-search-input',
   </div>
 
 
-
+    
   
   
   
@@ -290,7 +294,7 @@ autocomplete('#aa-search-input',
 
 
   
-    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://res.cloudinary.com/kalid/image/upload/blog/img/about.png" ></div>
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" ></div>
   
 
   <header class="header-section has-img">
@@ -302,20 +306,31 @@ autocomplete('#aa-search-input',
           <div class="row">
               <div class="col-lg-12 col-md-12 col-md-offset-0">
                 
-                <div class="page-heading">
+                <div class="post-heading">
                 
                   
-                     <h1>archives</h1>
+                     <h1>Kubectl</h1>
                      
+                     
+                  
+                  
+                  
+                    
+                      <hr class="small">
+                      <span class="post-subheading">Kubectl</span>
+                    
+                  
+                  
                     <span class="post-meta">
+  
+  Posted on January 11, 2019
   
   
 </span>
 
 
-                    
                   
-                  
+                
               </div>
             </div>
           </div>
@@ -328,16 +343,13 @@ autocomplete('#aa-search-input',
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-md-offset-0">
-            <div class="page-heading">
-                <h1 align="center">archives</h1>
+            <div class="posts-heading">
+                <h1 align="center">Kubectl</h1>
                 
+                  
+                    <h2 align="center" class="posts-subheading">Kubectl</h2>
+                  
                 
-                  <span class="post-meta">
-  
-  
-</span>
-
-
                 
             </div>
           </div>
@@ -347,86 +359,393 @@ autocomplete('#aa-search-input',
   </header>
 
 
- 
-<main id="container" class="container" role="main">
-    <div id="content" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <article class="archives">
-            <header class="archives-header"></header>
-            <section class="archives-content">
-                <span class="archives-top"></span>
-                <span class="archives-total">                                   
-                    <strong>干的不错，继续加油！</strong>              
-                </span>
+    
+<div class="container" role="main" itemscope itemtype="http://schema.org/Article">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             
-                <div class="archives-item fadeInDown animated">
-                        <div class='archives-info'>                  
-                            <div class="archives-year">
-                                <h3>2018</h3>
-                            </div>                                
-                        </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="12-16">12-16</time>
-                            <a href="https://kalid.io/posts/git-learn-course-recommendation/" title="玩转Git三剑客(学习课程推荐)">玩转Git三剑客(学习课程推荐)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="10-11">10-11</time>
-                            <a href="https://kalid.io/posts/follow-these-rules-for-git/" title="遵循这些简单的规则，你将成为Git和GitHub大师">遵循这些简单的规则，你将成为Git和GitHub大师</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="09-19">09-19</time>
-                            <a href="https://kalid.io/posts/git-learning-notes-2/" title="Git学习系列笔记(2)">Git学习系列笔记(2)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="09-19">09-19</time>
-                            <a href="https://kalid.io/posts/git-learning-notes-1/" title="Git学习系列笔记(1)">Git学习系列笔记(1)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="08-14">08-14</time>
-                            <a href="https://kalid.io/posts/connect-to-server-by-usb-serial-port/" title="Windows 10 使用 USB Serial Port连接树莓派系统">Windows 10 使用 USB Serial Port连接树莓派系统</a>
-                        </div>
-                    </div>
-                </div>
+            
+              
+            
+            
                 
             
-            </section>
-        </article>
-    <div>
-</main>  
-<article role="main" class="blog-post" itemprop="articleBody" id="content">
-        
+            <article role="main" class="blog-post" itemprop="articleBody" id="content">
+                
 
-        
-        
-        <div class="entry-shang text-center">
+                <p><code>kubectl</code> 是用于针对 <code>Kubernetes</code> 集群运行操作管理命令的命令行接口，也就是 <code>kubernetes</code> 的客户端工具。本文对 <code>kubectl</code> 的使用进行总结，深入学习 <code>kubernetes</code> 集群管理操作。</p>
+
+<p><code>kubectl</code> 语法格式：</p>
+
+<pre><code class="language-bash">$ kubectl [command] [type] [name] [flags]
+</code></pre>
+
+<p>其中 <code>command</code>,<code>type</code>,<code>name</code>,<code>flags</code> 说明如下：</p>
+
+<ul>
+<li><code>command</code>: 指定要在一个或多个资源进行操作命令，例如 <code>create</code>，<code>get</code>，<code>describe</code>，<code>delete</code>,<code>apply</code>等操作，可以由 <code>$ kubectl --help</code> 获取 <code>command</code> 的所有命令集合。</li>
+<li><code>type</code>: 指定资源对象类型，不区分大小写，但可以指定单复数或缩写形式。例如 <code>po Pod Pods pod pods POD PODS</code> 等，但缩写形式不支持大写。</li>
+<li><code>name</code>: 指定资源对象的名称，区分大小写。如果省略名称，默认显示所有资源的详细信息。在多个资源对象上执行操作时，可以按资源类型和名称来指定每个资源，或指定一个或多个文件：
+
+<ul>
+<li>指定多个同类型的资源 <code>kubectl get type name01 name02 ...</code></li>
+<li>分别指定多种不同类型的资源 <code>kubectl get type1/name1 type2/name2 type3/name3 ...</code></li>
+<li>使用一个或多个文件指定资源 <code>kubectl get -f file1 -f file2 -f file3 ...</code></li>
+</ul></li>
+<li><code>flags</code>: 指定可选标志。例如：<code>-o -l -w -s</code> 等来指定一些可选项参数。</li>
+</ul>
+
+<p>常见资源总结及缩写形式表如下：</p>
+
+<table>
+<thead>
+<tr>
+<th>Resource type</th>
+<th>Abbreviated alias</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>apiservice</td>
+<td></td>
+</tr>
+
+<tr>
+<td>certificatesigningrequests</td>
+<td>csr</td>
+</tr>
+
+<tr>
+<td>clusters</td>
+<td></td>
+</tr>
+
+<tr>
+<td>clusterrolebindings</td>
+<td></td>
+</tr>
+
+<tr>
+<td>clusterroles</td>
+<td></td>
+</tr>
+
+<tr>
+<td>componentstatuses</td>
+<td>cs</td>
+</tr>
+
+<tr>
+<td>configmaps</td>
+<td>cm</td>
+</tr>
+
+<tr>
+<td>controllerrevisions</td>
+<td></td>
+</tr>
+
+<tr>
+<td>cronjobs</td>
+<td></td>
+</tr>
+
+<tr>
+<td>customresourcedefinition</td>
+<td>crd</td>
+</tr>
+
+<tr>
+<td>daemonsets</td>
+<td>ds</td>
+</tr>
+
+<tr>
+<td>deployments</td>
+<td>deploy</td>
+</tr>
+
+<tr>
+<td>endpoints</td>
+<td>ep</td>
+</tr>
+
+<tr>
+<td>events</td>
+<td>ev</td>
+</tr>
+
+<tr>
+<td>horizontalpodautoscalers</td>
+<td>hpa</td>
+</tr>
+
+<tr>
+<td>ingresses</td>
+<td>ing</td>
+</tr>
+
+<tr>
+<td>jobs</td>
+<td></td>
+</tr>
+
+<tr>
+<td>limitranges</td>
+<td>limits</td>
+</tr>
+
+<tr>
+<td>namespaces</td>
+<td>ns</td>
+</tr>
+
+<tr>
+<td>networkpolicies</td>
+<td>netpol</td>
+</tr>
+
+<tr>
+<td>nodes</td>
+<td>no</td>
+</tr>
+
+<tr>
+<td>persistentvolumeclaims</td>
+<td>pvc</td>
+</tr>
+
+<tr>
+<td>persistentvolumes</td>
+<td>pv</td>
+</tr>
+
+<tr>
+<td>poddisruptionbudget</td>
+<td>pdb</td>
+</tr>
+
+<tr>
+<td>podpreset</td>
+<td></td>
+</tr>
+
+<tr>
+<td>pods</td>
+<td>po</td>
+</tr>
+
+<tr>
+<td>podsecuritypolicies</td>
+<td>psp</td>
+</tr>
+
+<tr>
+<td>podtemplates</td>
+<td></td>
+</tr>
+
+<tr>
+<td>replicasets</td>
+<td>rs</td>
+</tr>
+
+<tr>
+<td>replicationcontrollers</td>
+<td>rc</td>
+</tr>
+
+<tr>
+<td>resourcequotas</td>
+<td>quota</td>
+</tr>
+
+<tr>
+<td>rolebindings</td>
+<td></td>
+</tr>
+
+<tr>
+<td>roles</td>
+<td></td>
+</tr>
+
+<tr>
+<td>secrets</td>
+<td></td>
+</tr>
+
+<tr>
+<td>serviceaccounts</td>
+<td>sa</td>
+</tr>
+
+<tr>
+<td>services</td>
+<td>svc</td>
+</tr>
+
+<tr>
+<td>statefulsets</td>
+<td></td>
+</tr>
+
+<tr>
+<td>storageclasses</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>常见`<code>flags</code> 如下表：</p>
+
+<table>
+<thead>
+<tr>
+<th>Output format</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>-o=custom-columns-file=<code>&lt;filename&gt;</code></td>
+<td>自定义输出模板格式打印显示</td>
+</tr>
+
+<tr>
+<td>-o=custom-columns=<code>&lt;spec&gt;</code></td>
+<td>使用逗号分隔打印显示</td>
+</tr>
+
+<tr>
+<td>-o=json</td>
+<td>输出json格式的api对象</td>
+</tr>
+
+<tr>
+<td>-o=jsonpath=<code>&lt;template&gt;</code></td>
+<td>打印出自定义的字段</td>
+</tr>
+
+<tr>
+<td>-o=jsonpath-file=<code>&lt;filename&gt;</code></td>
+<td>打印文件定义的字段</td>
+</tr>
+
+<tr>
+<td>-o=name</td>
+<td>仅打印资源对象的名称，不输出内容</td>
+</tr>
+
+<tr>
+<td>-o=wide</td>
+<td>以纯文档格式输出任何附加的信息</td>
+</tr>
+
+<tr>
+<td>-o=yaml</td>
+<td>输出yaml格式的api对象资源信息</td>
+</tr>
+</tbody>
+</table>
+
+<p>资源对象枚举如下：</p>
+
+<ul>
+<li>Pod</li>
+<li>Node</li>
+<li>Service</li>
+<li>Deployment</li>
+<li>Ingress</li>
+<li>StatefulSet</li>
+<li>Secret</li>
+<li>DaemonSet</li>
+<li>ReplicaSet</li>
+<li>ConfigMap</li>
+<li>Job</li>
+<li>CronJob</li>
+<li>ReplicationController</li>
+<li>Namespace</li>
+<li>Volume</li>
+<li>PersistentVolume</li>
+<li>ServiceAccount</li>
+<li>SecurityContext</li>
+<li>ResourceQuota</li>
+<li>LimitRange</li>
+<li>HorizontalPodAutoscaling</li>
+<li>Label</li>
+<li>Role</li>
+<li>ClusterRole</li>
+<li>CustomResourceDefinition</li>
+</ul>
+
+<p>归类如下：</p>
+
+<table>
+<thead>
+<tr>
+<th>resource type</th>
+<th>name</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>资源对象</td>
+<td>Pod、ReplicaSet、ReplicationController、Deployment、StatefulSet、DaemonSet、Job、CronJob、HorizontalPodAutoscaling、Node、Namespace、Service、Ingress、Label、CustomResourceDefinition</td>
+</tr>
+
+<tr>
+<td>存储对象</td>
+<td>Volume、PersistentVolume、Secret、ConfigMap</td>
+</tr>
+
+<tr>
+<td>策略对象</td>
+<td>SecurityContext、ResourceQuota、LimitRange</td>
+</tr>
+
+<tr>
+<td>身份对象</td>
+<td>ServiceAccount、Role、ClusterRole</td>
+</tr>
+</tbody>
+</table>
+
+<p>一级字段：</p>
+
+<ul>
+<li>apiVersion   : API 版本</li>
+<li>kind         ：资源类型</li>
+<li>metadata     ：资源元数据</li>
+<li>spec         ：资源期望定义</li>
+<li>statue       ：kubernetes 自动维护的状态</li>
+</ul>
+
+<p>要整理的知识点：</p>
+
+<ul>
+<li>apiVersion 都有哪些常见定义，以及每种资源对象的定义</li>
+<li>kind 都有哪些常见定义，基本作用</li>
+<li>metadata 都有哪些常见参数定义及作用</li>
+<li>spec 针对不同资源对象有怎样的定义
+<br /></li>
+</ul>
+
+<p><a href="https://www.kubernetes.org.cn/doc-45">https://www.kubernetes.org.cn/doc-45</a></p>
+
+<p><a href="https://jimmysong.io/kubernetes-handbook/guide/kubectl-cheatsheet.html">https://jimmysong.io/kubernetes-handbook/guide/kubectl-cheatsheet.html</a></p>
+
+<p><a href="https://k8smeetup.github.io/docs/user-guide/kubectl-overview/">https://k8smeetup.github.io/docs/user-guide/kubectl-overview/</a></p>
+
+<p><a href="https://yeasy.gitbooks.io/docker_practice/kubernetes/kubectl.html">https://yeasy.gitbooks.io/docker_practice/kubernetes/kubectl.html</a></p>
+
+<p><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-getting-started-strong-">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-getting-started-strong-</a></p>
+
+                
+                <div class="entry-shang text-center">
 	<p>「真诚赞赏，手留余香」</p>
 	<button class="zs show-zs btn btn-bred">赞赏</button>
 </div>
@@ -459,9 +778,38 @@ autocomplete('#aa-search-input',
 	</div>
 </div>
 
-        
-</article>
-<footer>
+                
+            </article>
+
+            <ul class="pager blog-pager">
+                
+                <li class="previous">
+                    <a href="https://kalid.io/posts/kubernetes-apiversion-definition-guide/" data-toggle="tooltip" data-placement="top" title="Which Kubernetes apiVersion Should I Use?">&larr; Previous Post</a>
+                </li>
+                 
+                <li class="next">
+                    <a href="https://kalid.io/posts/kubernetes/kubectl-help/" data-toggle="tooltip" data-placement="top" title="Kubectl Help">Next Post &rarr;</a>
+                </li>
+                
+            </ul>
+            
+            
+            
+            
+              
+            </div>
+            
+            
+                
+                
+            
+        </div>
+    </div>
+    </section>
+</div>
+
+    
+    <footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -518,7 +866,7 @@ autocomplete('#aa-search-input',
             
           
           &nbsp;&bull;&nbsp;
-          December 16,2018
+          January 21,2019
           updated
           
             &nbsp;&bull;&nbsp;
@@ -559,7 +907,5 @@ autocomplete('#aa-search-input',
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
-</body>
+  </body>
 </html>
-
-  

@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="baidu_union_verify" content="d7b4d391560d7416db087b15811e0a1e">
 
-  <title> archives - kalid.io</title>
+  <title> Ansible学习手册 - kalid.io</title>
   <meta name="description" content="kalid.io" />
-  <meta property="og:title" content="archives" />
-  <meta name="twitter:title" content="archives" />
-  <meta name="keywords" content="kalid,kubernetes,docker,linux学习" />
+  <meta property="og:title" content="Ansible学习手册" />
+  <meta name="twitter:title" content="Ansible学习手册" />
+  <meta name="description" content="韦世滴的博客" />
+  <meta property="og:description" content="韦世滴的博客" />
+  <meta name="twitter:description" content="韦世滴的博客" />
+  <meta name="keywords" content="kalid,韦世滴的博客" />
+
   <meta name="author" content="Kalid"/>
   <link href='https://res.cloudinary.com/kalid/image/upload/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://res.cloudinary.com/kalid/image/upload/blog/img/avatar-icon.png" />
@@ -18,12 +22,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@kalid_io" />
   <meta name="twitter:creator" content="@kalid_io" />
-  <meta property="og:url" content="https://kalid.io/archives/" />
+  <meta property="og:url" content="https://kalid.io/posts/ansible/command-modules/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kalid" />
 
   <meta name="generator" content="Hugo 0.49.2" />
-  <link rel="canonical" href="https://kalid.io/archives/" />
+  <link rel="canonical" href="https://kalid.io/posts/ansible/command-modules/" />
   <link rel="alternate" href="https://kalid.io/index.xml" type="application/rss+xml" title="Kalid">
   <script src="https://res.cloudinary.com/kalid/raw/upload/blog/jquery-1.12.4.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -131,8 +135,8 @@ if (!doNotTrack) {
 
 </head>
 
- <body>
-<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
@@ -281,7 +285,7 @@ autocomplete('#aa-search-input',
   </div>
 
 
-
+    
   
   
   
@@ -290,7 +294,7 @@ autocomplete('#aa-search-input',
 
 
   
-    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://res.cloudinary.com/kalid/image/upload/blog/img/about.png" ></div>
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" ></div>
   
 
   <header class="header-section has-img">
@@ -302,20 +306,31 @@ autocomplete('#aa-search-input',
           <div class="row">
               <div class="col-lg-12 col-md-12 col-md-offset-0">
                 
-                <div class="page-heading">
+                <div class="post-heading">
                 
                   
-                     <h1>archives</h1>
+                     <h1>Ansible学习手册</h1>
                      
+                     
+                  
+                  
+                  
+                    
+                      <hr class="small">
+                      <span class="post-subheading">Command Modules</span>
+                    
+                  
+                  
                     <span class="post-meta">
+  
+  Posted on January 21, 2019
   
   
 </span>
 
 
-                    
                   
-                  
+                
               </div>
             </div>
           </div>
@@ -328,16 +343,13 @@ autocomplete('#aa-search-input',
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-md-offset-0">
-            <div class="page-heading">
-                <h1 align="center">archives</h1>
+            <div class="posts-heading">
+                <h1 align="center">Ansible学习手册</h1>
                 
+                  
+                    <h2 align="center" class="posts-subheading">Command Modules</h2>
+                  
                 
-                  <span class="post-meta">
-  
-  
-</span>
-
-
                 
             </div>
           </div>
@@ -347,86 +359,195 @@ autocomplete('#aa-search-input',
   </header>
 
 
- 
-<main id="container" class="container" role="main">
-    <div id="content" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <article class="archives">
-            <header class="archives-header"></header>
-            <section class="archives-content">
-                <span class="archives-top"></span>
-                <span class="archives-total">                                   
-                    <strong>干的不错，继续加油！</strong>              
-                </span>
+    
+<div class="container" role="main" itemscope itemtype="http://schema.org/Article">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             
-                <div class="archives-item fadeInDown animated">
-                        <div class='archives-info'>                  
-                            <div class="archives-year">
-                                <h3>2018</h3>
-                            </div>                                
-                        </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="12-16">12-16</time>
-                            <a href="https://kalid.io/posts/git-learn-course-recommendation/" title="玩转Git三剑客(学习课程推荐)">玩转Git三剑客(学习课程推荐)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="10-11">10-11</time>
-                            <a href="https://kalid.io/posts/follow-these-rules-for-git/" title="遵循这些简单的规则，你将成为Git和GitHub大师">遵循这些简单的规则，你将成为Git和GitHub大师</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="09-19">09-19</time>
-                            <a href="https://kalid.io/posts/git-learning-notes-2/" title="Git学习系列笔记(2)">Git学习系列笔记(2)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="09-19">09-19</time>
-                            <a href="https://kalid.io/posts/git-learning-notes-1/" title="Git学习系列笔记(1)">Git学习系列笔记(1)</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='archives-item'>
-                    <div class='archives-info'>
-                        <div class="archives-info-meta">
-                            <i class='fa fa-calendar fa-fw' aria-hidden='true'></i>
-                            <time class="archives-date" datetime="08-14">08-14</time>
-                            <a href="https://kalid.io/posts/connect-to-server-by-usb-serial-port/" title="Windows 10 使用 USB Serial Port连接树莓派系统">Windows 10 使用 USB Serial Port连接树莓派系统</a>
-                        </div>
-                    </div>
-                </div>
+            
+              
+            
+            
                 
             
-            </section>
-        </article>
-    <div>
-</main>  
-<article role="main" class="blog-post" itemprop="articleBody" id="content">
-        
+            <article role="main" class="blog-post" itemprop="articleBody" id="content">
+                
 
-        
-        
-        <div class="entry-shang text-center">
+                
+
+<p>模块(又称任务插件或库插件)是可以从命令行或 playbook 任务中使用的离散代码单元。几乎所有的模块都是采用 <code>key=value</code> 形式的 <code>yaml</code> 文件进行定义参数。</p>
+
+<p>ansible 模块分类：</p>
+
+<ul>
+<li><a href="#Commands-modules">Commands modules</a></li>
+<li><a href="#Files-modules">Files modules</a></li>
+<li><a href="#Packaging-modules">Packaging modules</a></li>
+<li><a href="#Cloud-modules">Cloud modules</a></li>
+<li><a href="#Clustering-modules">Clustering modules</a></li>
+<li><a href="#Crypto-modules">Crypto modules</a></li>
+<li><a href="#Database-modules">Database modules</a></li>
+<li><a href="#Inventory-modules">Inventory modules</a></li>
+<li><a href="#Messaging-modules">Messaging modules</a></li>
+<li><a href="#Monitoring-modules">Monitoring modules</a></li>
+<li><a href="#Net-Tools-modules">Net Tools modules</a></li>
+<li><a href="#Network-modules">Network modules</a></li>
+<li><a href="#Notification-modules">Notification modules</a></li>
+<li><a href="#Remote-Management-modules">Remote Management modules</a></li>
+<li><a href="#Source-Control-modules">Source Control modules</a></li>
+<li><a href="#Storage-modules">Storage modules</a></li>
+<li><a href="#System-modules">System modules</a></li>
+<li><a href="#Utilities-modules">Utilities modules</a></li>
+<li><a href="#Web-Infrastructure-modules">Web Infrastructure modules</a></li>
+<li><a href="#Windows-modules">Windows modules</a></li>
+</ul>
+
+<p id="Commands-modules"></p>
+
+<h4 id="命令模块">命令模块</h4>
+
+<ul>
+<li><code>command</code> ：远程执行命令<br />
+ansible 默认使用 <code>command</code> 模块，可以在 <code>ansible.cfg</code> 文件中修改默认执行的模块。
+具体来看下这个 <code>command</code> 的使用参数:</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>argv</td>
+<td>提供字符串或列表表单，不可同时提供，shell命令行中 <code>-a</code></td>
+</tr>
+
+<tr>
+<td>chdir</td>
+<td>运行命令前先切换到的目录</td>
+</tr>
+
+<tr>
+<td>creates</td>
+<td>文件存在则不会执行命令</td>
+</tr>
+
+<tr>
+<td>free_form</td>
+<td>自由模式</td>
+</tr>
+
+<tr>
+<td>removes</td>
+<td>文件存在则执行命令</td>
+</tr>
+
+<tr>
+<td>stdin</td>
+<td>标准输出</td>
+</tr>
+
+<tr>
+<td>warn</td>
+<td>警告设置，yes/no</td>
+</tr>
+</tbody>
+</table>
+
+<p>直接命令行举例：</p>
+
+<pre><code class="language-shell">$ ansible nginx -m command -a &quot;chdir=/usr/local pwd&quot;   # 相当于 ansible nginx -a &quot;chdir=/usr/local pwd&quot;
+172.16.0.8 | CHANGED | rc=0 &gt;&gt;
+/usr/local
+$ ansible nginx -m command -a &quot;chdir=/opt/ ls&quot;
+$ ansible nginx -m command -a &quot;chdir=/opt/ creates=not-file echo '文件不存在时输出'&quot;   
+$ ansible nginx -m command -a &quot;chdir=/opt/ removes=exist-file echo '文件存在时输出'&quot;  
+</code></pre>
+
+<p>yaml 格式举例：</p>
+
+<pre><code class="language-yaml">- name: cat command
+  command: cat /etc/motd
+  register: mymotd
+
+- name: 命令列表
+  command: 
+  args:
+    argv: 
+      - echo 11
+      - echo 22
+
+- name: 文件不存在则执行，存在则忽略
+  command: echo $(date)
+  args:
+    creates: /opt/test.txt
+</code></pre>
+
+<ul>
+<li><p>expect  ：远程执行命令并返回提示
+静默处理，指令不会通过 <code>shell</code> 执行，比如变量，<code>&lt;</code>,<code>&gt;</code>,<code>|</code>,<code>$</code>,<code>&amp;</code>等都不能正确解析。</p></li>
+
+<li><p>psexec  : 远程执行Windows命令</p></li>
+
+<li><p>raw     ：执行低-SSH命令</p></li>
+
+<li><p>script  : 传输脚本到远程并远程执行</p></li>
+
+<li><p>shell   ：远程执行命令</p></li>
+
+<li><p>telnet  ：远程执行Telent命令</p></li>
+</ul>
+
+<pre><code class="language-bash">$ ansible all -m command -a &quot;ip addr&quot;
+$ ansible all -m shell -a &quot;ip addr&quot;
+$ ansible all -m raw -a &quot;ip addr&quot;
+</code></pre>
+
+<p id="Crypto-modules"></p>
+
+<p>加密模块：</p>
+
+<ul>
+<li>certificate_complete_chain 给定一组不受信任和根证书的完整证书链</li>
+<li>openssl_certificate  生成或检查openssl证书</li>
+<li>openssl_csr     生成openssl证书签名请求</li>
+<li>openssl_dhparam  生成openssl diffie-hellman参数</li>
+<li>openssl_pkcs12    生成openssl pkcs</li>
+<li>openssl_privatekey  生成证书私钥</li>
+<li>openssl_publikey    生成公钥</li>
+</ul>
+
+<p id="Files-modules">文件模块：</p>
+
+<ul>
+<li>acl - 设置和检索文件ACL信息</li>
+<li>archive - 创建一个或多个文件或树的压缩存档</li>
+<li>assemble - 从片段组装配置文件</li>
+<li>blockinfile - 插入/更新/删除由标记线包围的文本块</li>
+<li>copy - 将文件复制到远程位置</li>
+<li>fetch - 从远程节点获取文件</li>
+<li>file - 设置文件的属性</li>
+<li>find - 根据特定条件返回文件列表</li>
+<li>ini_file - 调整INI文件中的设置</li>
+<li>iso_extract - 从ISO映像中提取文件</li>
+<li>lineinfile - 管理文本文件中的行</li>
+<li>patch - 使用GNU补丁工具应用补丁文件</li>
+<li>replace - 使用反向引用的正则表达式替换文件中特定字符串的所有实例。</li>
+<li>stat - 检索文件或文件系统状态</li>
+<li>synchronize - 围绕rsync的包装器，可以快速轻松地在您的剧本中完成常见任务。</li>
+<li>tempfile - 创建临时文件和目录</li>
+<li>template - 将文件模板发送到远程服务器</li>
+<li>unarchive - 在（可选）从本地计算机复制存档后解压缩存档。</li>
+<li>xattr - 管理用户定义的扩展属性</li>
+<li>xml - 管理XML文件或字符串的各个部分</li>
+</ul>
+
+                
+                <div class="entry-shang text-center">
 	<p>「真诚赞赏，手留余香」</p>
 	<button class="zs show-zs btn btn-bred">赞赏</button>
 </div>
@@ -459,9 +580,34 @@ autocomplete('#aa-search-input',
 	</div>
 </div>
 
-        
-</article>
-<footer>
+                
+            </article>
+
+            <ul class="pager blog-pager">
+                
+                <li class="previous">
+                    <a href="https://kalid.io/posts/kubernetes/pod/" data-toggle="tooltip" data-placement="top" title="Pod">&larr; Previous Post</a>
+                </li>
+                 
+            </ul>
+            
+            
+            
+            
+              
+            </div>
+            
+            
+                
+                
+            
+        </div>
+    </div>
+    </section>
+</div>
+
+    
+    <footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -518,7 +664,7 @@ autocomplete('#aa-search-input',
             
           
           &nbsp;&bull;&nbsp;
-          December 16,2018
+          January 21,2019
           updated
           
             &nbsp;&bull;&nbsp;
@@ -559,7 +705,5 @@ autocomplete('#aa-search-input',
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
-</body>
+  </body>
 </html>
-
-  
