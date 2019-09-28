@@ -6,8 +6,8 @@
     <description>Recent content in Me on Kalid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <managingEditor>dishuihengxin@gmail.com (Kalid)</managingEditor>
-    <webMaster>dishuihengxin@gmail.com (Kalid)</webMaster>
+    <managingEditor>kalid@kalid.io (Kalid)</managingEditor>
+    <webMaster>kalid@kalid.io (Kalid)</webMaster>
     <lastBuildDate>Fri, 03 Aug 2018 23:30:19 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/tags/me/index.xml" rel="self" type="application/rss+xml" />
@@ -17,9 +17,9 @@
       <title>About me</title>
       <link>https://kalid.io/about/</link>
       <pubDate>Fri, 03 Aug 2018 23:30:19 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <author>kalid@kalid.io (Kalid)</author>
       <guid>https://kalid.io/about/</guid>
-      <description>Info Kalid (韦世滴) ShenZhen, China CN BIO I&amp;rsquo;m an operation and maintenance engineer,Currently working at Cisystem in ShenZhen.</description>
+      <description>My QR code Info Kalid (韦世滴) ShenZhen, China CN Career TenBoon Cisystem Zaiso Code Zero BIO I&amp;rsquo;m an operation and maintenance engineer,Currently working at Code Zero in ShenZhen.And my focus is on cloud services, microservices architecture, security operations, and the familiar use of Shell, Python, Go, etc. I am currently preparing for AWS Certification and Certificated Kubernetes Administrator. Involved Projects Getting start with knative ,Participate in</description>
     </item>
     
   </channel>

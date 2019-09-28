@@ -6,8 +6,8 @@
     <description>Recent content in Website on Kalid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <managingEditor>dishuihengxin@gmail.com (Kalid)</managingEditor>
-    <webMaster>dishuihengxin@gmail.com (Kalid)</webMaster>
+    <managingEditor>kalid@kalid.io (Kalid)</managingEditor>
+    <webMaster>kalid@kalid.io (Kalid)</webMaster>
     <lastBuildDate>Mon, 26 Mar 2018 15:35:54 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/tags/website/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <title>Windows 10 安装hugo的文档</title>
       <link>https://kalid.io/posts/hugo-install/</link>
       <pubDate>Mon, 26 Mar 2018 15:35:54 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <author>kalid@kalid.io (Kalid)</author>
       <guid>https://kalid.io/posts/hugo-install/</guid>
       <description>Hugo是一个用Go语言编写的快速而现代的静态网站生成器，简单易用，高效易扩展，轻量易部署，旨在使网站创建再次变得有趣。Hugo仅需要一个二</description>
     </item>

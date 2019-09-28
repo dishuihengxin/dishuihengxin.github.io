@@ -6,8 +6,8 @@
     <description>Recent content in Serial on Kalid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <managingEditor>dishuihengxin@gmail.com (Kalid)</managingEditor>
-    <webMaster>dishuihengxin@gmail.com (Kalid)</webMaster>
+    <managingEditor>kalid@kalid.io (Kalid)</managingEditor>
+    <webMaster>kalid@kalid.io (Kalid)</webMaster>
     <lastBuildDate>Tue, 14 Aug 2018 11:48:03 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/tags/serial/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <title>使用 USB Serial Port连接树莓派系统</title>
       <link>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</link>
       <pubDate>Tue, 14 Aug 2018 11:48:03 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <author>kalid@kalid.io (Kalid)</author>
       <guid>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</guid>
       <description>树莓派开发的硬件上连接的WiFi有问题时，导致不能通过正常的SSH方式连接进去，在实际操作过程中就遇到这个问题，针对这我们可以采用UBS串口</description>
     </item>

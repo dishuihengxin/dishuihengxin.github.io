@@ -6,8 +6,8 @@
     <description>Recent content in Categories on Kalid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <managingEditor>dishuihengxin@gmail.com (Kalid)</managingEditor>
-    <webMaster>dishuihengxin@gmail.com (Kalid)</webMaster>
+    <managingEditor>kalid@kalid.io (Kalid)</managingEditor>
+    <webMaster>kalid@kalid.io (Kalid)</webMaster>
     
 	<atom:link href="https://kalid.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,7 +16,7 @@
       <title>Operation</title>
       <link>https://kalid.io/categories/operation/</link>
       <pubDate>Sun, 16 Dec 2018 00:23:22 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <author>kalid@kalid.io (Kalid)</author>
       <guid>https://kalid.io/categories/operation/</guid>
       <description></description>
     </item>
