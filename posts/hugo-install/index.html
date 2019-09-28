@@ -4,20 +4,24 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="baidu_union_verify" content="8c0bc40f37d4272b43f216631ce92ea9">
 
-  <title> Hugo Install Documentation - 韦世滴的博客|kalid.io</title>
-  <meta name="description" content="韦世滴的博客|kalid.io" />
-  <meta property="og:title" content="Hugo Install Documentation" />
-  <meta name="twitter:title" content="Hugo Install Documentation" />
+  <title> Windows 10 安装hugo的文档 - kalid.io</title>
+  <meta name="description" content="kalid.io" />
+  <meta property="og:title" content="Windows 10 安装hugo的文档" />
+  <meta name="twitter:title" content="Windows 10 安装hugo的文档" />
   <meta name="description" content="Windows 10 安装hugo的文档" />
   <meta property="og:description" content="Windows 10 安装hugo的文档" />
   <meta name="twitter:description" content="Windows 10 安装hugo的文档" />
-  <meta name="keywords" content="kalid,韦世滴,kubernetes,docker,linux学习" />
+  <meta name="keywords" content="kalid,kalid.io" />
+
   <meta name="author" content="Kalid"/>
-  <link href='https://res.cloudinary.com/kalid/image/upload/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://res.cloudinary.com/kalid/image/upload/blog/img/avatar-icon.png" />
-  <meta name="twitter:image" content="https://res.cloudinary.com/kalid/image/upload/blog/img/avatar-icon.png" />
+  <link href='https://res.cloudinary.com/kalid/image/upload/v1569664127/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://res.cloudinary.com/kalid/image/upload/v1569663875/blog/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/kalid/image/upload/v1569663875/blog/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@kalid_io" />
+  <meta name="twitter:creator" content="@kalid_io" />
   <meta property="og:url" content="https://kalid.io/posts/hugo-install/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kalid" />
@@ -163,12 +167,6 @@ if (!doNotTrack) {
                   <a href="https://kalid.io/categories/operation">Operation</a>
                 
                 
-                  <a href="https://kalid.io/categories/devops">Devops</a>
-                
-                
-                  <a href="https://kalid.io/categories/docker">Docker</a>
-                
-                
                   <a href="https://kalid.io/tags">Tags</a>
                 
                 
@@ -216,7 +214,7 @@ if (!doNotTrack) {
       <div class="avatar-img-border">
         
           <a title="Kalid" href="https://kalid.io/">
-            <img class="avatar-img" src="https://res.cloudinary.com/kalid/image/upload/blog/img/avatar-icon.png" alt="Kalid" />
+            <img class="avatar-img" src="https://res.cloudinary.com/kalid/image/upload/v1569663875/blog/img/avatar-icon.png" alt="Kalid" />
           </a>
         
       </div>
@@ -290,7 +288,7 @@ autocomplete('#aa-search-input',
 
 
   
-    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://kalid.io/img/banner1.jpg" data-img-desc-1="Spring vitality - February 14, 2018"></div>
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" ></div>
   
 
   <header class="header-section has-img">
@@ -305,7 +303,7 @@ autocomplete('#aa-search-input',
                 <div class="post-heading">
                 
                   
-                     <h1>Hugo Install Documentation</h1>
+                     <h1>Windows 10 安装hugo的文档</h1>
                      
                      
                   
@@ -319,7 +317,7 @@ autocomplete('#aa-search-input',
                   
                     <span class="post-meta">
   
-  Posted on August 31, 2018
+  Posted on March 26, 2018
   
   
 </span>
@@ -340,7 +338,7 @@ autocomplete('#aa-search-input',
         <div class="row">
           <div class="col-lg-12 col-md-12 col-md-offset-0">
             <div class="posts-heading">
-                <h1 align="center">Hugo Install Documentation</h1>
+                <h1 align="center">Windows 10 安装hugo的文档</h1>
                 
                   
                     <h2 align="center" class="posts-subheading">Hugo Install</h2>
@@ -380,41 +378,41 @@ autocomplete('#aa-search-input',
 <p>安装hugo很简单，可以从hugo官方<a href="https://github.com/gohugoio/hugo/releases">Github</a>下载对应系统的最新的二进制文件(hugo或hugo.exe)，目前最新的版本是0.48，然后添加到电脑环境变量即可。<img src="https://res.cloudinary.com/kalid/image/upload/blog/img/hugo-version.png" alt="" />
 我们通过命令行来先学习一下hugo的基本指令：</p>
 
-<pre><code class="language-bash">	
+<pre><code class="language-bash">    
 D:\Hugo\bin&gt;hugo help
-	
+    
 hugo is the main command, used to build your Hugo site.
 
 Hugo is a Fast and Flexible Static Site Generator built with love by spf13 and friends in Go.
 
 Complete documentation is available at http://gohugo.io/.
 
-Usage:	
-  	hugo [flags]
-  	hugo [command]
+Usage:  
+    hugo [flags]
+    hugo [command]
 
 Available Commands:
-	benchmark   Benchmark Hugo by building a site a number of times.
-  	config      Print the site configuration
- 	convert     Convert your content to different formats
-  	env         Print Hugo version and environment info
-  	gen         A collection of several useful generators.
-  	help        Help about any command
-  	import      Import your site from others.
- 	list        Listing out various types of content
-  	new         Create new content for your site
-  	server      A high performance webserver
-  	version     Print the version number of Hugo
+    benchmark   Benchmark Hugo by building a site a number of times.
+    config      Print the site configuration
+    convert     Convert your content to different formats
+    env         Print Hugo version and environment info
+    gen         A collection of several useful generators.
+    help        Help about any command
+    import      Import your site from others.
+    list        Listing out various types of content
+    new         Create new content for your site
+    server      A high performance webserver
+    version     Print the version number of Hugo
 Flags:
-  	-b, --baseURL string      hostname (and path) to the root, e.g. http://spf13.com/
-  	-D, --buildDrafts         include content marked as draft
-  	-E, --buildExpired        include expired content
-  	-F, --buildFuture         include content with publishdate in the future
+    -b, --baseURL string      hostname (and path) to the root, e.g. http://spf13.com/
+    -D, --buildDrafts         include content marked as draft
+    -E, --buildExpired        include expired content
+    -F, --buildFuture         include content with publishdate in the future
     --cacheDir string         filesystem path to cache directory. Defaults: $TMPDIR/hugo_cache/
     --canonifyURLs            (deprecated) if true, all relative URLs will be canonicalized using baseURL
     --cleanDestinationDir     remove files from destination not found in static directories
     --config string           config file (default is path/config.yaml|json|toml)
-	-c, --contentDir string   filesystem path to content directory
+    -c, --contentDir string   filesystem path to content directory
     --debug                   debug output
     -d, --destination string  filesystem path to write files to
     --disableKinds strings    disable different kind of pages (home, RSS etc.)
@@ -445,7 +443,7 @@ Flags:
     --verboseLog              verbose logging
     -w, --watch               watch filesystem for changes and recreate as needed
 Additional help topics:
-	hugo check                Contains some verification checks
+    hugo check                Contains some verification checks
 Use `hugo [command] --help` for more information about a command.
 </code></pre>
 
@@ -491,7 +489,7 @@ Use `hugo [command] --help` for more information about a command.
             <ul class="pager blog-pager">
                  
                 <li class="next">
-                    <a href="https://kalid.io/posts/connect-to-server-by-usb-serial-port/" data-toggle="tooltip" data-placement="top" title="Windows 10 使用 USB Serial Port连接树莓派系统">Next Post &rarr;</a>
+                    <a href="https://kalid.io/posts/connect-to-server-by-usb-serial-port/" data-toggle="tooltip" data-placement="top" title="使用 USB Serial Port连接树莓派系统">Next Post &rarr;</a>
                 </li>
                 
             </ul>
@@ -535,6 +533,14 @@ Use `hugo [command] --help` for more information about a command.
                 </a>
               </li>
               <li>
+                <a href="https://twitter.com/kalid_io" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
                 <a href="http://weibo.com/dishuihengxin" title="weibo">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
@@ -561,7 +567,7 @@ Use `hugo [command] --help` for more information about a command.
             
           
           &nbsp;&bull;&nbsp;
-          October 11,2018
+          December 16,2018
           updated
           
             &nbsp;&bull;&nbsp;

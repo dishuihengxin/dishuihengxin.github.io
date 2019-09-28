@@ -31,23 +31,5 @@
       <description>本文中我不介绍如何创建GitHub仓库或如何使用Git终端进行代码的提交。相反，我将解释为什么每天使用Git和GitHub是如此重要，特别是</description>
     </item>
     
-    <item>
-      <title>Git学习系列笔记(1)</title>
-      <link>https://kalid.io/posts/git-learning-notes-1/</link>
-      <pubDate>Wed, 19 Sep 2018 23:09:38 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (Kalid)</author>
-      <guid>https://kalid.io/posts/git-learning-notes-1/</guid>
-      <description>Git是一个免费开源的分布式版本控制系统，旨在快速、高效的处理从小型到大型项目版本管理。最初是因为BitKeeper不再免费提供给Linux</description>
-    </item>
-    
-    <item>
-      <title>Git学习系列笔记(2)</title>
-      <link>https://kalid.io/posts/git-learning-notes-2/</link>
-      <pubDate>Wed, 19 Sep 2018 23:09:38 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (Kalid)</author>
-      <guid>https://kalid.io/posts/git-learning-notes-2/</guid>
-      <description>上一篇中简单的介绍了Git和常见操作系统安装Git的方法，现在来总结一下Git客户端的使用命令，在终端中执行： $ git --help usage: git [--version] [--help] [-C &amp;lt;path&amp;gt;] [-c &amp;lt;name&amp;gt;=&amp;lt;value&amp;gt;] [--exec-path[=&amp;lt;path&amp;gt;]] [--html-path] [--man-path] [--info-path]</description>
-    </item>
-    
   </channel>
 </rss>

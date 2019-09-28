@@ -8,10 +8,19 @@
     <language>zh</language>
     <managingEditor>dishuihengxin@gmail.com (Kalid)</managingEditor>
     <webMaster>dishuihengxin@gmail.com (Kalid)</webMaster>
-    <lastBuildDate>Sun, 16 Dec 2018 00:23:22 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Mar 2018 15:35:54 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blog</title>
+      <link>https://kalid.io/tags/blog/</link>
+      <pubDate>Mon, 26 Mar 2018 15:35:54 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <guid>https://kalid.io/tags/blog/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Git</title>
@@ -32,11 +41,29 @@
     </item>
     
     <item>
+      <title>Hugo</title>
+      <link>https://kalid.io/tags/hugo/</link>
+      <pubDate>Mon, 26 Mar 2018 15:35:54 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <guid>https://kalid.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Me</title>
       <link>https://kalid.io/tags/me/</link>
       <pubDate>Fri, 03 Aug 2018 23:30:19 +0800</pubDate>
       <author>dishuihengxin@gmail.com (Kalid)</author>
       <guid>https://kalid.io/tags/me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Os</title>
+      <link>https://kalid.io/tags/os/</link>
+      <pubDate>Tue, 14 Aug 2018 11:48:03 +0800</pubDate>
+      <author>dishuihengxin@gmail.com (Kalid)</author>
+      <guid>https://kalid.io/tags/os/</guid>
       <description></description>
     </item>
     
@@ -50,20 +77,11 @@
     </item>
     
     <item>
-      <title>学习课程推荐</title>
-      <link>https://kalid.io/tags/%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%8E%A8%E8%8D%90/</link>
-      <pubDate>Sun, 16 Dec 2018 00:23:22 +0800</pubDate>
+      <title>Website</title>
+      <link>https://kalid.io/tags/website/</link>
+      <pubDate>Mon, 26 Mar 2018 15:35:54 +0800</pubDate>
       <author>dishuihengxin@gmail.com (Kalid)</author>
-      <guid>https://kalid.io/tags/%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E6%8E%A8%E8%8D%90/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>树莓派</title>
-      <link>https://kalid.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
-      <pubDate>Tue, 14 Aug 2018 11:48:03 +0800</pubDate>
-      <author>dishuihengxin@gmail.com (Kalid)</author>
-      <guid>https://kalid.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</guid>
+      <guid>https://kalid.io/tags/website/</guid>
       <description></description>
     </item>
     

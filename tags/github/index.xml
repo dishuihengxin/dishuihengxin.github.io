@@ -23,12 +23,12 @@
     </item>
     
     <item>
-      <title>Git学习系列笔记(1)</title>
-      <link>https://kalid.io/posts/git-learning-notes-1/</link>
-      <pubDate>Wed, 19 Sep 2018 23:09:38 +0800</pubDate>
+      <title>遵循这些简单的规则，你将成为Git和GitHub大师</title>
+      <link>https://kalid.io/posts/follow-these-rules-for-git/</link>
+      <pubDate>Thu, 11 Oct 2018 14:23:44 +0800</pubDate>
       <author>dishuihengxin@gmail.com (Kalid)</author>
-      <guid>https://kalid.io/posts/git-learning-notes-1/</guid>
-      <description>Git是一个免费开源的分布式版本控制系统，旨在快速、高效的处理从小型到大型项目版本管理。最初是因为BitKeeper不再免费提供给Linux</description>
+      <guid>https://kalid.io/posts/follow-these-rules-for-git/</guid>
+      <description>本文中我不介绍如何创建GitHub仓库或如何使用Git终端进行代码的提交。相反，我将解释为什么每天使用Git和GitHub是如此重要，特别是</description>
     </item>
     
   </channel>

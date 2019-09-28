@@ -1,0 +1,151 @@
+[
+    {
+        "title": "About me",
+        "uri": "about",
+        "content": "Info Kalid       ShenZhen  China CN BIO I m operation maintenance engineer Currently working Cisystem ShenZhen",
+        "objectID": "about",
+        "date": "2018-08-03T15:30:19.000Z",
+        "tags": [
+            "me"
+        ],
+        "subtitle": "Hi,I'm kalid",
+        "description": "kalid - 韦世滴的博客|kubernetes|docker",
+        "nocomment": true,
+        "postmeta": false,
+        "notoc": true,
+        "seealso": false,
+        "bigimg": [
+            {
+                "src": "https://res.cloudinary.com/kalid/image/upload/blog/img/about.png",
+                "desc": "about me"
+            }
+        ]
+    },
+    {
+        "title": "archives",
+        "uri": "archives",
+        "content": "",
+        "objectID": "archives",
+        "nocomment": true,
+        "postmeta": false,
+        "notoc": true,
+        "seealso": false,
+        "bigimg": [
+            {
+                "src": "https://res.cloudinary.com/kalid/image/upload/blog/img/about.png"
+            }
+        ],
+        "draft": false,
+        "type": "page",
+        "layout": "archives"
+    },
+    {
+        "title": "使用 USB Serial Port连接树莓派系统",
+        "uri": "posts/connect-to-server-by-USB-serial-port",
+        "content": "WiFi              SSH                                UBS               USB serial                 COM LPT    USB serial Port      USB     PUTTY serial            putty              debug     help  command      console",
+        "objectID": "posts/connect-to-server-by-USB-serial-port",
+        "subtitle": "Connect to Server by USB Serial Port",
+        "date": "2018-08-14T03:48:03.000Z",
+        "draft": false,
+        "categories": "operation",
+        "description": "USB serial port是一个很好的方式，在紧急情况下是可以很好的利用这个方法进行系统扑救的。",
+        "keywords": [
+            "kalid,kalid.io"
+        ],
+        "tags": [
+            "serial",
+            "os"
+        ],
+        "nocomment": true,
+        "postmeta": true,
+        "notoc": true,
+        "seealso": true,
+        "bigimg": [
+            {
+                "src": "https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg"
+            }
+        ]
+    },
+    {
+        "title": "遵循这些简单的规则，你将成为Git和GitHub大师",
+        "uri": "posts/follow-these-rules-for-git",
+        "content": "GitHub       Git                        Git GitHub                        Github         Github                GitHub                           Git GitHub                                                           Git GitHub       99             Git GitHub          Git GitHub                                                                                                                                     Git GitHub                                                             Git GitHub                      Git Github              Git                                                           Git                                                                            Git                 GitHub Git                                                    Git                  GitHub             GitLab Bitbucket             GitHub     GitLab Bitbucket                    Git Github                                       Git Github                                          1            Git                                                                       Git         GitHub         repo                                                               2                                                                                 contact me section                  3          master              master                                                Pull                                       Pull          GitHub                                                                                                                                    Pull                                                                                                                       2 3",
+        "objectID": "posts/follow-these-rules-for-git",
+        "subtitle": "Git使用技巧",
+        "date": "2018-10-11T06:23:44.000Z",
+        "draft": false,
+        "categories": "operation",
+        "description": "kalid.io",
+        "keywords": [
+            "kalid,kalid.io"
+        ],
+        "tags": [
+            "git",
+            "github"
+        ],
+        "nocomment": true,
+        "postmeta": true,
+        "notoc": true,
+        "seealso": true,
+        "bigimg": [
+            {
+                "src": "https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg"
+            }
+        ]
+    },
+    {
+        "title": "玩转Git三剑客(学习课程推荐)",
+        "uri": "posts/git-learn-course-recommendation",
+        "content": "Git                      GitHub Gitlab                                              Git                                       Git GitHub Gitlab                                     2004                                                                            kedacom                   VCS                                    SVN               1000             Git Gitlab      3000             Gitlab                 pre commit post commit                  Git         Git           Githu Gitlab                 Git Devops                      Git",
+        "objectID": "posts/git-learn-course-recommendation",
+        "subtitle": "苏玲(携程代码平台负责人)--极客时间出品",
+        "date": "2018-12-15T16:23:22.000Z",
+        "draft": false,
+        "categories": "operation",
+        "description": "kalid.io",
+        "keywords": [
+            "kalid,kalid.io"
+        ],
+        "tags": [
+            "git",
+            "github"
+        ],
+        "nocomment": true,
+        "postmeta": true,
+        "notoc": true,
+        "seealso": true,
+        "bigimg": [
+            {
+                "src": "https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg"
+            }
+        ]
+    },
+    {
+        "title": "Windows 10 安装hugo的文档",
+        "uri": "posts/hugo-install",
+        "content": "Hugo    Go                                                  Hugo          hugo  hugo exe                   Hugo                Hugo  watch                                                         Hugo   Go          nice    Hugo                                                                                                                                              hugo                                  Github pages S3 Azure CloudFront                                 Github Pages                   nice     hugo       hugo  Github                hugo hugo exe          0 48                             hugo        bash D  Hugo bin hugo help hugo main command  used build Hugo site  Hugo Fast Flexible Static Site Generator built love spf13 friends Go  Complete documentation available http   gohugo io   Usage  hugo  flags  hugo  command  Available Commands  benchmark Benchmark Hugo building site number times  config Print site configuration convert Convert content different formats env Print Hugo version environment info gen collection several useful generators  help Help command import Import site others  list Listing various types content new Create new content site server high performance webserver version Print version number Hugo Flags   b    baseURL string hostname  and path  root  e g  http   spf13 com   D    buildDrafts include content marked draft  E    buildExpired include expired content  F    buildFuture include content publishdate future   cacheDir string filesystem path cache directory  Defaults   TMPDIR hugo_cache    canonifyURLs  deprecated  true  relative URLs will canonicalized using baseURL   cleanDestinationDir remove files destination not found static directories   config string config file  default path config yaml json toml   c    contentDir string filesystem path content directory   debug debug output  d    destination string filesystem path write files   disableKinds strings disable different kind pages  home  RSS etc     enableGitInfo add Git revision  date author info pages   forceSyncStatic copy files when static changed    gc enable run cleanup tasks  remove unused cache files  build  h    help help hugo   i18n warnings print missing translations   ignoreCache ignores cache directory  l    layoutDir string filesystem path layout directory   log enable Logging   logFile string log File path  if set  logging enabled automatically    minify minify supported output format  HTML  XML etc     noChmod don t sync permission mode files   noTimes don t sync modification time files   pluralizeListTitles  deprecated  pluralize titles lists using inflect  default true    preserveTaxonomyNames  deprecated  preserve taxonomy names written   G rard Depardieu  vs  gerard depardieu     quiet build quiet mode   renderToMemory render memory  only useful benchmark testing   s    source string filesystem path read files relative   stepAnalysis display memory timing different steps program   templateMetrics display metrics template executions   templateMetricsHints calculate improvement hints when combined   templateMetrics  t    theme string theme use  located  themes THEMENAME     themesDir string filesystem path themes directory   uglyURLs  deprecated  true  use  filename html instead  filename   v    verbose verbose output   verboseLog verbose logging  w    watch watch filesystem changes recreate needed Additional help topics  hugo check Contains verification checks Use hugo  command    help information command       hugo                 github pages",
+        "objectID": "posts/hugo-install",
+        "subtitle": "Hugo Install",
+        "date": "2018-03-26T07:35:54.000Z",
+        "draft": false,
+        "categories": "operation",
+        "description": "Windows 10 安装hugo的文档",
+        "keywords": [
+            "kalid,kalid.io"
+        ],
+        "tags": [
+            "hugo",
+            "blog",
+            "website"
+        ],
+        "nocomment": true,
+        "postmeta": true,
+        "notoc": true,
+        "seealso": true,
+        "bigimg": [
+            {
+                "src": "https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg"
+            }
+        ]
+    }
+]
