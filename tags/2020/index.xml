@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2020 on Kalid</title>
+    <link>https://kalid.io/tags/2020/</link>
+    <description>Recent content in 2020 on Kalid</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>kalid@kalid.io (Kalid)</managingEditor>
+    <webMaster>kalid@kalid.io (Kalid)</webMaster>
+    <lastBuildDate>Wed, 01 Jan 2020 00:25:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://kalid.io/tags/2020/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2020年，立个 Flag</title>
+      <link>https://kalid.io/posts/my-plan-for-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:25:59 +0800</pubDate>
+      <author>kalid@kalid.io (Kalid)</author>
+      <guid>https://kalid.io/posts/my-plan-for-2020/</guid>
+      <description>2020年，先立个小目标，万一实现了呢！哈哈&amp;hellip;.. 读书计划：本年度计划阅读 50 本书籍，不限题材。 学习一门外语：先从 Engines 开始啦，读写</description>
+    </item>
+    
+  </channel>
+</rss>
