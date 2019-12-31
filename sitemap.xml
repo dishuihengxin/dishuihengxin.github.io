@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kalid.io/posts/my-plan-for-2020/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kalid.io/posts/git-learn-course-recommendation/</loc>
     <lastmod>2018-12-16T00:23:22+08:00</lastmod>
   </url>
@@ -28,8 +33,14 @@
   </url>
   
   <url>
+    <loc>https://kalid.io/categories/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kalid.io/</loc>
-    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
   </url>
   
   <url>
@@ -40,6 +51,7 @@
   
   <url>
     <loc>https://kalid.io/categories/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -58,6 +70,12 @@
   <url>
     <loc>https://kalid.io/tags/hugo/</loc>
     <lastmod>2018-03-26T15:35:54+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/kubernetes/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -81,7 +99,7 @@
   
   <url>
     <loc>https://kalid.io/posts/</loc>
-    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   

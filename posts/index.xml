@@ -8,10 +8,19 @@
     <language>zh</language>
     <managingEditor>kalid@kalid.io (Kalid)</managingEditor>
     <webMaster>kalid@kalid.io (Kalid)</webMaster>
-    <lastBuildDate>Sun, 16 Dec 2018 00:23:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 00:25:59 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2020年，立个 Flag</title>
+      <link>https://kalid.io/posts/my-plan-for-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:25:59 +0800</pubDate>
+      <author>kalid@kalid.io (Kalid)</author>
+      <guid>https://kalid.io/posts/my-plan-for-2020/</guid>
+      <description>2020年，先立个小目标，万一实现了呢！哈哈&amp;hellip;.. 读书计划：本年度计划阅读 50 本书籍，不限题材。 学习一门外语：先从 Engines 开始啦，读写</description>
+    </item>
     
     <item>
       <title>玩转Git三剑客(学习课程推荐)</title>
