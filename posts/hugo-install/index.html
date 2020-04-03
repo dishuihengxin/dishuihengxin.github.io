@@ -17,8 +17,8 @@
 
   <meta name="author" content="Kalid"/>
   <link href='https://res.cloudinary.com/kalid/image/upload/v1569664127/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="https://res.cloudinary.com/kalid/image/upload/v1569663875/blog/img/avatar-icon.png" />
-  <meta name="twitter:image" content="https://res.cloudinary.com/kalid/image/upload/v1569663875/blog/img/avatar-icon.png" />
+  <meta property="og:image" content="https://res.cloudinary.com/kalid/image/upload/v1585933564/blog/img/avatar-icon1.png" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/kalid/image/upload/v1585933564/blog/img/avatar-icon1.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@kalid_io" />
   <meta name="twitter:creator" content="@kalid_io" />
@@ -26,7 +26,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kalid" />
 
-  <meta name="generator" content="Hugo 0.49.2" />
+  <meta name="generator" content="Hugo 0.68.1" />
   <link rel="canonical" href="https://kalid.io/posts/hugo-install/" />
   <link rel="alternate" href="https://kalid.io/index.xml" type="application/rss+xml" title="Kalid">
   <script src="https://res.cloudinary.com/kalid/raw/upload/blog/jquery-1.12.4.min.js"></script>
@@ -214,7 +214,7 @@ if (!doNotTrack) {
       <div class="avatar-img-border">
         
           <a title="Kalid" href="https://kalid.io/">
-            <img class="avatar-img" src="https://res.cloudinary.com/kalid/image/upload/v1569663875/blog/img/avatar-icon.png" alt="Kalid" />
+            <img class="avatar-img" src="https://res.cloudinary.com/kalid/image/upload/v1585933564/blog/img/avatar-icon1.png" alt="Kalid" />
           </a>
         
       </div>
@@ -368,86 +368,79 @@ autocomplete('#aa-search-input',
                 
 
                 <p>Hugo是一个用Go语言编写的快速而现代的静态网站生成器，简单易用，高效易扩展，轻量易部署，旨在使网站创建再次变得有趣。Hugo仅需要一个二进制文件hugo(或hugo.exe)即可轻松用于本地调试和生成静态页面，Hugo生成静态页面的效率是非常高的。</p>
-
 <p>Hugo自带watch的调试模式，会自动检测文件的更新而自动刷新页面，可以边写边浏览效果，不仅能提高写作的效率还能提高博文的质量。再加上Hugo是使用Go语言编写，各方面都很nice，所以用Hugo来写静态网站是一件极其享受的事儿。</p>
-
 <p>静态页面不需要像动态页面那样经常去查询数据库，而是直接将最终页面内容返回，使得访问速度体验非常流畅。同时便于搜索引擎索引，静态的页面对各大搜索引擎是十分友好的。抛弃数据库，减少复杂度，将最复杂的一步交给静态网站生成器，让我们可以更专注于写作。</p>
-
 <p>使用hugo构建的网站，可以托管在任何的地方，可以放在自搭的服务器上，也可以放在Github pages，S3，Azure，CloudFront等等，不需要依赖于任何的数据库和其他编程语言。通常我们会选择托管在Github Pages上，可以自定义一个个性的域名，这就非常nice了！</p>
-
-<p>安装hugo很简单，可以从hugo官方<a href="https://github.com/gohugoio/hugo/releases">Github</a>下载对应系统的最新的二进制文件(hugo或hugo.exe)，目前最新的版本是0.48，然后添加到电脑环境变量即可。<img src="https://res.cloudinary.com/kalid/image/upload/blog/img/hugo-version.png" alt="" />
+<p>安装hugo很简单，可以从hugo官方<a href="https://github.com/gohugoio/hugo/releases" title="">Github</a>下载对应系统的最新的二进制文件(hugo或hugo.exe)，目前最新的版本是0.48，然后添加到电脑环境变量即可。<img src="https://res.cloudinary.com/kalid/image/upload/blog/img/hugo-version.png" alt="">
 我们通过命令行来先学习一下hugo的基本指令：</p>
-
-<pre><code class="language-bash">    
-D:\Hugo\bin&gt;hugo help
-    
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">	
+D:<span class="se">\H</span>ugo<span class="se">\b</span>in&gt;hugo <span class="nb">help</span>
+	
 hugo is the main command, used to build your Hugo site.
 
 Hugo is a Fast and Flexible Static Site Generator built with love by spf13 and friends in Go.
 
 Complete documentation is available at http://gohugo.io/.
 
-Usage:  
-    hugo [flags]
-    hugo [command]
+Usage:	
+  	hugo <span class="o">[</span>flags<span class="o">]</span>
+  	hugo <span class="o">[</span>command<span class="o">]</span>
 
 Available Commands:
-    benchmark   Benchmark Hugo by building a site a number of times.
-    config      Print the site configuration
-    convert     Convert your content to different formats
-    env         Print Hugo version and environment info
-    gen         A collection of several useful generators.
-    help        Help about any command
-    import      Import your site from others.
-    list        Listing out various types of content
-    new         Create new content for your site
-    server      A high performance webserver
-    version     Print the version number of Hugo
+	benchmark   Benchmark Hugo by building a site a number of times.
+  	config      Print the site configuration
+ 	convert     Convert your content to different formats
+  	env         Print Hugo version and environment info
+  	gen         A collection of several useful generators.
+  	<span class="nb">help</span>        Help about any <span class="nb">command</span>
+  	import      Import your site from others.
+ 	list        Listing out various types of content
+  	new         Create new content <span class="k">for</span> your site
+  	server      A high performance webserver
+  	version     Print the version number of Hugo
 Flags:
-    -b, --baseURL string      hostname (and path) to the root, e.g. http://spf13.com/
-    -D, --buildDrafts         include content marked as draft
-    -E, --buildExpired        include expired content
-    -F, --buildFuture         include content with publishdate in the future
-    --cacheDir string         filesystem path to cache directory. Defaults: $TMPDIR/hugo_cache/
-    --canonifyURLs            (deprecated) if true, all relative URLs will be canonicalized using baseURL
+  	-b, --baseURL string      hostname <span class="o">(</span>and path<span class="o">)</span> to the root, e.g. http://spf13.com/
+  	-D, --buildDrafts         include content marked as draft
+  	-E, --buildExpired        include expired content
+  	-F, --buildFuture         include content with publishdate in the future
+    --cacheDir string         filesystem path to cache directory. Defaults: <span class="nv">$TMPDIR</span>/hugo_cache/
+    --canonifyURLs            <span class="o">(</span>deprecated<span class="o">)</span> <span class="k">if</span> true, all relative URLs will be canonicalized using baseURL
     --cleanDestinationDir     remove files from destination not found in static directories
-    --config string           config file (default is path/config.yaml|json|toml)
-    -c, --contentDir string   filesystem path to content directory
+    --config string           config file <span class="o">(</span>default is path/config.yaml<span class="p">|</span>json<span class="p">|</span>toml<span class="o">)</span>
+	-c, --contentDir string   filesystem path to content directory
     --debug                   debug output
     -d, --destination string  filesystem path to write files to
-    --disableKinds strings    disable different kind of pages (home, RSS etc.)
+    --disableKinds strings    disable different kind of pages <span class="o">(</span>home, RSS etc.<span class="o">)</span>
     --enableGitInfo           add Git revision, date and author info to the pages
     --forceSyncStatic         copy all files when static is changed.
-    --gc                      enable to run some cleanup tasks (remove unused cache files) after the build
-    -h, --help                help for hugo
+    --gc                      <span class="nb">enable</span> to run some cleanup tasks <span class="o">(</span>remove unused cache files<span class="o">)</span> after the build
+    -h, --help                <span class="nb">help</span> <span class="k">for</span> hugo
     --i18n-warnings           print missing translations
     --ignoreCache             ignores the cache directory
     -l, --layoutDir string    filesystem path to layout directory
-    --log                     enable Logging
-    --logFile string          log File path (if set, logging enabled automatically)
-    --minify                  minify any supported output format (HTML, XML etc.)
-    --noChmod                 don't sync permission mode of files
-    --noTimes                 don't sync modification time of files
-    --pluralizeListTitles     (deprecated) pluralize titles in lists using inflect (default true)
-    --preserveTaxonomyNames   (deprecated) preserve taxonomy names as written (&quot;Gérard Depardieu&quot; vs &quot;gerard-depardieu&quot;)
+    --log                     <span class="nb">enable</span> Logging
+    --logFile string          log File path <span class="o">(</span><span class="k">if</span> set, logging enabled automatically<span class="o">)</span>
+    --minify                  minify any supported output format <span class="o">(</span>HTML, XML etc.<span class="o">)</span>
+    --noChmod                 don<span class="s1">&#39;t sync permission mode of files
+</span><span class="s1">    --noTimes                 don&#39;</span>t sync modification <span class="nb">time</span> of files
+    --pluralizeListTitles     <span class="o">(</span>deprecated<span class="o">)</span> pluralize titles in lists using inflect <span class="o">(</span>default <span class="nb">true</span><span class="o">)</span>
+    --preserveTaxonomyNames   <span class="o">(</span>deprecated<span class="o">)</span> preserve taxonomy names as written <span class="o">(</span><span class="s2">&#34;Gérard Depardieu&#34;</span> vs <span class="s2">&#34;gerard-depardieu&#34;</span><span class="o">)</span>
     --quiet                   build in quiet mode
-    --renderToMemory          render to memory (only useful for benchmark testing)
-    -s, --source string       filesystem path to read files relative from
+    --renderToMemory          render to memory <span class="o">(</span>only useful <span class="k">for</span> benchmark testing<span class="o">)</span>
+    -s, --source string       filesystem path to <span class="nb">read</span> files relative from
     --stepAnalysis            display memory and timing of different steps of the program
     --templateMetrics         display metrics about template executions
     --templateMetricsHints    calculate some improvement hints when combined with --templateMetrics
-    -t, --theme string        theme to use (located in /themes/THEMENAME/)
+    -t, --theme string        theme to use <span class="o">(</span>located in /themes/THEMENAME/<span class="o">)</span>
     --themesDir string        filesystem path to themes directory
-    --uglyURLs                (deprecated) if true, use /filename.html instead of /filename/
+    --uglyURLs                <span class="o">(</span>deprecated<span class="o">)</span> <span class="k">if</span> true, use /filename.html instead of /filename/
     -v, --verbose             verbose output
     --verboseLog              verbose logging
-    -w, --watch               watch filesystem for changes and recreate as needed
-Additional help topics:
-    hugo check                Contains some verification checks
-Use `hugo [command] --help` for more information about a command.
-</code></pre>
-
-<p>好了，hugo已经安装好了，下一篇将介绍一下基于github pages的快速创建一个个人博客。</p>
+    -w, --watch               watch filesystem <span class="k">for</span> changes and recreate as needed
+Additional <span class="nb">help</span> topics:
+	hugo check                Contains some verification checks
+Use <span class="sb">`</span>hugo <span class="o">[</span>command<span class="o">]</span> --help<span class="sb">`</span> <span class="k">for</span> more information about a command.
+</code></pre></div><p>好了，hugo已经安装好了，下一篇将介绍一下基于github pages的快速创建一个个人博客。</p>
 
                 
                 <div class="entry-shang text-center">
@@ -580,7 +573,7 @@ Use `hugo [command] --help` for more information about a command.
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.49.2</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/rootsongjc/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.68.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/rootsongjc/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
