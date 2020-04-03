@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kalid</title>
@@ -8,7 +8,7 @@
     <language>zh</language>
     <managingEditor>kalid@kalid.io (Kalid)</managingEditor>
     <webMaster>kalid@kalid.io (Kalid)</webMaster>
-    <lastBuildDate>Fri, 03 Aug 2018 23:30:19 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 00:25:59 +0800</lastBuildDate>
     
 	<atom:link href="https://kalid.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,7 +19,7 @@
       <pubDate>Wed, 01 Jan 2020 00:25:59 +0800</pubDate>
       <author>kalid@kalid.io (Kalid)</author>
       <guid>https://kalid.io/posts/my-plan-for-2020/</guid>
-      <description>2020年，先立个小目标，万一实现了呢！哈哈&amp;hellip;.. **读书计划：**本年度计划阅读 50 本书籍，不限题材。 **学习一门外语：**先</description>
+      <description>2020年，先立个小目标，万一实现了呢！哈哈&amp;hellip;.. 读书计划：本年度计划阅读 50 本书籍，不限题材。 学习一门外语：先从 Engines 开始啦，读写</description>
     </item>
     
     <item>
@@ -55,7 +55,7 @@
       <pubDate>Fri, 03 Aug 2018 23:30:19 +0800</pubDate>
       <author>kalid@kalid.io (Kalid)</author>
       <guid>https://kalid.io/about/</guid>
-      <description>Info Kalid (韦世滴) ShenZhen, China CN Career TenBoon Cisystem Zaiso &amp;amp; Code Zero BIO I&amp;rsquo;m an operation and maintenance engineer,Currently working at Code Zero &amp;amp; Zaiso in ShenZhen.And my focus is on cloud services, microservices architecture, security operations, and the familiar use of Shell, Python, Go, etc. I am currently preparing for AWS Certification and Certificated Kubernetes Administrator. Involved Projects Getting start with knative ,Participate in</description>
+      <description>My QR code -- Info Kalid (韦世滴) ShenZhen, China CN Career TenBoon Cisystem Zaiso &amp;amp; Code Zero BIO I&amp;rsquo;m an operation and maintenance engineer,Currently working at Code Zero &amp;amp; Zaiso in ShenZhen.And my focus is on cloud services, microservices architecture, security operations, and the familiar use of Shell, Python, Go, etc. I am currently preparing for AWS Certification and Certificated Kubernetes Administrator. Involved Projects Getting start</description>
     </item>
     
     <item>

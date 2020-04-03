@@ -1,50 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kalid.io/tags/2020/</loc>
-    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kalid.io/posts/my-plan-for-2020/</loc>
     <lastmod>2020-01-01T00:25:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/tags/flag/</loc>
-    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/posts/</loc>
-    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/tags/</loc>
-    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/categories/</loc>
-    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/tags/git/</loc>
-    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/tags/github/</loc>
-    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/categories/operation/</loc>
-    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
   </url>
   
   <url>
@@ -58,24 +18,8 @@
   </url>
   
   <url>
-    <loc>https://kalid.io/tags/os/</loc>
-    <lastmod>2018-08-14T11:48:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/tags/serial/</loc>
-    <lastmod>2018-08-14T11:48:03+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kalid.io/posts/connect-to-server-by-usb-serial-port/</loc>
     <lastmod>2018-08-14T11:48:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/</loc>
-    <lastmod>2018-08-03T23:30:19+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -84,28 +28,103 @@
   </url>
   
   <url>
-    <loc>https://kalid.io/tags/me/</loc>
-    <lastmod>2018-08-03T23:30:19+08:00</lastmod>
+    <loc>https://kalid.io/posts/hugo-install/</loc>
+    <lastmod>2018-03-26T15:35:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/categories/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/2020/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kalid.io/tags/blog/</loc>
     <lastmod>2018-03-26T15:35:54+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/categories/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/flag/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/git/</loc>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/github/</loc>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kalid.io/tags/hugo/</loc>
     <lastmod>2018-03-26T15:35:54+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/me/</loc>
+    <lastmod>2018-08-03T23:30:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/categories/operation/</loc>
+    <lastmod>2018-12-16T00:23:22+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/os/</loc>
+    <lastmod>2018-08-14T11:48:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/posts/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/serial/</loc>
+    <lastmod>2018-08-14T11:48:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalid.io/tags/</loc>
+    <lastmod>2020-01-01T00:25:59+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kalid.io/tags/website/</loc>
     <lastmod>2018-03-26T15:35:54+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kalid.io/posts/hugo-install/</loc>
-    <lastmod>2018-03-26T15:35:54+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
