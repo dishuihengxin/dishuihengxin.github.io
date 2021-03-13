@@ -25,7 +25,7 @@ Hugo **extended** 版本对于 `style` shortcode 是必需的。
 一个 `style` 示例:
 
 ```markdown
-{{</* style "text-align:right; strong{color:#00b1ff;}" */>}}
+{{</* style "text-align:right; strong {color:#00b1ff;}" */>}}
 This is a **right-aligned** paragraph.
 {{</* /style */>}}
 ```
