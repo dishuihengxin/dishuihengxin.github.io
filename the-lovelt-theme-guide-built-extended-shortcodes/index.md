@@ -22,7 +22,7 @@ Hugo **extended** 版本对于 `style` shortcode 是必需的。
 
 第二个参数是包裹你要更改样式的内容的 HTML 标签, 默认值是 `div`。
 
-一个 `style` 示例:
+<!-- 一个 `style` 示例:
 
 ```markdown
 {{</* style "text-align:right; strong{color:#00b1ff;}" */>}}
@@ -34,7 +34,7 @@ This is a **right-aligned** paragraph
 
 {{< style "text-align:right; strong{color:#00b1ff;}" >}}
 This is a **right-aligned** paragraph
-{{< /style >}}
+{{< /style >}} -->
 
 ## 2 link
 
