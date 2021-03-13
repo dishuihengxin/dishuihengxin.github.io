@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Windows 10 安装 hugo 的文档 - kalid.io</title><meta name="Description" content=""><meta property="og:title" content="Windows 10 安装 hugo 的文档" />
+<meta property="og:description" content="Hugo 是一个用 Go 语言编写的快速而现代的静态网站生成器，简单易用，高效易扩展，轻量易部署，旨在使网站创建再次变得有趣。Hugo 仅需要一个二进制文件" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kalid.io/hugo-install/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-03-26T15:35:54&#43;08:00" />
+<meta property="article:modified_time" content="2021-03-13T17:08:37&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Windows 10 安装 hugo 的文档"/>
+<meta name="twitter:description" content="Hugo 是一个用 Go 语言编写的快速而现代的静态网站生成器，简单易用，高效易扩展，轻量易部署，旨在使网站创建再次变得有趣。Hugo 仅需要一个二进制文件"/>
+<meta name="application-name" content="kalid.io">
+<meta name="apple-mobile-web-app-title" content="kalid.io"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://kalid.io/hugo-install/" /><link rel="next" href="https://kalid.io/connect-to-server-by-usb-serial-port/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="baidu-site-verification" content="ygFt6lKduA" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Windows 10 安装 hugo 的文档",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kalid.io\/hugo-install\/"
+        },"genre": "posts","keywords": "Hugo","wordcount":  1103 ,
+        "url": "https:\/\/kalid.io\/hugo-install\/","datePublished": "2018-03-26T15:35:54+08:00","dateModified": "2021-03-13T17:08:37+08:00","publisher": {
+            "@type": "Organization",
+            "name": "kalid","logo": "https:\/\/kalid.io\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Kalid"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="fixed"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="kalid.io"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif"
+        data-srcset="https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif, https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif 1.5x, https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif"
+        title="https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif" /><span class="header-title-post">Kalid</span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 归档 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="/gitbook-tutorial/"> Gitbook </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="kalid.io"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif"
+        data-srcset="https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif, https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif 1.5x, https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif"
+        title="https://res.cloudinary.com/kalid/image/upload/blog/img/goto.gif" /><span class="header-title-post">Kalid</span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">归档</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="/gitbook-tutorial/" title="">Gitbook</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Windows 10 安装 hugo 的文档</h1><h2 class="single-subtitle">Hugo Install</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://kalid.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kalid</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/hugo/"><i class="far fa-folder fa-fw"></i>Hugo</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-03-26">2018-03-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1103 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg"
+        data-srcset="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg, https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg 1.5x, https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg"
+        title="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>Hugo 是一个用 Go 语言编写的快速而现代的静态网站生成器，简单易用，高效易扩展，轻量易部署，旨在使网站创建再次变得有趣。Hugo 仅需要一个二进制文件 hugo (或 hugo.exe )即可轻松用于本地调试和生成静态页面，Hugo 生成静态页面的效率是非常高的。</p>
+<p>Hugo 自带 watch 的调试模式，会自动检测文件的更新而自动刷新页面，可以边写边浏览效果，不仅能提高写作的效率还能提高博文的质量。再加上 Hugo 是使用 Go 语言编写，各方面都很 nice，所以用 Hugo 来写静态网站是一件极其享受的事儿。</p>
+<p>静态页面不需要像动态页面那样经常去查询数据库，而是直接将最终页面内容返回，使得访问速度体验非常流畅。同时便于搜索引擎索引，静态的页面对各大搜索引擎是十分友好的。抛弃数据库，减少复杂度，将最复杂的一步交给静态网站生成器，让我们可以更专注于写作。</p>
+<p>使用 hugo 构建的网站，可以托管在任何的地方，可以放在自搭的服务器上，也可以放在 Github pages，S3，Azure，CloudFront 等等，不需要依赖于任何的数据库和其他编程语言。通常我们会选择托管在 Github Pages 上，可以自定义一个个性的域名，这就非常 nice 了！</p>
+<p>安装 hugo 很简单，可以从 hugo 官方<a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer">Github</a>下载对应系统的最新的二进制文件( hugo 或 hugo.exe )，目前最新的版本是0.48，然后添加到电脑环境变量即可。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/kalid/image/upload/blog/img/hugo-version.png"
+        data-srcset="https://res.cloudinary.com/kalid/image/upload/blog/img/hugo-version.png, https://res.cloudinary.com/kalid/image/upload/blog/img/hugo-version.png 1.5x, https://res.cloudinary.com/kalid/image/upload/blog/img/hugo-version.png 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/kalid/image/upload/blog/img/hugo-version.png"
+        title="https://res.cloudinary.com/kalid/image/upload/blog/img/hugo-version.png" /></p>
+<p>我们通过命令行来先学习一下hugo的基本指令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">	
+D:<span class="se">\H</span>ugo<span class="se">\b</span>in&gt;hugo <span class="nb">help</span>
+	
+hugo is the main command, used to build your Hugo site.
+
+Hugo is a Fast and Flexible Static Site Generator built with love by spf13 and friends in Go.
+
+Complete documentation is available at http://gohugo.io/.
+
+Usage:	
+  	hugo <span class="o">[</span>flags<span class="o">]</span>
+  	hugo <span class="o">[</span>command<span class="o">]</span>
+
+Available Commands:
+	benchmark   Benchmark Hugo by building a site a number of times.
+  	config      Print the site configuration
+ 	convert     Convert your content to different formats
+  	env         Print Hugo version and environment info
+  	gen         A collection of several useful generators.
+  	<span class="nb">help</span>        Help about any <span class="nb">command</span>
+  	import      Import your site from others.
+ 	list        Listing out various types of content
+  	new         Create new content <span class="k">for</span> your site
+  	server      A high performance webserver
+  	version     Print the version number of Hugo
+Flags:
+  	-b, --baseURL string      hostname <span class="o">(</span>and path<span class="o">)</span> to the root, e.g. http://spf13.com/
+  	-D, --buildDrafts         include content marked as draft
+  	-E, --buildExpired        include expired content
+  	-F, --buildFuture         include content with publishdate in the future
+    --cacheDir string         filesystem path to cache directory. Defaults: <span class="nv">$TMPDIR</span>/hugo_cache/
+    --canonifyURLs            <span class="o">(</span>deprecated<span class="o">)</span> <span class="k">if</span> true, all relative URLs will be canonicalized using baseURL
+    --cleanDestinationDir     remove files from destination not found in static directories
+    --config string           config file <span class="o">(</span>default is path/config.yaml<span class="p">|</span>json<span class="p">|</span>toml<span class="o">)</span>
+	-c, --contentDir string   filesystem path to content directory
+    --debug                   debug output
+    -d, --destination string  filesystem path to write files to
+    --disableKinds strings    disable different kind of pages <span class="o">(</span>home, RSS etc.<span class="o">)</span>
+    --enableGitInfo           add Git revision, date and author info to the pages
+    --forceSyncStatic         copy all files when static is changed.
+    --gc                      <span class="nb">enable</span> to run some cleanup tasks <span class="o">(</span>remove unused cache files<span class="o">)</span> after the build
+    -h, --help                <span class="nb">help</span> <span class="k">for</span> hugo
+    --i18n-warnings           print missing translations
+    --ignoreCache             ignores the cache directory
+    -l, --layoutDir string    filesystem path to layout directory
+    --log                     <span class="nb">enable</span> Logging
+    --logFile string          log File path <span class="o">(</span><span class="k">if</span> set, logging enabled automatically<span class="o">)</span>
+    --minify                  minify any supported output format <span class="o">(</span>HTML, XML etc.<span class="o">)</span>
+    --noChmod                 don<span class="s1">&#39;t sync permission mode of files
+</span><span class="s1">    --noTimes                 don&#39;</span>t sync modification <span class="nb">time</span> of files
+    --pluralizeListTitles     <span class="o">(</span>deprecated<span class="o">)</span> pluralize titles in lists using inflect <span class="o">(</span>default <span class="nb">true</span><span class="o">)</span>
+    --preserveTaxonomyNames   <span class="o">(</span>deprecated<span class="o">)</span> preserve taxonomy names as written <span class="o">(</span><span class="s2">&#34;Gérard Depardieu&#34;</span> vs <span class="s2">&#34;gerard-depardieu&#34;</span><span class="o">)</span>
+    --quiet                   build in quiet mode
+    --renderToMemory          render to memory <span class="o">(</span>only useful <span class="k">for</span> benchmark testing<span class="o">)</span>
+    -s, --source string       filesystem path to <span class="nb">read</span> files relative from
+    --stepAnalysis            display memory and timing of different steps of the program
+    --templateMetrics         display metrics about template executions
+    --templateMetricsHints    calculate some improvement hints when combined with --templateMetrics
+    -t, --theme string        theme to use <span class="o">(</span>located in /themes/THEMENAME/<span class="o">)</span>
+    --themesDir string        filesystem path to themes directory
+    --uglyURLs                <span class="o">(</span>deprecated<span class="o">)</span> <span class="k">if</span> true, use /filename.html instead of /filename/
+    -v, --verbose             verbose output
+    --verboseLog              verbose logging
+    -w, --watch               watch filesystem <span class="k">for</span> changes and recreate as needed
+Additional <span class="nb">help</span> topics:
+	hugo check                Contains some verification checks
+Use <span class="sb">`</span>hugo <span class="o">[</span>command<span class="o">]</span> --help<span class="sb">`</span> <span class="k">for</span> more information about a command.
+</code></pre></td></tr></table>
+</div>
+</div><p>好了，hugo 已经安装好了，下一篇将介绍一下基于 github pages 的快速创建一个个人博客。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-03-13</span>
+            </div>
+            <div class="post-info-license"><span>基于 <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a> 发布</span></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/connect-to-server-by-usb-serial-port/" class="next" rel="next" title="使用 USB Serial Port连接树莓派系统">使用 USB Serial Port连接树莓派系统<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><a rel="icp" href="https://cloudnative.to/" target="_blank">云原生社区</a> | <a href="https://kalid.io" target="_blank">中国 DevOps 社区</a>  </div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo </a> 强力驱动， 主题 <a href="https://github.com/dishuihengxin/lovelt-kalid" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> lovelt-kalid </a> 移植自 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a> 
+                </div><div class="footer-line">Copyright 
+                    <i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://kalid.io" target="_blank">Kalid</a></span>保留所有权利&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"gitalk":{"admin":["dishuihengxin"],"clientID":"b97f8690d8cee9e9fd42","clientSecret":"c2b5c91cd0e445481f130a8b0fe06ab386d37ff4","id":"2018-03-26T15:35:54+08:00","owner":"dishuihengxin","repo":"dishuihengxin.github.io","title":"Windows 10 安装 hugo 的文档"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
