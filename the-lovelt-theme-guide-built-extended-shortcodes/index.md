@@ -32,13 +32,9 @@ This is a **right-aligned** paragraph.
 
 呈现的输出效果如下:
 
-{{
-  < style "text-align:right; strong{color:#00b1ff;}" >
-}}
-This is a **right-aligned** paragraph.
-{{
-  < /style >
-}}
+{{<style "text-align:right; strong{color:#00b1ff;}">}}
+This is a **right-aligned** paragraph
+{{< /style >}}
 
 ## 2 link
 
