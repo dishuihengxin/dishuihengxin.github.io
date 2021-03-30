@@ -9,7 +9,26 @@ I'm Kalid.
 
 Currently working in Shenzhen, China. 
 
-I'm an operation and maintenance engineer,Currently working at [Code Zero](http://www.code-zero.net "Code Zero Limited") & [Zaiso](http://www.zaiso.net) in ShenZhen.And my focus is on cloud services, microservices architecture, security operations, and the familiar use of Shell, Python, Go, etc. I am currently preparing for AWS Certification and Certificated Kubernetes Administrator.
+I'm an operation and maintenance engineer, Currently working at [Code Zero](http://www.code-zero.net "Code Zero Limited") & [Zaiso](http://www.zaiso.net). And my focus is on DevOps, cloud services, microservices architecture, security operations, SRE, and the familiar use of Shell, Dcoker, Kubernetes, Python, Golang, etc. 
+
+### Professional Certification
+
+The goal for the last two years is to obtain the following certificates. And start crazy exam mode, come on!
+
+- [x] Alibaba Cloud Certified Associate - DevOps
+- [x] Alibaba Cloud Certified Professional - Cloud Security
+- [ ] Alibaba Cloud Certified Professional - Cloud Computing
+- [ ] Alibaba Cloud Certified Expert - Cloud Architect
+- [ ] Certified Kubernetes Administrator
+- [ ] AWS Certified SysOps Administrator - Associate
+- [ ] AWS Certified Solutions Architect – Associate
+- [ ] AWS Certified Solutions Architect - Professional
+- [ ] AWS Certified DevOps Engineer - Professional
+- [ ] Microsoft Certified Azure Administrator Associate
+- [ ] Microsoft Certified Azure Security Engineer Associate
+- [ ] Microsoft Certified Azure DevOps Engineer Expert
+- [ ] Microsoft Certified Azure Solutions Architect Expert
+- [ ] System Architecture Designer
 
 ### Career
 
