@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Github - 标签 - 滴水恒心</title>
-        <link>https://www.dishuihengxin.com/tags/github/</link>
+        <link>https://dishuihengxin.com/tags/github/</link>
         <description>Github - 标签 - 滴水恒心</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor>
-            <webMaster>dishuihengxin@gmail.com (滴水恒心 )</webMaster><lastBuildDate>Thu, 11 Oct 2018 14:23:44 &#43;0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/github/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dishuihengxin@gmail.com (滴水恒心 )</webMaster><lastBuildDate>Thu, 11 Oct 2018 14:23:44 &#43;0800</lastBuildDate><atom:link href="https://dishuihengxin.com/tags/github/" rel="self" type="application/rss+xml" /><item>
     <title>遵循这些简单的规则，你将成为 Git 和 GitHub 大师</title>
-    <link>https://www.dishuihengxin.com/follow-these-rules-for-git/</link>
+    <link>https://dishuihengxin.com/follow-these-rules-for-git/</link>
     <pubDate>Thu, 11 Oct 2018 14:23:44 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://www.dishuihengxin.com/follow-these-rules-for-git/</guid>
+    <guid>https://dishuihengxin.com/follow-these-rules-for-git/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" referrerpolicy="no-referrer">
             </div>本文中我不介绍如何创建 GitHub 仓库或如何使用 Git 终端进行代码的提交。相反，我将解释为什么每天使用 Git 和 GitHub 是如此重要，特别是对于那些正在学习编程的同学来]]></description>
