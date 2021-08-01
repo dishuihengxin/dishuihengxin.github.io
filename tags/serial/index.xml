@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Serial - 标签 - kalid.io</title>
-        <link>https://kalid.io/tags/serial/</link>
-        <description>Serial - 标签 - kalid.io</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (Kalid)</managingEditor>
-            <webMaster>dishuihengxin@gmail.com (Kalid)</webMaster><lastBuildDate>Tue, 14 Aug 2018 11:48:03 &#43;0800</lastBuildDate><atom:link href="https://kalid.io/tags/serial/" rel="self" type="application/rss+xml" /><item>
+        <title>Serial - 标签 - 滴水恒心</title>
+        <link>https://www.dishuihengxin.com/tags/serial/</link>
+        <description>Serial - 标签 - 滴水恒心</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor>
+            <webMaster>dishuihengxin@gmail.com (滴水恒心 )</webMaster><lastBuildDate>Tue, 14 Aug 2018 11:48:03 &#43;0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/serial/" rel="self" type="application/rss+xml" /><item>
     <title>使用 USB Serial Port连接树莓派系统</title>
-    <link>https://kalid.io/connect-to-server-by-usb-serial-port/</link>
+    <link>https://www.dishuihengxin.com/connect-to-server-by-usb-serial-port/</link>
     <pubDate>Tue, 14 Aug 2018 11:48:03 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://kalid.io/connect-to-server-by-usb-serial-port/</guid>
+    <guid>https://www.dishuihengxin.com/connect-to-server-by-usb-serial-port/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" referrerpolicy="no-referrer">
             </div>树莓派开发的硬件上连接的 WiFi 有问题时，导致不能通过正常的 SSH 方式连接进去，在实际操作过程中就遇到这个问题，针对这我们可以采用 UBS 串口直连的方式进入]]></description>
