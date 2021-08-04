@@ -1,7 +1,6 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>树莓派 - 标签 - 滴水恒心</title>
-<<<<<<< HEAD
         <link>https://www.dishuihengxin.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
         <description>树莓派 - 标签 - 滴水恒心</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor>
@@ -11,17 +10,6 @@
     <pubDate>Tue, 14 Aug 2018 11:48:03 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://www.dishuihengxin.com/connect-to-server-by-usb-serial-port/</guid>
-=======
-        <link>https://dishuihengxin.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
-        <description>树莓派 - 标签 - 滴水恒心</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor>
-            <webMaster>dishuihengxin@gmail.com (滴水恒心 )</webMaster><lastBuildDate>Tue, 14 Aug 2018 11:48:03 &#43;0800</lastBuildDate><atom:link href="https://dishuihengxin.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" rel="self" type="application/rss+xml" /><item>
-    <title>使用 USB Serial Port连接树莓派系统</title>
-    <link>https://dishuihengxin.com/connect-to-server-by-usb-serial-port/</link>
-    <pubDate>Tue, 14 Aug 2018 11:48:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://dishuihengxin.com/connect-to-server-by-usb-serial-port/</guid>
->>>>>>> 2709d625497d020c66dfb3c2bc3119599c6a5def
     <description><![CDATA[<div class="featured-image">
                 <img src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" referrerpolicy="no-referrer">
             </div>树莓派开发的硬件上连接的 WiFi 有问题时，导致不能通过正常的 SSH 方式连接进去，在实际操作过程中就遇到这个问题，针对这我们可以采用 UBS 串口直连的方式进入]]></description>

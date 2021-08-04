@@ -9,11 +9,7 @@ I'm Kalid.
 
 Currently working in Shenzhen, China. 
 
-<<<<<<< HEAD
 I'm an operation and maintenance engineer, Currently working at [Code Zero](http://www.code-zero.net?utm_source=dishuihengxin.com "Code Zero Limited"). And my focus is on DevOps, cloud services, microservices architecture, security operations, SRE, and the familiar use of Shell, Dcoker, Kubernetes, Python, Golang, etc. 
-=======
-I'm an operation and maintenance engineer, Currently working at [Code Zero](http://www.code-zero.net?utm_source=dishuihengxin.com "Code Zero Limited") & [Zaiso](http://www.zaiso.net?utm_source=dishuihengxin.com). And my focus is on DevOps, cloud services, microservices architecture, security operations, SRE, and the familiar use of Shell, Dcoker, Kubernetes, Python, Golang, etc. 
->>>>>>> 2709d625497d020c66dfb3c2bc3119599c6a5def
 
 ### Professional Certification
 

@@ -1,7 +1,6 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>me - 标签 - 滴水恒心</title>
-<<<<<<< HEAD
         <link>https://www.dishuihengxin.com/tags/me/</link>
         <description>me - 标签 - 滴水恒心</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor>
@@ -12,17 +11,5 @@
     <author>作者</author>
     <guid>https://www.dishuihengxin.com/about/</guid>
     <description><![CDATA[About Me" About Me Introduction I&rsquo;m Kalid. Currently working in Shenzhen, China. I&rsquo;m an operation and maintenance engineer, Currently working at Code Zero. And my focus is on DevOps, cloud services, microservices architecture, security operations, SRE, and the familiar use of Shell, Dcoker, Kubernetes, Python, Golang, etc. Professional Certification The goal for the last two years is to obtain the following certificates. And start crazy exam mode, come on! Alibaba]]></description>
-=======
-        <link>https://dishuihengxin.com/tags/me/</link>
-        <description>me - 标签 - 滴水恒心</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor>
-            <webMaster>dishuihengxin@gmail.com (滴水恒心 )</webMaster><lastBuildDate>Fri, 03 Aug 2018 23:30:19 &#43;0800</lastBuildDate><atom:link href="https://dishuihengxin.com/tags/me/" rel="self" type="application/rss+xml" /><item>
-    <title>About Me</title>
-    <link>https://dishuihengxin.com/about/</link>
-    <pubDate>Fri, 03 Aug 2018 23:30:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://dishuihengxin.com/about/</guid>
-    <description><![CDATA[About Me" About Me Introduction I&rsquo;m Kalid. Currently working in Shenzhen, China. I&rsquo;m an operation and maintenance engineer, Currently working at Code Zero &amp; Zaiso. And my focus is on DevOps, cloud services, microservices architecture, security operations, SRE, and the familiar use of Shell, Dcoker, Kubernetes, Python, Golang, etc. Professional Certification The goal for the last two years is to obtain the following certificates. And start crazy exam mode, come]]></description>
->>>>>>> 2709d625497d020c66dfb3c2bc3119599c6a5def
 </item></channel>
 </rss>
