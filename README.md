@@ -1,3 +1,3 @@
-# My Blog
+# kalid-blog
 
-[https://kalid.io](https://kalid.io)
+my blog [https://dishuihengxin.com](https://dishuihengxin.com)
