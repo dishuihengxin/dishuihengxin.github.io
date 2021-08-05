@@ -8,9 +8,10 @@
         <title>(转) - Lovelt 主题使用说明 - 滴水恒心</title><meta name="Description" content=" 探索 Hugo - LoveIt 主题的全部内容和背后的核心概念。"><meta property="og:title" content="(转) - Lovelt 主题使用说明" />
 <meta property="og:description" content=" 探索 Hugo - LoveIt 主题的全部内容和背后的核心概念。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/" />
+<meta property="og:url" content="https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-03-06T13:56:36+08:00" />
 <meta property="article:modified_time" content="2021-03-13T17:08:37+08:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="(转) - Lovelt 主题使用说明"/>
 <meta name="twitter:description" content=" 探索 Hugo - LoveIt 主题的全部内容和背后的核心概念。"/>
@@ -39,11 +40,12 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?a60715809868679547f5cce7b6866e38";
+      hm.src = "https://hm.baidu.com/hm.js?cdb9c487f6c71421e1844a7cc0fd40e9";
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
+    
     </head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
@@ -57,7 +59,7 @@
         data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
         data-sizes="auto"
         alt="/logo.png"
-        title="/logo.png" /><span class="header-title-post"><img src="/logo_cxt.png" style="width:160px;"></span></a>
+        title="/logo.png" /><span class="header-title-post">滴水恒心</span></a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 归档 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="/gitbook-tutorial/"> Gitbook </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -88,7 +90,7 @@
         data-srcset="/logo.png, /logo.png 1.5x, /logo.png 2x"
         data-sizes="auto"
         alt="/logo.png"
-        title="/logo.png" /><span class="header-title-post"><img src="/logo_cxt.png" style="width:160px;"></span></a>
+        title="/logo.png" /><span class="header-title-post">滴水恒心</span></a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -202,11 +204,11 @@
 <p>Hugo 提供了一个 <code>new</code> 命令来创建一个新的网站:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo new site my_website
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo new site my_website
 <span class="nb">cd</span> my_website
 </code></pre></td></tr></table>
 </div>
@@ -216,20 +218,20 @@
 <p>另外, 也可以直接把这个主题克隆到 <code>themes</code> 目录:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </code></pre></td></tr></table>
 </div>
 </div><p>或者, 初始化你的项目目录为 git 仓库, 并且把主题仓库作为你的网站目录的子模块:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git init
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git init
 git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </code></pre></td></tr></table>
 </div>
@@ -237,7 +239,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>以下是 LoveIt 主题的基本配置:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -291,7 +293,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </span><span class="lnt">52
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://example.org/&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://example.org/&#34;</span>
 <span class="c"># [en, zh-cn, fr, ...] 设置默认的语言</span>
 <span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
 <span class="c"># 网站语言, 仅在这里 CN 大写</span>
@@ -357,10 +359,10 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>以下是创建第一篇文章的方法:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo new posts/first_post.md
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo new posts/first_post.md
 </code></pre></td></tr></table>
 </div>
 </div><p>通过添加一些示例内容并替换文件开头的标题, 你可以随意编辑文章.</p>
@@ -376,10 +378,10 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>使用以下命令启动网站:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo serve
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo serve
 </code></pre></td></tr></table>
 </div>
 </div><p>去查看 <code>http://localhost:1313</code>.</p>
@@ -410,10 +412,10 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 非常建议你为 <code>hugo server</code> 命令添加 <code>--disableFastRender</code> 参数来实时预览你正在编辑的文章页面.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo serve --disableFastRender
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo serve --disableFastRender
 </code></pre></td></tr></table>
 </div>
 </div></div>
@@ -423,10 +425,10 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>当你准备好部署你的网站时, 运行以下命令:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo
 </code></pre></td></tr></table>
 </div>
 </div><p>会生成一个 <code>public</code> 目录, 其中包含你网站的所有静态内容和资源. 现在可以将其部署在任何 Web 服务器上.</p>
@@ -445,7 +447,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>请打开下面的代码块查看完整的示例配置 <i class="far fa-hand-point-down fa-fw"></i>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -976,7 +978,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </span><span class="lnt">529
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
   <span class="c"># <a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.0" rel="noopener noreffer" target="_blank"><img
         class="lazyload version"
         src="/svg/loading.min.svg"
@@ -1907,13 +1909,13 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
             <div class="admonition-content"><p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">cdn</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">cdn</span><span class="p">]</span>
   <span class="c"># CDN 数据文件名称, 默认不启用</span>
   <span class="c"># (&#34;jsdelivr.yml&#34;)</span>
   <span class="nx">data</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
@@ -1933,11 +1935,11 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>你可以直接配置你的社交 ID 来生成一个默认社交链接和图标:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">social</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">social</span><span class="p">]</span>
   <span class="nx">Mastodon</span> <span class="p">=</span> <span class="s2">&#34;@xxxx&#34;</span>
 </code></pre></td></tr></table>
 </div>
@@ -1945,7 +1947,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>或者你可以通过一个字典来设置更多的选项:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1957,7 +1959,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">social</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">social</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">social</span><span class="p">.</span><span class="nx">Mastodon</span><span class="p">]</span>
     <span class="c"># 排列图标时的权重 (权重越大, 图标的位置越靠后)</span>
     <span class="nx">weight</span> <span class="p">=</span> <span class="mi">0</span>
@@ -2019,12 +2021,12 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>这是一个例子:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="sx">url(&#39;https://fonts.googleapis.com/css?family=Fira+Mono:400,700&amp;display=swap&amp;subset=latin-ext&#39;)</span><span class="p">;</span>
-<span class="nv">$code-font-family</span><span class="o">:</span> <span class="n">Fira</span> <span class="n">Mono</span><span class="o">,</span> <span class="n">Source</span> <span class="n">Code</span> <span class="n">Pro</span><span class="o">,</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="no">monospace</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="sx">url(&#39;https://fonts.googleapis.com/css?family=Fira+Mono:400,700&amp;display=swap&amp;subset=latin-ext&#39;)</span><span class="p">;</span>
+<span class="nv">$code-font-family</span><span class="o">:</span> <span class="n">Fira</span> <span class="n">Mono</span><span class="o">,</span> <span class="n">Source</span> <span class="n">Code</span> <span class="n">Pro</span><span class="o">,</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="ni">monospace</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>在 <code>assets/css/_custom.scss</code> 中, 你可以添加一些 CSS 样式代码以自定义样式.</p>
@@ -2052,97 +2054,97 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <table>
 <thead>
 <tr>
-<th align="left">语言</th>
-<th align="center">Hugo 代码</th>
-<th align="center">HTML <code>lang</code> 属性</th>
-<th align="center">主题文档</th>
-<th align="center">Lunr.js 支持</th>
+<th style="text-align:left">语言</th>
+<th style="text-align:center">Hugo 代码</th>
+<th style="text-align:center">HTML <code>lang</code> 属性</th>
+<th style="text-align:center">主题文档</th>
+<th style="text-align:center">Lunr.js 支持</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">英语</td>
-<td align="center"><code>en</code></td>
-<td align="center"><code>en</code></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">英语</td>
+<td style="text-align:center"><code>en</code></td>
+<td style="text-align:center"><code>en</code></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">简体中文</td>
-<td align="center"><code>zh-cn</code></td>
-<td align="center"><code>zh-CN</code></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">简体中文</td>
+<td style="text-align:center"><code>zh-cn</code></td>
+<td style="text-align:center"><code>zh-CN</code></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">法语</td>
-<td align="center"><code>fr</code></td>
-<td align="center"><code>fr</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">法语</td>
+<td style="text-align:center"><code>fr</code></td>
+<td style="text-align:center"><code>fr</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">波兰语</td>
-<td align="center"><code>pl</code></td>
-<td align="center"><code>pl</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:left">波兰语</td>
+<td style="text-align:center"><code>pl</code></td>
+<td style="text-align:center"><code>pl</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">巴西葡萄牙语</td>
-<td align="center"><code>pt-br</code></td>
-<td align="center"><code>pt-BR</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">巴西葡萄牙语</td>
+<td style="text-align:center"><code>pt-br</code></td>
+<td style="text-align:center"><code>pt-BR</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">意大利语</td>
-<td align="center"><code>it</code></td>
-<td align="center"><code>it</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">意大利语</td>
+<td style="text-align:center"><code>it</code></td>
+<td style="text-align:center"><code>it</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">西班牙语</td>
-<td align="center"><code>es</code></td>
-<td align="center"><code>es</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">西班牙语</td>
+<td style="text-align:center"><code>es</code></td>
+<td style="text-align:center"><code>es</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">德语</td>
-<td align="center"><code>de</code></td>
-<td align="center"><code>de</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">德语</td>
+<td style="text-align:center"><code>de</code></td>
+<td style="text-align:center"><code>de</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">塞尔维亚语</td>
-<td align="center"><code>pl</code></td>
-<td align="center"><code>pl</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:left">塞尔维亚语</td>
+<td style="text-align:center"><code>pl</code></td>
+<td style="text-align:center"><code>pl</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">俄语</td>
-<td align="center"><code>ru</code></td>
-<td align="center"><code>ru</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">俄语</td>
+<td style="text-align:center"><code>ru</code></td>
+<td style="text-align:center"><code>ru</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">罗马尼亚语</td>
-<td align="center"><code>ro</code></td>
-<td align="center"><code>ro</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">罗马尼亚语</td>
+<td style="text-align:center"><code>ro</code></td>
+<td style="text-align:center"><code>ro</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 <tr>
-<td align="left">越南语</td>
-<td align="center"><code>vi</code></td>
-<td align="center"><code>vi</code></td>
-<td align="center"><i class="far fa-square fa-fw"></i></td>
-<td align="center"><i class="far fa-check-square fa-fw"></i></td>
+<td style="text-align:left">越南语</td>
+<td style="text-align:center"><code>vi</code></td>
+<td style="text-align:center"><code>vi</code></td>
+<td style="text-align:center"><i class="far fa-square fa-fw"></i></td>
+<td style="text-align:center"><i class="far fa-check-square fa-fw"></i></td>
 </tr>
 </tbody>
 </table>
@@ -2151,7 +2153,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>例如, 一个支持英语, 中文和法语的网站配置:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2249,7 +2251,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </span><span class="lnt">96
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># [en, zh-cn, fr, pl, ...] 设置默认的语言</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># [en, zh-cn, fr, pl, ...] 设置默认的语言</span>
 <span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
 
 <span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
@@ -2283,7 +2285,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
       <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
       <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
 
-  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">]</span>
+  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">]</span>
     <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
     <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;我的全新 Hugo 网站&#34;</span>
     <span class="c"># 网站语言, 仅在这里 CN 大写</span>
@@ -2291,7 +2293,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
     <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;简体中文&#34;</span>
     <span class="c"># 是否包括中日韩文字</span>
     <span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
       <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
       <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
       <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
@@ -2299,7 +2301,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
       <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
       <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
       <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
       <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
       <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
       <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
@@ -2307,7 +2309,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
       <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
       <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
       <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
       <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
       <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
       <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
@@ -2389,11 +2391,11 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>为了生成搜索功能所需要的 <code>index.json</code>, 请在你的 <a href="#site-configuration" rel="">网站配置</a> 中添加 <code>JSON</code> 输出文件类型到 <code>outputs</code> 部分的 <code>home</code> 字段中.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
   <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span>
 </code></pre></td></tr></table>
 </div>
@@ -2402,7 +2404,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>这是你的 <a href="#site-configuration" rel="">网站配置</a> 中的搜索部分:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2424,7 +2426,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
   <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
   <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
   <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;lunr&#34;</span>
@@ -2527,7 +2529,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
                 Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><a rel="links" href="https://cloudnative.to/?utm_source=dishuihengxin.com" target="_blank">云原生社区</a> | <a href="https://www.devopsmeetup.com/?utm_source=dishuihengxin.com" target="_blank">中国 DevOps 社区</a>  </div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.71.1">Hugo </a> 强力驱动， 主题 <a href="https://github.com/dishuihengxin/lovelt-kalid" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> lovelt-kalid </a> 移植自 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a> 
+        <div class="footer-container"><div class="footer-line"><a rel="links" href="https://cloudnative.to/?utm_source=dishuihengxin.com" target="_blank">云原生社区</a> | <a href="https://www.devopsmeetup.com/?utm_source=dishuihengxin.com" target="_blank">中国 DevOps 社区</a>  </div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo </a> 强力驱动， 主题 <a href="https://github.com/dishuihengxin/lovelt-kalid" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> lovelt-kalid </a> 移植自 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a> 
                 </div><div class="footer-line">Copyright 
                     <i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.dishuihengxin.com" target="_blank">滴水恒心 </a></span>保留所有权利&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |</span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp"> <a rel="icp" href="https://beian.miit.gov.cn/" target="_blank">桂ICP备16007197号-5 </a></span></div>
