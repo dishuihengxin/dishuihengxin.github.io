@@ -1,35 +1,9 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Configuration - 标签 - 滴水恒心</title>
-        <link>https://www.dishuihengxin.com/tags/configuration/</link>
-        <description>Configuration - 标签 - 滴水恒心</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor>
-            <webMaster>dishuihengxin@gmail.com (滴水恒心 )</webMaster><lastBuildDate>Fri, 06 Mar 2020 13:56:36 &#43;0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/configuration/" rel="self" type="application/rss+xml" /><item>
-    <title>(转) - Lovelt 主题使用说明</title>
-    <link>https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/</link>
-    <pubDate>Fri, 06 Mar 2020 13:56:36 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/</guid>
-    <description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Configuration - 标签 - 滴水恒心</title><link>https://www.dishuihengxin.com/tags/configuration/</link><description>Configuration - 标签 - 滴水恒心</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor><webMaster>dishuihengxin@gmail.com (滴水恒心 )</webMaster><lastBuildDate>Fri, 06 Mar 2020 13:56:36 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/configuration/" rel="self" type="application/rss+xml"/><item><title>(转) - Lovelt 主题使用说明</title><link>https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/</link><pubDate>Fri, 06 Mar 2020 13:56:36 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/blog/featured-image-1.jpg" referrerpolicy="no-referrer">
-            </div><p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念。</p>]]></description>
-</item><item>
-    <title>(转) - Lovelt 主题内置模块的使用文档</title>
-    <link>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-in-shortcodes/</link>
-    <pubDate>Wed, 04 Mar 2020 14:36:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-in-shortcodes/</guid>
-    <description><![CDATA[<div class="featured-image">
+            </div><p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念。</p>]]></description></item><item><title>(转) - Lovelt 主题内容文档</title><link>https://www.dishuihengxin.com/the-lovelt-theme-guide-content/</link><pubDate>Thu, 05 Mar 2020 14:35:38 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-content/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/blog/featured-image-2.jpg" referrerpolicy="no-referrer">
+            </div><p>了解如何在 <strong>LoveIt</strong> 主题中快速, 直观地创建和组织内容。</p>]]></description></item><item><title>(转) - Lovelt 主题内置模块的使用文档</title><link>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-in-shortcodes/</link><pubDate>Wed, 04 Mar 2020 14:36:15 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-in-shortcodes/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/blog/featured-image-3.png" referrerpolicy="no-referrer">
-            </div><p><strong>Hugo</strong> 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。</p>]]></description>
-</item><item>
-    <title>(转) - Lovelt 主题拓展模块的使用文档</title>
-    <link>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-extended-shortcodes/</link>
-    <pubDate>Tue, 03 Mar 2020 14:36:37 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-extended-shortcodes/</guid>
-    <description><![CDATA[<div class="featured-image">
+            </div><p><strong>Hugo</strong> 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。</p>]]></description></item><item><title>(转) - Lovelt 主题拓展模块的使用文档</title><link>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-extended-shortcodes/</link><pubDate>Tue, 03 Mar 2020 14:36:37 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-extended-shortcodes/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/blog/featured-image-4.jpg" referrerpolicy="no-referrer">
-            </div><p><strong>LoveIt</strong> 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。</p>]]></description>
-</item></channel>
-</rss>
+            </div><p><strong>LoveIt</strong> 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。</p>]]></description></item></channel></rss>

@@ -1,64 +1,15 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>滴水恒心</title>
-        <link>https://www.dishuihengxin.com/</link>
-        <description>滴水恒心</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor>
-            <webMaster>dishuihengxin@gmail.com (滴水恒心 )</webMaster><lastBuildDate>Fri, 06 Mar 2020 13:56:36 &#43;0800</lastBuildDate>
-            <atom:link href="https://www.dishuihengxin.com/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>(转) - Lovelt 主题使用说明</title>
-    <link>https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/</link>
-    <pubDate>Fri, 06 Mar 2020 13:56:36 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/</guid>
-    <description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>滴水恒心</title><link>https://www.dishuihengxin.com/</link><description>滴水恒心</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dishuihengxin@gmail.com (滴水恒心 )</managingEditor><webMaster>dishuihengxin@gmail.com (滴水恒心 )</webMaster><lastBuildDate>Fri, 06 Mar 2020 13:56:36 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/index.xml" rel="self" type="application/rss+xml"/><item><title>(转) - Lovelt 主题使用说明</title><link>https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/</link><pubDate>Fri, 06 Mar 2020 13:56:36 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-basics/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/blog/featured-image-1.jpg" referrerpolicy="no-referrer">
-            </div><p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念。</p>]]></description>
-</item><item>
-    <title>(转) - Lovelt 主题内置模块的使用文档</title>
-    <link>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-in-shortcodes/</link>
-    <pubDate>Wed, 04 Mar 2020 14:36:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-in-shortcodes/</guid>
-    <description><![CDATA[<div class="featured-image">
+            </div><p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念。</p>]]></description></item><item><title>(转) - Lovelt 主题内容文档</title><link>https://www.dishuihengxin.com/the-lovelt-theme-guide-content/</link><pubDate>Thu, 05 Mar 2020 14:35:38 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-content/</guid><description><![CDATA[<div class="featured-image">
+                <img src="/blog/featured-image-2.jpg" referrerpolicy="no-referrer">
+            </div><p>了解如何在 <strong>LoveIt</strong> 主题中快速, 直观地创建和组织内容。</p>]]></description></item><item><title>(转) - Lovelt 主题内置模块的使用文档</title><link>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-in-shortcodes/</link><pubDate>Wed, 04 Mar 2020 14:36:15 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-in-shortcodes/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/blog/featured-image-3.png" referrerpolicy="no-referrer">
-            </div><p><strong>Hugo</strong> 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。</p>]]></description>
-</item><item>
-    <title>(转) - Lovelt 主题拓展模块的使用文档</title>
-    <link>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-extended-shortcodes/</link>
-    <pubDate>Tue, 03 Mar 2020 14:36:37 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-extended-shortcodes/</guid>
-    <description><![CDATA[<div class="featured-image">
+            </div><p><strong>Hugo</strong> 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。</p>]]></description></item><item><title>(转) - Lovelt 主题拓展模块的使用文档</title><link>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-extended-shortcodes/</link><pubDate>Tue, 03 Mar 2020 14:36:37 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/the-lovelt-theme-guide-built-extended-shortcodes/</guid><description><![CDATA[<div class="featured-image">
                 <img src="/blog/featured-image-4.jpg" referrerpolicy="no-referrer">
-            </div><p><strong>LoveIt</strong> 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。</p>]]></description>
-</item><item>
-    <title>遵循这些简单的规则，你将成为 Git 和 GitHub 大师</title>
-    <link>https://www.dishuihengxin.com/follow-these-rules-for-git/</link>
-    <pubDate>Thu, 11 Oct 2018 14:23:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.dishuihengxin.com/follow-these-rules-for-git/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" referrerpolicy="no-referrer">
-            </div>本文中我不介绍如何创建 GitHub 仓库或如何使用 Git 终端进行代码的提交。相反，我将解释为什么每天使用 Git 和 GitHub 是如此重要，特别是对于那些正在学习编程的同学来]]></description>
-</item><item>
-    <title>使用 USB Serial Port连接树莓派系统</title>
-    <link>https://www.dishuihengxin.com/connect-to-server-by-usb-serial-port/</link>
-    <pubDate>Tue, 14 Aug 2018 11:48:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.dishuihengxin.com/connect-to-server-by-usb-serial-port/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" referrerpolicy="no-referrer">
-            </div>树莓派开发的硬件上连接的 WiFi 有问题时，导致不能通过正常的 SSH 方式连接进去，在实际操作过程中就遇到这个问题，针对这我们可以采用 UBS 串口直连的方式进入]]></description>
-</item><item>
-    <title>Windows 10 安装 hugo 的文档</title>
-    <link>https://www.dishuihengxin.com/hugo-install/</link>
-    <pubDate>Mon, 26 Mar 2018 15:35:54 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.dishuihengxin.com/hugo-install/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" referrerpolicy="no-referrer">
-            </div>Hugo 是一个用 Go 语言编写的快速而现代的静态网站生成器，简单易用，高效易扩展，轻量易部署，旨在使网站创建再次变得有趣。Hugo 仅需要一个二进制文件]]></description>
-</item></channel>
-</rss>
+            </div><p><strong>LoveIt</strong> 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。</p>]]></description></item><item><title>遵循这些简单的规则，你将成为 Git 和 GitHub 大师</title><link>https://www.dishuihengxin.com/follow-these-rules-for-git/</link><pubDate>Thu, 11 Oct 2018 14:23:44 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/follow-these-rules-for-git/</guid><description>&lt;div class="featured-image">
+&lt;img src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" referrerpolicy="no-referrer">
+&lt;/div>本文中我不介绍如何创建 GitHub 仓库或如何使用 Git 终端进行代码的提交。相反，我将解释为什么每天使用 Git 和 GitHub 是如此重要，特别是对于那些正在学习编程的同学来</description></item><item><title>使用 USB Serial Port连接树莓派系统</title><link>https://www.dishuihengxin.com/connect-to-server-by-usb-serial-port/</link><pubDate>Tue, 14 Aug 2018 11:48:03 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/connect-to-server-by-usb-serial-port/</guid><description>&lt;div class="featured-image">
+&lt;img src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" referrerpolicy="no-referrer">
+&lt;/div>树莓派开发的硬件上连接的 WiFi 有问题时，导致不能通过正常的 SSH 方式连接进去，在实际操作过程中就遇到这个问题，针对这我们可以采用 UBS 串口直连的方式进入</description></item><item><title>Windows 10 安装 hugo 的文档</title><link>https://www.dishuihengxin.com/hugo-install/</link><pubDate>Mon, 26 Mar 2018 15:35:54 +0800</pubDate><author>作者</author><guid>https://www.dishuihengxin.com/hugo-install/</guid><description>&lt;div class="featured-image">
+&lt;img src="https://res.cloudinary.com/kalid/image/upload/blog/img/banner3.jpg" referrerpolicy="no-referrer">
+&lt;/div>Hugo 是一个用 Go 语言编写的快速而现代的静态网站生成器，简单易用，高效易扩展，轻量易部署，旨在使网站创建再次变得有趣。Hugo 仅需要一个二进制文件</description></item></channel></rss>
