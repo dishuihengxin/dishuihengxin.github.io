@@ -18,7 +18,7 @@ The goal for the last two years is to obtain the following certificates. And sta
 - [x] [Alibaba Cloud Certified Associate - DevOps](https://edu.aliyun.com/certification/aca06?utm_source=dishuihengxin.com)
 - [x] [Alibaba Cloud Certified Professional - Cloud Security](https://edu.aliyun.com/certification/acp03?utm_source=dishuihengxin.com)
 - [x] [Alibaba Cloud Certified Professional - Cloud Computing](https://edu.aliyun.com/certification/acp01?utm_source=dishuihengxin.com)
-- [ ] [Alibaba Cloud Certified Expert - Cloud Architect](https://edu.aliyun.com/certification/ace01?utm_source=dishuihengxin.com)
+<!-- - [ ] [Alibaba Cloud Certified Expert - Cloud Architect](https://edu.aliyun.com/certification/ace01?utm_source=dishuihengxin.com)
 - [ ] [Certified Kubernetes Administrator](https://www.cncf.io/certification/cka/?utm_source=dishuihengxin.com)
 - [ ] [AWS Certified SysOps Administrator - Associate](https://aws.amazon.com/certification/certified-sysops-admin-associate/?utm_source=dishuihengxin.com)
 - [ ] [AWS Certified Solutions Architect – Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/?utm_source=dishuihengxin.com)
@@ -29,7 +29,7 @@ The goal for the last two years is to obtain the following certificates. And sta
 - [ ] [Microsoft Certified Azure DevOps Engineer Expert](https://docs.microsoft.com/zh-cn/learn/certifications/devops-engineer/?utm_source=dishuihengxin.com)
 - [ ] [Microsoft Certified Azure Solutions Architect Expert](https://docs.microsoft.com/zh-cn/learn/certifications/azure-solutions-architect/?utm_source=dishuihengxin.com)
 - [ ] [System Architecture Designer](https://www.ruankao.org.cn/platform/details?code=03_03?utm_source=dishuihengxin.com)
-- [ ] [Project Management Professional](https://www.pmi.org/?utm_source=dishuihengxin.com)
+- [ ] [Project Management Professional](https://www.pmi.org/?utm_source=dishuihengxin.com) -->
 
 ### Career
 
