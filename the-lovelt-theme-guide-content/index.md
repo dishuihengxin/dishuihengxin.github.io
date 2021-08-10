@@ -340,7 +340,7 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 去露营啦! :(fas fa-campground fa-fw): 很快就回来.
 
 真开心! :(far fa-grin-tears):
-
+<!-- 
 ### 转义字符 {#escape-character}
 
 在某些特殊情况下 (编写这个主题文档时 :(far fa-grin-squint-tears):),
@@ -374,5 +374,5 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
 呈现的输出效果如下:
 
-**[link{?]}(#escape-character)** 而不是 **[link](#escape-character)**.
+**[link{?]}(#escape-character)** 而不是 **[link](#escape-character)**. -->
 
