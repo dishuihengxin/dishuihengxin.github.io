@@ -34,8 +34,8 @@ The goal for the last two years is to obtain the following certificates. And sta
 ### Career
 
   - TenBoon
-  - [Cisystem](https://www.cisystemsolutions.com/?utm_source=dishuihengxin.com)
-  - [CodeZero](https://www.code-zero.net/?utm_source=dishuihengxin.com) 
+  - Cisystem
+  - [Code Zero Limited](https://www.code-zero.net/?utm_source=dishuihengxin.com) 
 
 ### Community Activity
 
