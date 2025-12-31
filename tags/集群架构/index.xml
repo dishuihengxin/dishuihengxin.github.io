@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>集群架构 on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84/</link><description>Recent content in 集群架构 on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 31 Dec 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml"/><item><title>Redis集群架构设计与实践：从单机到分布式的完整方案</title><link>https://www.dishuihengxin.com/posts/database-redis-cluster/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-redis-cluster/</guid><description>&lt;h1 id="redis集群架构设计与实践从单机到分布式的完整方案"&gt;Redis集群架构设计与实践：从单机到分布式的完整方案&lt;/h1&gt;
+&lt;p&gt;Redis作为高性能的内存数据库，在现代互联网架构中扮演着重要角色。随着业务规模的增长，单机Redis往往无法满足高并发、大容量的需求。本文将深入探讨Redis集群架构的设计原理和实践方案，从基础的主从复制到复杂的分布式集群部署。&lt;/p&gt;
+&lt;h2 id="redis集群架构概述"&gt;Redis集群架构概述&lt;/h2&gt;
+&lt;h3 id="redis集群模式对比"&gt;Redis集群模式对比&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;模式&lt;/th&gt;
+ &lt;th&gt;特点&lt;/th&gt;
+ &lt;th&gt;适用场景&lt;/th&gt;
+ &lt;th&gt;优点&lt;/th&gt;
+ &lt;th&gt;缺点&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;单机模式&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;单个Redis实例&lt;/td&gt;
+ &lt;td&gt;开发测试、小型应用&lt;/td&gt;
+ &lt;td&gt;简单易用、性能高&lt;/td&gt;
+ &lt;td&gt;无高可用、容量受限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;主从复制&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;一主多从，读写分离&lt;/td&gt;
+ &lt;td&gt;读多写少场景&lt;/td&gt;
+ &lt;td&gt;读性能扩展、数据备份&lt;/td&gt;
+ &lt;td&gt;主节点单点故障&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;哨兵模式&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;主从+自动故障转移&lt;/td&gt;
+ &lt;td&gt;中等规模应用&lt;/td&gt;
+ &lt;td&gt;自动故障转移、高可用&lt;/td&gt;
+ &lt;td&gt;写性能无法扩展&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;Cluster集群&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;分布式集群&lt;/td&gt;
+ &lt;td&gt;大规模应用&lt;/td&gt;
+ &lt;td&gt;水平扩展、高可用&lt;/td&gt;
+ &lt;td&gt;复杂度高、部分命令限制&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;代理模式&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;通过代理分片&lt;/td&gt;
+ &lt;td&gt;平滑迁移场景&lt;/td&gt;
+ &lt;td&gt;对客户端透明&lt;/td&gt;
+ &lt;td&gt;代理成为瓶颈&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="redis集群架构演进"&gt;Redis集群架构演进&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-mermaid" data-lang="mermaid"&gt;graph TB
+ subgraph &amp;#34;单机模式&amp;#34;
+ A[Redis Server]
+ A1[Client]
+ A1 --&amp;gt; A
+ end
+ 
+ subgraph &amp;#34;主从复制模式&amp;#34;
+ B[Master]
+ B1[Slave 1]
+ B2[Slave 2]
+ B3[Client]
+ B --&amp;gt; B1
+ B --&amp;gt; B2
+ B3 --&amp;gt; B
+ B3 --&amp;gt; B1
+ B3 --&amp;gt; B2
+ end
+ 
+ subgraph &amp;#34;哨兵模式&amp;#34;
+ C[Master]
+ C1[Slave 1]
+ C2[Slave 2]
+ C3[Sentinel 1]
+ C4[Sentinel 2]
+ C5[Sentinel 3]
+ C6[Client]
+ C --&amp;gt; C1
+ C --&amp;gt; C2
+ C3 --&amp;gt; C
+ C4 --&amp;gt; C
+ C5 --&amp;gt; C
+ C6 --&amp;gt; C3
+ end
+ 
+ subgraph &amp;#34;Cluster集群模式&amp;#34;
+ D[Node 1&amp;lt;br/&amp;gt;Master]
+ D1[Node 2&amp;lt;br/&amp;gt;Master]
+ D2[Node 3&amp;lt;br/&amp;gt;Master]
+ D3[Node 4&amp;lt;br/&amp;gt;Slave]
+ D4[Node 5&amp;lt;br/&amp;gt;Slave]
+ D5[Node 6&amp;lt;br/&amp;gt;Slave]
+ D6[Client]
+ D --&amp;gt; D3
+ D1 --&amp;gt; D4
+ D2 --&amp;gt; D5
+ D6 --&amp;gt; D
+ D6 --&amp;gt; D1
+ D6 --&amp;gt; D2
+ end
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="主从复制配置与优化"&gt;主从复制配置与优化&lt;/h2&gt;
+&lt;h3 id="主从复制原理"&gt;主从复制原理&lt;/h3&gt;
+&lt;p&gt;Redis主从复制采用异步复制机制，包含以下关键步骤：&lt;/p&gt;</description></item></channel></rss>

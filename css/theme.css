@@ -1,0 +1,255 @@
+/* Theme CSS - Dark Mode and Theme Switching */
+
+/* Theme Toggle Button */
+.theme-toggle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background: linear-gradient(135deg, var(--primary-600), var(--accent-purple));
+  color: white;
+  transform: scale(1.1);
+}
+
+.theme-toggle i {
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Specific Styles */
+.dark {
+  color-scheme: dark;
+}
+
+.dark .glass-card {
+  background: rgba(17, 24, 39, 0.8);
+  border-color: rgba(75, 85, 99, 0.3);
+}
+
+.dark .tech-card {
+  background: rgba(17, 24, 39, 0.8);
+  border-color: rgba(75, 85, 99, 0.3);
+}
+
+.dark .tech-card:hover {
+  background: rgba(17, 24, 39, 0.9);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Navigation Dark Mode */
+.dark nav {
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.dark .nav-link {
+  color: var(--secondary-300);
+}
+
+.dark .nav-link:hover {
+  color: var(--primary-400);
+}
+
+/* Background Gradients for Dark Mode */
+.dark body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 100%);
+}
+
+/* Dark Mode Background Elements */
+.dark .fixed.inset-0 .absolute.inset-0 {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.5) 50%, rgba(51, 65, 85, 0.3) 100%);
+}
+
+/* Dark Mode Floating Elements */
+.dark .absolute.top-1\/4 {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+}
+
+.dark .absolute.bottom-1\/4 {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+}
+
+.dark .absolute.top-3\/4 {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+}
+
+/* Text Colors in Dark Mode */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--secondary-100);
+}
+
+.dark p {
+  color: var(--secondary-300);
+}
+
+.dark .text-gray-800 {
+  color: var(--secondary-100) !important;
+}
+
+.dark .text-gray-600 {
+  color: var(--secondary-300) !important;
+}
+
+/* Button Dark Mode Adjustments */
+.dark .btn-secondary {
+  background: rgba(17, 24, 39, 0.8);
+  color: var(--primary-400);
+  border-color: rgba(75, 85, 99, 0.3);
+}
+
+.dark .btn-secondary:hover {
+  background: var(--primary-600);
+  color: white;
+}
+
+/* Form Elements Dark Mode */
+.dark input, .dark textarea, .dark select {
+  background: rgba(17, 24, 39, 0.8);
+  border-color: rgba(75, 85, 99, 0.3);
+  color: var(--secondary-100);
+}
+
+.dark input:focus, .dark textarea:focus, .dark select:focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Code Blocks Dark Mode */
+.dark pre {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.dark code {
+  background: rgba(15, 23, 42, 0.6);
+  color: var(--secondary-200);
+}
+
+/* Links Dark Mode */
+.dark a {
+  color: var(--primary-400);
+}
+
+.dark a:hover {
+  color: var(--primary-300);
+}
+
+/* Borders and Dividers Dark Mode */
+.dark .border-gray-200 {
+  border-color: rgba(75, 85, 99, 0.3) !important;
+}
+
+.dark .divide-gray-200 > * + * {
+  border-color: rgba(75, 85, 99, 0.3) !important;
+}
+
+/* Card Shadows Dark Mode */
+.dark .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.dark .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Theme Transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Animation */
+.theme-toggle .sun-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle .moon-icon {
+  opacity: 0;
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+  position: absolute;
+}
+
+.dark .theme-toggle .sun-icon {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.dark .theme-toggle .moon-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--primary-600);
+  }
+  
+  .dark .glass-card {
+    background: rgba(17, 24, 39, 0.95);
+    border: 2px solid var(--primary-400);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-float {
+    animation: none;
+  }
+  
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Focus Styles for Accessibility */
+.focus\:outline-none:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+.dark .focus\:outline-none:focus {
+  outline-color: var(--primary-400);
+}
+
+/* Print Styles */
+@media print {
+  .theme-toggle,
+  .fixed.inset-0,
+  .animate-float {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .glass-card {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+}

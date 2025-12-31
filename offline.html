@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Hugo Tech Blog</title>
+    <meta name="description" content="You are currently offline. Please check your internet connection.">
+    
+    <!-- Inline critical CSS for offline page -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .offline-container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .offline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.02) 50%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .offline-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+        
+        .offline-icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            opacity: 0.3;
+            animation: ripple 2s infinite;
+        }
+        
+        .offline-icon svg {
+            width: 60px;
+            height: 60px;
+            fill: white;
+            z-index: 1;
+        }
+        
+        .offline-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .offline-message {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+        
+        .offline-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .connection-status {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: blink 1.5s infinite;
+        }
+        
+        .status-offline {
+            background-color: #ef4444;
+        }
+        
+        .status-online {
+            background-color: #10b981;
+        }
+        
+        .cached-content {
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .cached-content h3 {
+            margin-bottom: 15px;
+            color: #a78bfa;
+        }
+        
+        .cached-list {
+            list-style: none;
+        }
+        
+        .cached-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .cached-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .cached-list a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .cached-list a:hover {
+            color: #93c5fd;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            51%, 100% {
+                opacity: 0.3;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .offline-container {
+                padding: 40px 20px;
+                margin: 20px;
+            }
+            
+            .offline-title {
+                font-size: 2rem;
+            }
+            
+            .offline-message {
+                font-size: 1rem;
+            }
+            
+            .offline-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM13 17h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+        </div>
+        
+        <h1 class="offline-title">You're Offline</h1>
+        
+        <p class="offline-message">
+            It looks like you've lost your internet connection. Don't worry, you can still browse some cached content or try reconnecting.
+        </p>
+        
+        <div class="offline-actions">
+            <button class="btn btn-primary" onclick="window.location.reload()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+                </svg>
+                Try Again
+            </button>
+            
+            <a href="/" class="btn btn-secondary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                Go Home
+            </a>
+        </div>
+        
+        <div class="connection-status">
+            <span class="status-indicator status-offline" id="statusIndicator"></span>
+            <span id="connectionStatus">Connection Status: Offline</span>
+        </div>
+        
+        <div class="cached-content" id="cachedContent" style="display: none;">
+            <h3>Available Offline Content</h3>
+            <ul class="cached-list" id="cachedList">
+                <!-- Cached pages will be populated here -->
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Check connection status
+        function updateConnectionStatus() {
+            const statusIndicator = document.getElementById('statusIndicator');
+            const connectionStatus = document.getElementById('connectionStatus');
+            
+            if (navigator.onLine) {
+                statusIndicator.className = 'status-indicator status-online';
+                connectionStatus.textContent = 'Connection Status: Online';
+                
+                // Auto-reload when back online
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1000);
+            } else {
+                statusIndicator.className = 'status-indicator status-offline';
+                connectionStatus.textContent = 'Connection Status: Offline';
+            }
+        }
+        
+        // Listen for connection changes
+        window.addEventListener('online', updateConnectionStatus);
+        window.addEventListener('offline', updateConnectionStatus);
+        
+        // Initial status check
+        updateConnectionStatus();
+        
+        // Load cached content if available
+        async function loadCachedContent() {
+            if ('caches' in window) {
+                try {
+                    const cacheNames = await caches.keys();
+                    const cachedUrls = new Set();
+                    
+                    for (const cacheName of cacheNames) {
+                        const cache = await caches.open(cacheName);
+                        const requests = await cache.keys();
+                        
+                        for (const request of requests) {
+                            const url = new URL(request.url);
+                            if (url.pathname !== '/offline.html' && 
+                                url.pathname !== '/sw.js' &&
+                                !url.pathname.startsWith('/css/') &&
+                                !url.pathname.startsWith('/js/')) {
+                                cachedUrls.add({
+                                    url: url.pathname,
+                                    title: url.pathname === '/' ? 'Home' : 
+                                           url.pathname.replace(/\//g, '').replace(/-/g, ' ')
+                                });
+                            }
+                        }
+                    }
+                    
+                    if (cachedUrls.size > 0) {
+                        const cachedContent = document.getElementById('cachedContent');
+                        const cachedList = document.getElementById('cachedList');
+                        
+                        cachedList.innerHTML = '';
+                        
+                        Array.from(cachedUrls).forEach(item => {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.href = item.url;
+                            a.textContent = item.title;
+                            li.appendChild(a);
+                            cachedList.appendChild(li);
+                        });
+                        
+                        cachedContent.style.display = 'block';
+                    }
+                } catch (error) {
+                    console.error('Failed to load cached content:', error);
+                }
+            }
+        }
+        
+        // Load cached content on page load
+        loadCachedContent();
+        
+        // Retry connection every 30 seconds
+        setInterval(() => {
+            if (!navigator.onLine) {
+                // Try to fetch a small resource to test connectivity
+                fetch('/favicon.ico', { 
+                    method: 'HEAD',
+                    cache: 'no-cache'
+                }).then(() => {
+                    // If successful, connection is back
+                    updateConnectionStatus();
+                }).catch(() => {
+                    // Still offline
+                });
+            }
+        }, 30000);
+        
+        // Add some visual feedback for user interactions
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('btn')) {
+                e.target.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    e.target.style.transform = '';
+                }, 150);
+            }
+        });
+        
+        // Keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.target.classList.contains('btn')) {
+                e.target.click();
+            }
+        });
+    </script>
+</body>
+</html>

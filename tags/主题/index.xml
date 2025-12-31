@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>主题 on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/%E4%B8%BB%E9%A2%98/</link><description>Recent content in 主题 on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 31 Dec 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/%E4%B8%BB%E9%A2%98/index.xml" rel="self" type="application/rss+xml"/><item><title>主题展示 - 暗黑模式与液态玻璃效果</title><link>https://www.dishuihengxin.com/posts/theme-showcase/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/theme-showcase/</guid><description>&lt;h1 id="现代化主题设计展示"&gt;现代化主题设计展示&lt;/h1&gt;
+&lt;p&gt;欢迎体验我们全新的博客主题！这个主题融合了最新的设计趋势，包括暗黑模式、液态玻璃效果（Glassmorphism）和流畅的动画效果。&lt;/p&gt;
+&lt;h2 id="-暗黑模式"&gt;🌙 暗黑模式&lt;/h2&gt;
+&lt;p&gt;点击导航栏中的主题切换按钮，即可在明亮模式和暗黑模式之间切换。主题会自动保存您的偏好设置。&lt;/p&gt;
+&lt;h3 id="特性"&gt;特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;自动检测系统主题偏好&lt;/li&gt;
+&lt;li&gt;平滑的主题切换动画&lt;/li&gt;
+&lt;li&gt;完整的暗黑模式适配&lt;/li&gt;
+&lt;li&gt;本地存储偏好设置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="-液态玻璃效果"&gt;🔮 液态玻璃效果&lt;/h2&gt;
+&lt;p&gt;我们的设计采用了流行的液态玻璃效果，为界面带来现代感和层次感。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+&lt;div class="tech-note"&gt;
+ 
+ &lt;div class="tech-note-title"&gt;
+ 
+ &lt;span&gt;💡&lt;/span&gt;
+ 
+ 
+ 
+ &lt;span&gt;设计亮点&lt;/span&gt;
+ 
+ &lt;/div&gt;
+ 
+ 
+ &lt;div class="tech-note-content"&gt;
+ 液态玻璃效果通过半透明背景、模糊滤镜和精致的边框，创造出漂浮在背景之上的视觉效果。
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id="应用场景"&gt;应用场景&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;导航栏&lt;/li&gt;
+&lt;li&gt;卡片组件&lt;/li&gt;
+&lt;li&gt;侧边栏&lt;/li&gt;
+&lt;li&gt;按钮元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="-动画效果"&gt;✨ 动画效果&lt;/h2&gt;
+&lt;p&gt;主题包含多种精心设计的动画效果：&lt;/p&gt;
+&lt;h3 id="悬停效果"&gt;悬停效果&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;卡片悬停时的 3D 变换&lt;/li&gt;
+&lt;li&gt;按钮的涟漪效果&lt;/li&gt;
+&lt;li&gt;平滑的颜色过渡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="加载动画"&gt;加载动画&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;页面切换动画&lt;/li&gt;
+&lt;li&gt;内容加载效果&lt;/li&gt;
+&lt;li&gt;滚动视差效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="-视觉元素"&gt;🎨 视觉元素&lt;/h2&gt;
+&lt;h3 id="渐变文字"&gt;渐变文字&lt;/h3&gt;
+&lt;p&gt;使用 CSS 渐变创建动态的文字效果，让标题更加引人注目。&lt;/p&gt;
+&lt;h3 id="霓虹发光"&gt;霓虹发光&lt;/h3&gt;
+&lt;p&gt;特殊的霓虹发光效果，为重要元素增加视觉焦点。&lt;/p&gt;
+&lt;h3 id="流体背景"&gt;流体背景&lt;/h3&gt;
+&lt;p&gt;动态的流体背景动画，增加页面的活力。&lt;/p&gt;
+&lt;h2 id="-响应式设计"&gt;📱 响应式设计&lt;/h2&gt;
+&lt;p&gt;主题完全响应式，在各种设备上都能提供最佳体验：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;桌面端&lt;/strong&gt;: 完整功能和视觉效果&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;平板端&lt;/strong&gt;: 优化的布局和交互&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;移动端&lt;/strong&gt;: 简化的界面和触摸优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Note&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;VAR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in 2..8&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;hello kalid&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; docker ps
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="-技术实现"&gt;🛠️ 技术实现&lt;/h2&gt;
+&lt;h3 id="css-变量系统"&gt;CSS 变量系统&lt;/h3&gt;
+&lt;p&gt;使用 CSS 自定义属性实现主题切换：&lt;/p&gt;</description></item></channel></rss>

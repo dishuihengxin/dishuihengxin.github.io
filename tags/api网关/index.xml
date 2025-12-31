@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>API网关 on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/api%E7%BD%91%E5%85%B3/</link><description>Recent content in API网关 on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 31 Dec 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/api%E7%BD%91%E5%85%B3/index.xml" rel="self" type="application/rss+xml"/><item><title>微服务架构在云环境中的设计模式：构建可扩展、弹性的分布式系统</title><link>https://www.dishuihengxin.com/posts/microservices-cloud-architecture/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/microservices-cloud-architecture/</guid><description>&lt;h2 id="目录"&gt;目录&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#%e5%be%ae%e6%9c%8d%e5%8a%a1%e6%9e%b6%e6%9e%84%e6%a6%82%e8%bf%b0"&gt;微服务架构概述&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#%e6%9c%8d%e5%8a%a1%e6%8b%86%e5%88%86%e4%b8%8e%e8%ae%be%e8%ae%a1%e5%8e%9f%e5%88%99"&gt;服务拆分与设计原则&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#%e6%9c%8d%e5%8a%a1%e9%80%9a%e4%bf%a1%e6%a8%a1%e5%bc%8f"&gt;服务通信模式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#%e6%95%b0%e6%8d%ae%e7%ae%a1%e7%90%86%e7%ad%96%e7%95%a5"&gt;数据管理策略&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#%e6%9c%8d%e5%8a%a1%e5%8f%91%e7%8e%b0%e4%b8%8e%e6%b3%a8%e5%86%8c"&gt;服务发现与注册&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#api%e7%bd%91%e5%85%b3%e8%ae%be%e8%ae%a1"&gt;API网关设计&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#%e6%9c%8d%e5%8a%a1%e7%bd%91%e6%a0%bc%e6%9e%b6%e6%9e%84"&gt;服务网格架构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#%e7%9b%91%e6%8e%a7%e4%b8%8e%e5%8f%af%e8%a7%82%e6%b5%8b%e6%80%a7"&gt;监控与可观测性&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#%e9%83%a8%e7%bd%b2%e4%b8%8e%e8%bf%90%e7%bb%b4"&gt;部署与运维&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dishuihengxin.com/posts/microservices-cloud-architecture/#%e6%80%bb%e7%bb%93"&gt;总结&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="微服务架构概述"&gt;微服务架构概述&lt;/h2&gt;
+&lt;p&gt;微服务架构是一种将单一应用程序开发为一套小型服务的方法，每个服务运行在自己的进程中，并使用轻量级机制（通常是HTTP API）进行通信。&lt;/p&gt;
+&lt;h3 id="微服务架构图"&gt;微服务架构图&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-mermaid" data-lang="mermaid"&gt;graph TB
+ subgraph &amp;#34;客户端层&amp;#34;
+ Web[Web应用]
+ Mobile[移动应用]
+ API[第三方API]
+ end
+ 
+ subgraph &amp;#34;API网关层&amp;#34;
+ Gateway[API网关]
+ LB[负载均衡器]
+ end
+ 
+ subgraph &amp;#34;微服务层&amp;#34;
+ UserService[用户服务]
+ OrderService[订单服务]
+ PaymentService[支付服务]
+ ProductService[商品服务]
+ NotificationService[通知服务]
+ end
+ 
+ subgraph &amp;#34;数据层&amp;#34;
+ UserDB[(用户数据库)]
+ OrderDB[(订单数据库)]
+ PaymentDB[(支付数据库)]
+ ProductDB[(商品数据库)]
+ Cache[(缓存层)]
+ end
+ 
+ subgraph &amp;#34;基础设施层&amp;#34;
+ ServiceRegistry[服务注册中心]
+ ConfigCenter[配置中心]
+ MessageQueue[消息队列]
+ Monitoring[监控系统]
+ end
+ 
+ Web --&amp;gt; Gateway
+ Mobile --&amp;gt; Gateway
+ API --&amp;gt; Gateway
+ 
+ Gateway --&amp;gt; LB
+ LB --&amp;gt; UserService
+ LB --&amp;gt; OrderService
+ LB --&amp;gt; PaymentService
+ LB --&amp;gt; ProductService
+ LB --&amp;gt; NotificationService
+ 
+ UserService --&amp;gt; UserDB
+ OrderService --&amp;gt; OrderDB
+ PaymentService --&amp;gt; PaymentDB
+ ProductService --&amp;gt; ProductDB
+ 
+ UserService --&amp;gt; Cache
+ OrderService --&amp;gt; Cache
+ ProductService --&amp;gt; Cache
+ 
+ UserService --&amp;gt; ServiceRegistry
+ OrderService --&amp;gt; ServiceRegistry
+ PaymentService --&amp;gt; ServiceRegistry
+ ProductService --&amp;gt; ServiceRegistry
+ NotificationService --&amp;gt; ServiceRegistry
+ 
+ OrderService --&amp;gt; MessageQueue
+ PaymentService --&amp;gt; MessageQueue
+ NotificationService --&amp;gt; MessageQueue
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="微服务架构优势"&gt;微服务架构优势&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;技术多样性&lt;/strong&gt;：每个服务可以使用最适合的技术栈&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;独立部署&lt;/strong&gt;：服务可以独立开发、测试和部署&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;故障隔离&lt;/strong&gt;：单个服务的故障不会影响整个系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;团队自治&lt;/strong&gt;：小团队可以独立负责特定服务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可扩展性&lt;/strong&gt;：可以根据需求独立扩展特定服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="服务拆分与设计原则"&gt;服务拆分与设计原则&lt;/h2&gt;
+&lt;p&gt;合理的服务拆分是微服务架构成功的关键。&lt;/p&gt;</description></item></channel></rss>

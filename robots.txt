@@ -1,4 +1,26 @@
-# robots.txt for www.dishuihengxin.com
-# date: 2018-08-31 14:42:26
 User-agent: *
+
 Allow: /
+
+
+# Sitemap
+Sitemap: https://www.dishuihengxin.com//sitemap.xml
+
+# Disallow specific paths
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /search/
+Disallow: /404.html
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (optional)
+Crawl-delay: 1

@@ -1,0 +1,2275 @@
+<!DOCTYPE html>
+<html lang="zh" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <title>数据仓库 | 滴水恒心</title>
+    
+
+
+<meta name="description" content="专注于技术分享的现代化博客">
+<meta name="keywords" content="technology, programming, web development, hugo, 技术, 编程, 网站开发">
+<meta name="author" content="博主">
+
+
+<meta property="og:title" content="数据仓库">
+<meta property="og:description" content="专注于技术分享的现代化博客">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.dishuihengxin.com/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">
+<meta property="og:site_name" content="滴水恒心">
+<meta property="og:locale" content="zh">
+
+
+
+
+    
+
+
+
+<meta property="og:image" content="https://www.dishuihengxin.com/images/og-default.jpg">
+<meta property="og:image:alt" content="数据仓库">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="数据仓库">
+<meta name="twitter:description" content="专注于技术分享的现代化博客">
+
+
+<meta name="twitter:image" content="https://www.dishuihengxin.com/images/og-default.jpg">
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "数据仓库",
+  "headline": "数据仓库",
+  "description": "专注于技术分享的现代化博客",
+  "url": "https:\/\/www.dishuihengxin.com\/tags\/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93\/",
+  
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https:\/\/www.dishuihengxin.com\//search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/www.dishuihengxin.com\/tags\/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93\/"
+  }
+}
+</script>
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https:\/\/www.dishuihengxin.com\/"
+    }
+    
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tags",
+      "item": "https:\/\/www.dishuihengxin.com\//tags/"
+    }
+    
+    
+  ]
+}
+</script>
+
+
+
+<link rel="canonical" href="https://www.dishuihengxin.com/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">
+
+
+
+<link rel="alternate" type="application/rss+xml" title="滴水恒心" href="https://www.dishuihengxin.com/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/index.xml">
+
+
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<meta name="theme-color" content="#3B82F6">
+<meta name="msapplication-TileColor" content="#3B82F6">
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
+
+    
+    
+    <link rel="alternate" hreflang="zh" href="https://www.dishuihengxin.com/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://www.dishuihengxin.com/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">
+
+    
+    <link rel="icon" type="image/x-icon" href="/%20favicon.ico">
+
+    
+    <link rel="manifest" href="/%20manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="滴水恒心">
+    <link rel="apple-touch-icon" href="/%20icons/icon-192x192.png">
+
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="滴水恒心" href="https://www.dishuihengxin.com/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/index.xml">
+    
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+
+    
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f4ff',
+                            500: '#667eea',
+                            600: '#5a67d8',
+                            700: '#4c51bf'
+                        }
+                    },
+                    animation: {
+                        'gradient-shift': 'gradient-shift 3s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'circuit-flow': 'circuit-flow 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        'gradient-shift': {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' }
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '33%': { transform: 'translateY(-10px)' },
+                            '66%': { transform: 'translateY(-5px)' }
+                        },
+                        'circuit-flow': {
+                            '0%': { opacity: '0.3' },
+                            '50%': { opacity: '0.8' },
+                            '100%': { opacity: '0.3' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <style>
+         
+        [x-cloak] {
+            display: none !important;
+        }
+
+         
+        .tech-hero-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-size: 200% 200%;
+            animation: gradient-shift 3s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .tech-expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+         
+        .bg-gradient-to-r.bg-clip-text.text-transparent {
+            background-size: 200% 200% !important;
+            animation: gradient-shift 3s ease infinite !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-clip: text !important;
+        }
+
+         
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+         
+        @keyframes gradient-shift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+         
+        .gradient-text-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%) !important;
+            background-size: 200% 200% !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-clip: text !important;
+            animation: gradientShift 4s ease infinite !important;
+        }
+
+         
+        @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+            .gradient-text-primary {
+                color: #3b82f6 !important;
+                -webkit-text-fill-color: initial !important;
+            }
+        }
+
+        .expertise-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .hero-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            overflow: hidden;
+        }
+
+        .dark .hero-container {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background-image:
+                radial-gradient(circle at 20% 50%, #667eea 2px, transparent 2px),
+                radial-gradient(circle at 80% 50%, #764ba2 2px, transparent 2px);
+            background-size: 50px 50px;
+            animation: circuit-flow 3s ease-in-out infinite;
+        }
+
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(2) {
+            animation-delay: -2s;
+        }
+
+        .floating-element:nth-child(3) {
+            animation-delay: -4s;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .heading-hero {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+            border-radius: 0.75rem;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .dark .expertise-card {
+            background: rgba(17, 24, 39, 0.8);
+            border-color: rgba(75, 85, 99, 0.3);
+        }
+
+         
+        .theme-toggle {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .theme-toggle:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+    </style>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    
+    <script>
+        
+        setTimeout(function () {
+            if (typeof Alpine === 'undefined') {
+                console.warn('Alpine.js failed to load, removing x-cloak attributes');
+                document.querySelectorAll('[x-cloak]').forEach(function (el) {
+                    el.removeAttribute('x-cloak');
+                });
+            }
+        }, 3000);
+
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                if (typeof Alpine !== 'undefined' && Alpine.version) {
+                    console.log('Alpine.js loaded successfully:', Alpine.version);
+                } else {
+                    console.warn('Alpine.js not detected, removing x-cloak attributes');
+                    document.querySelectorAll('[x-cloak]').forEach(function (el) {
+                        el.removeAttribute('x-cloak');
+                    });
+                }
+            }, 1000);
+        });
+    </script>
+
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/main.min.e4e930a9694f1bef5d88b9cb8df7448d557069bd1b883f9752972f749f3b7817.css" 
+        integrity="sha256-5OkwqWlPG&#43;9diLnLjfdEjVVwab0biD&#43;XUpcvdJ87eBc=" crossorigin="anonymous" >
+    
+
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/code.min.d8113910e55a8bf3c2b00bff6664d767b1326c723f610ffdbb17db29b550c869.css" 
+        integrity="sha256-2BE5EOVai/PCsAv/ZmTXZ7EybHI/YQ/9uxfbKbVQyGk=" crossorigin="anonymous" >
+    
+
+
+
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/article-content.min.1e7243d4c68581aed5ac49dbf65270186efd57f979274513bfe8e9b07aca9106.css" 
+        integrity="sha256-HnJD1MaFga7VrEnb9lJwGG79V/l5J0UTv&#43;jpsHrKkQY=" crossorigin="anonymous" >
+    
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/code.min.e908b2b60c4f45e49eac078432e3caeb2f68cd90bacf6655e1e2daeb7c033a61.js"  integrity="sha256-6QiytgxPReSerAeEMuPK6y9ozZC6z2ZV4eLa63wDOmE="
+        crossorigin="anonymous"  defer></script>
+    
+
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/theme.min.dd2785de1340fb42994644dc99d93edb890756750d7144ab9b7aadaacbb01150.css" 
+        integrity="sha256-3SeF3hNA&#43;0KZRkTcmdk&#43;24kHVnUNcUSrm3qtqsuwEVA=" crossorigin="anonymous" >
+    
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/responsive.min.f144a503e14c68cbc38822196c7658af9ab370ed84cae94de772479879f32f16.css" 
+        integrity="sha256-8USlA&#43;FMaMvDiCIZbHZYr5qzcO2EyulN53JHmHnzLxY=" crossorigin="anonymous" >
+    
+
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/view-toggle.min.1a3ade9d6e3626af96631334fe0e34633672c976cdac345380fe83b1cf365d03.css" 
+        integrity="sha256-GjrenW42Jq&#43;WYxM0/g40YzZyyXbNrDRTgP6Dsc82XQM=" crossorigin="anonymous" >
+    
+
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/hero-effects.min.cae12dabb387339d39793c685980b23d5568e5a2bad8336dcfacc86a4c84147b.css" 
+        integrity="sha256-yuEtq7OHM505eTxoWYCyPVVo5aK62DNtz6zIakyEFHs=" crossorigin="anonymous" >
+    
+
+</head>
+
+<body class="font-sans antialiased transition-all duration-500 overflow-x-hidden body-gradient-light">
+
+    
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-pink-50/50 dark:from-gray-900/90 dark:via-blue-900/50 dark:to-purple-900/30">
+        </div>
+        <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-3xl animate-float">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-full blur-3xl animate-pulse">
+        </div>
+        <div
+            class="absolute top-3/4 left-1/2 w-64 h-64 bg-gradient-to-r from-cyan-400/15 to-blue-500/15 rounded-full blur-2xl animate-float animation-delay-2000">
+        </div>
+    </div>
+
+    
+    <div class="relative z-50">
+        
+<section x-data="{ 
+            showNotification: false,
+            notificationVersion: '2024-01-20', // Update this when notification content changes
+            dismissDuration: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
+            
+            init() {
+                this.checkNotificationStatus();
+            },
+            
+            checkNotificationStatus() {
+                const dismissedData = localStorage.getItem('notification-dismissed');
+                
+                if (!dismissedData) {
+                    // Never dismissed, show notification
+                    this.showNotification = true;
+                    return;
+                }
+                
+                try {
+                    const data = JSON.parse(dismissedData);
+                    const currentTime = Date.now();
+                    
+                    // Check if notification version has changed (new content)
+                    if (data.version !== this.notificationVersion) {
+                        this.showNotification = true;
+                        return;
+                    }
+                    
+                    // Check if enough time has passed since dismissal
+                    if (currentTime - data.timestamp > this.dismissDuration) {
+                        this.showNotification = true;
+                        return;
+                    }
+                    
+                    // Still within dismiss period
+                    this.showNotification = false;
+                } catch (e) {
+                    // Invalid data format, show notification
+                    this.showNotification = true;
+                }
+            },
+            
+            dismissNotification() {
+                this.showNotification = false;
+                const dismissData = {
+                    timestamp: Date.now(),
+                    version: this.notificationVersion
+                };
+                localStorage.setItem('notification-dismissed', JSON.stringify(dismissData));
+            }
+         }" 
+         x-show="showNotification" 
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0 transform -translate-y-full"
+         x-transition:enter-end="opacity-100 transform translate-y-0"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100 transform translate-y-0"
+         x-transition:leave-end="opacity-0 transform -translate-y-full"
+         x-cloak
+         class="fixed top-0 left-0 right-0 z-60 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+         id="notification-section"
+         role="banner"
+         aria-label="通知栏">
+    
+    <div class="w-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-2 overflow-hidden">
+        <div class="flex items-center justify-between gap-2">
+            
+            <div class="flex items-center gap-2 flex-1 min-w-0 overflow-hidden">
+                
+                <div class="flex-shrink-0">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path>
+                    </svg>
+                </div>
+                
+                
+                <div class="flex-1 min-w-0 overflow-hidden">
+                    <p class="text-xs sm:text-sm font-medium text-white truncate">
+                        
+                            🎉 欢迎访问我们的技术博客！获取最新的技术文章和开发资源
+                        
+                    </p>
+                </div>
+                
+                
+                <div class="hidden sm:block flex-shrink-0">
+                    <a href="/about" 
+                       class="inline-flex items-center px-2 sm:px-3 py-1 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-md text-xs sm:text-sm font-medium text-white transition-all duration-200 hover:scale-105 whitespace-nowrap">
+                        
+                            了解更多
+                        
+                        <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            
+            <div class="flex-shrink-0">
+                <button @click="dismissNotification()" 
+                        class="inline-flex items-center justify-center w-6 h-6 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-md transition-all duration-200 hover:scale-105"
+                        aria-label="关闭通知"
+                        title="关闭通知（24小时后重新显示）">
+                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    
+    
+</script>
+    </div>
+
+    
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 glass-card px-4 py-2 rounded-xl z-50 text-primary-600 dark:text-primary-400 font-medium">
+        跳转到主要内容
+    </a>
+
+    
+
+    
+    <div class="relative z-40">
+        <section class="fixed left-0 right-0 z-55 transition-all duration-500" 
+         x-data="{ 
+             mobileMenuOpen: false, 
+             searchOpen: false,
+             scrolled: false,
+             themeMenuOpen: false,
+             notificationVisible: false,
+             notificationVersion: '2024-01-20', // Must match notification-bar.html
+             dismissDuration: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
+             
+             checkNotificationStatus() {
+                 const dismissedData = localStorage.getItem('notification-dismissed');
+                 
+                 if (!dismissedData) {
+                     this.notificationVisible = true;
+                     return;
+                 }
+                 
+                 try {
+                     const data = JSON.parse(dismissedData);
+                     const currentTime = Date.now();
+                     
+                     // Check if notification version has changed
+                     if (data.version !== this.notificationVersion) {
+                         this.notificationVisible = true;
+                         return;
+                     }
+                     
+                     // Check if enough time has passed since dismissal
+                     if (currentTime - data.timestamp > this.dismissDuration) {
+                         this.notificationVisible = true;
+                         return;
+                     }
+                     
+                     this.notificationVisible = false;
+                 } catch (e) {
+                     this.notificationVisible = true;
+                 }
+             }
+         }"
+         x-init="
+             // Force search to be closed immediately
+             $nextTick(() => {
+                 searchOpen = false;
+             });
+             
+             // Check notification status on init
+             checkNotificationStatus();
+             
+             window.addEventListener('scroll', () => {
+                 scrolled = window.pageYOffset > 50;
+             });
+             
+             // Watch for notification bar changes
+             window.addEventListener('storage', () => {
+                 checkNotificationStatus();
+             });
+         "
+         :class="{
+             'glass-nav shadow-2xl shadow-primary-500/20 border-b border-white/20 dark:border-gray-700/30': scrolled,
+             'bg-transparent': !scrolled,
+             'top-11': notificationVisible,
+             'top-0': !notificationVisible
+         }"
+         role="navigation"
+         aria-label="主导航">
+    <nav>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            
+            <div class="flex items-center">
+                <a href="/" class="site-logo-container group flex items-center space-x-3">
+                    
+                    <div class="relative">
+                        <div class="w-12 h-12 flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                            <img src="/images/logo.png" 
+                                 alt="滴水恒心 Logo" 
+                                 class="w-10 h-10 object-contain"
+                                 loading="eager">
+                        </div>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="site-title">
+                            滴水恒心
+                        </span>
+                        <div class="site-subtitle">
+                            技术分享
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            
+            <div class="hidden md:flex items-center space-x-1 flex-1 justify-end mr-4">
+                
+                    
+                        
+                        <a href="/" 
+                           class="nav-menu-item  text-gray-700 dark:text-gray-300 text-base">
+                            <span class="relative z-10">首页</span>
+                        </a>
+                    
+                
+                    
+                        
+                        <a href="/posts/" 
+                           class="nav-menu-item  text-gray-700 dark:text-gray-300 text-base">
+                            <span class="relative z-10">博文</span>
+                        </a>
+                    
+                
+                    
+                        
+                        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                            <button class="nav-menu-item dropdown-trigger  text-gray-700 dark:text-gray-300 text-base flex items-center gap-1"
+                                    @click="open = !open">
+                                <span class="relative z-10">DBA</span>
+                                <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            
+                            
+                            <div x-show="open"
+                                 x-transition:enter="transition ease-out duration-200"
+                                 x-transition:enter-start="opacity-0 scale-95 translate-y-2"
+                                 x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                                 x-transition:leave="transition ease-in duration-150"
+                                 x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                                 x-transition:leave-end="opacity-0 scale-95 translate-y-2"
+                                 class="absolute left-0 mt-2 w-56 rounded-xl shadow-2xl backdrop-blur-xl bg-white/95 dark:bg-gray-800/95 border border-gray-200/50 dark:border-gray-700/50 overflow-hidden z-50"
+                                 style="display: none;">
+                                <div class="py-2">
+                                    
+                                        <a href="/tags/mysql/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🐬</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">MySQL</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">高可用架构 · 主从复制 · 性能调优</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/postgresql/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🐘</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">PostgreSQL</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">流复制 · 逻辑复制 · 查询优化</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/oracle/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🔴</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">Oracle</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">RAC · DataGuard · RMAN 备份</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/tuning/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">⚡</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">性能调优</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">SQL 优化 · 索引设计 · 执行计划</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/backup/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">💾</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">备份恢复</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">备份策略 · PITR · 灾难恢复</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+                    
+                        
+                        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                            <button class="nav-menu-item dropdown-trigger  text-gray-700 dark:text-gray-300 text-base flex items-center gap-1"
+                                    @click="open = !open">
+                                <span class="relative z-10">运维</span>
+                                <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            
+                            
+                            <div x-show="open"
+                                 x-transition:enter="transition ease-out duration-200"
+                                 x-transition:enter-start="opacity-0 scale-95 translate-y-2"
+                                 x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                                 x-transition:leave="transition ease-in duration-150"
+                                 x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                                 x-transition:leave-end="opacity-0 scale-95 translate-y-2"
+                                 class="absolute left-0 mt-2 w-56 rounded-xl shadow-2xl backdrop-blur-xl bg-white/95 dark:bg-gray-800/95 border border-gray-200/50 dark:border-gray-700/50 overflow-hidden z-50"
+                                 style="display: none;">
+                                <div class="py-2">
+                                    
+                                        <a href="/tags/linux/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🐧</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">Linux 运维</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">内核调优 · 系统管理 · Shell 脚本</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/monitoring/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">📊</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">监控体系</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Prometheus · Grafana · 告警规则</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/automation/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🤖</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">自动化运维</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Ansible · Terraform · IaC</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/network/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🌐</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">网络运维</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">TCP/IP · 负载均衡 · 网络排障</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/security/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🔒</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">安全加固</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">权限管理 · 防火墙 · 安全审计</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+                    
+                        
+                        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                            <button class="nav-menu-item dropdown-trigger  text-gray-700 dark:text-gray-300 text-base flex items-center gap-1"
+                                    @click="open = !open">
+                                <span class="relative z-10">云架构</span>
+                                <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            
+                            
+                            <div x-show="open"
+                                 x-transition:enter="transition ease-out duration-200"
+                                 x-transition:enter-start="opacity-0 scale-95 translate-y-2"
+                                 x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                                 x-transition:leave="transition ease-in duration-150"
+                                 x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                                 x-transition:leave-end="opacity-0 scale-95 translate-y-2"
+                                 class="absolute left-0 mt-2 w-56 rounded-xl shadow-2xl backdrop-blur-xl bg-white/95 dark:bg-gray-800/95 border border-gray-200/50 dark:border-gray-700/50 overflow-hidden z-50"
+                                 style="display: none;">
+                                <div class="py-2">
+                                    
+                                        <a href="/tags/aws/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">☁️</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">AWS</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">EC2 · RDS · S3 · Lambda</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/azure/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🌐</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">Azure</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">VM · SQL Database · Blob Storage</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/aliyun/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">☁️</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">阿里云</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">ECS · RDS · OSS · 函数计算</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/architecture/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🏗️</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">架构设计</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">微服务 · 高可用 · 弹性伸缩</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/cloud-native/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🚀</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">云原生</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Serverless · Service Mesh · 云原生应用</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+                    
+                        
+                        <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                            <button class="nav-menu-item dropdown-trigger  text-gray-700 dark:text-gray-300 text-base flex items-center gap-1"
+                                    @click="open = !open">
+                                <span class="relative z-10">DevOps</span>
+                                <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            
+                            
+                            <div x-show="open"
+                                 x-transition:enter="transition ease-out duration-200"
+                                 x-transition:enter-start="opacity-0 scale-95 translate-y-2"
+                                 x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                                 x-transition:leave="transition ease-in duration-150"
+                                 x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                                 x-transition:leave-end="opacity-0 scale-95 translate-y-2"
+                                 class="absolute left-0 mt-2 w-56 rounded-xl shadow-2xl backdrop-blur-xl bg-white/95 dark:bg-gray-800/95 border border-gray-200/50 dark:border-gray-700/50 overflow-hidden z-50"
+                                 style="display: none;">
+                                <div class="py-2">
+                                    
+                                        <a href="/tags/cicd/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🔄</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">CI/CD</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Jenkins · GitLab CI · GitHub Actions</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/docker/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🐳</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">Docker</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">镜像构建 · 容器编排 · 最佳实践</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/kubernetes/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">☸️</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">Kubernetes</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Pod · Service · Ingress · Helm</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/gitops/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">🔀</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">GitOps</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">ArgoCD · Flux · 声明式部署</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                        <a href="/tags/observability/" 
+                                           class="dropdown-item block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 dark:hover:from-indigo-900/30 dark:hover:to-purple-900/30 transition-all duration-200 ">
+                                            <div class="flex items-center gap-3">
+                                                
+                                                    <span class="text-lg">👁️</span>
+                                                
+                                                <div>
+                                                    <div class="font-medium">可观测性</div>
+                                                    
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">日志 · 指标 · 链路追踪</div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+                    
+                        
+                        <a href="/about/" 
+                           class="nav-menu-item  text-gray-700 dark:text-gray-300 text-base">
+                            <span class="relative z-10">关于</span>
+                        </a>
+                    
+                
+            </div>
+            
+            
+            <div class="flex items-center space-x-3">
+                
+                <button @click="toggleTheme()" 
+                         @keydown.enter="toggleTheme()"
+                         @keydown.space.prevent="toggleTheme()"
+                         class="nav-action-btn group focus:outline-none"
+                         data-toggle="dark-mode"
+                         type="button"
+                         role="switch"
+                         :aria-checked="document.documentElement.classList.contains('dark') ? 'true' : 'false'"
+                         aria-label="切换主题"
+                         :aria-describedby="document.documentElement.classList.contains('dark') ? 'theme-dark' : 'theme-light'">
+                    <svg class="text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+                
+                
+                <a href="/search/" 
+                   class="nav-action-btn group focus:outline-none"
+                   aria-label="搜索">
+                    <svg class="text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </a>
+                
+                
+                
+                
+                    
+                
+                    
+                    
+                    
+                    
+                    
+                        
+                        
+                            
+                        
+                    
+                    
+                    <a href="/en/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" 
+                       hreflang="en"
+                       class="lang-switcher flex items-center space-x-2 text-gray-600 dark:text-gray-400 group"
+                       aria-label="Switch to English">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                        </svg>
+                        <span>EN</span>
+                    </a>
+                    
+                
+                
+                
+                
+                <button @click="mobileMenuOpen = !mobileMenuOpen" 
+                         @keydown.enter="mobileMenuOpen = !mobileMenuOpen"
+                         @keydown.space.prevent="mobileMenuOpen = !mobileMenuOpen"
+                         class="mobile-menu-toggle md:hidden p-2 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                         type="button"
+                         :aria-label="mobileMenuOpen ? '关闭菜单' : '打开菜单'"
+                         :aria-expanded="mobileMenuOpen ? 'true' : 'false'"
+                         aria-controls="mobile-menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        
+        <div x-show="mobileMenuOpen" 
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="transform opacity-0 scale-95 translate-y-2"
+             x-transition:enter-end="transform opacity-100 scale-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="transform opacity-100 scale-100 translate-y-0"
+             x-transition:leave-end="transform opacity-0 scale-95 translate-y-2"
+             id="mobile-menu"
+             class="mobile-menu-container md:hidden"
+             role="menu"
+             aria-label="移动端导航菜单">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                
+                    
+                        
+                        <a href="/" 
+                           class="mobile-nav-item block text-gray-700 dark:text-gray-300 ">
+                            首页
+                        </a>
+                    
+                
+                    
+                        
+                        <a href="/posts/" 
+                           class="mobile-nav-item block text-gray-700 dark:text-gray-300 ">
+                            博文
+                        </a>
+                    
+                
+                    
+                        
+                        <div x-data="{ mobileSubOpen: false }" class="space-y-1">
+                            <button @click="mobileSubOpen = !mobileSubOpen"
+                                    class="mobile-nav-item w-full flex items-center justify-between text-gray-700 dark:text-gray-300 ">
+                                <span>DBA</span>
+                                <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': mobileSubOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="mobileSubOpen" 
+                                 x-transition:enter="transition ease-out duration-200"
+                                 x-transition:enter-start="opacity-0 -translate-y-1"
+                                 x-transition:enter-end="opacity-100 translate-y-0"
+                                 class="pl-4 space-y-1"
+                                 style="display: none;">
+                                
+                                    <a href="/tags/mysql/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🐬</span>MySQL
+                                    </a>
+                                
+                                    <a href="/tags/postgresql/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🐘</span>PostgreSQL
+                                    </a>
+                                
+                                    <a href="/tags/oracle/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🔴</span>Oracle
+                                    </a>
+                                
+                                    <a href="/tags/tuning/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">⚡</span>性能调优
+                                    </a>
+                                
+                                    <a href="/tags/backup/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">💾</span>备份恢复
+                                    </a>
+                                
+                            </div>
+                        </div>
+                    
+                
+                    
+                        
+                        <div x-data="{ mobileSubOpen: false }" class="space-y-1">
+                            <button @click="mobileSubOpen = !mobileSubOpen"
+                                    class="mobile-nav-item w-full flex items-center justify-between text-gray-700 dark:text-gray-300 ">
+                                <span>运维</span>
+                                <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': mobileSubOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="mobileSubOpen" 
+                                 x-transition:enter="transition ease-out duration-200"
+                                 x-transition:enter-start="opacity-0 -translate-y-1"
+                                 x-transition:enter-end="opacity-100 translate-y-0"
+                                 class="pl-4 space-y-1"
+                                 style="display: none;">
+                                
+                                    <a href="/tags/linux/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🐧</span>Linux 运维
+                                    </a>
+                                
+                                    <a href="/tags/monitoring/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">📊</span>监控体系
+                                    </a>
+                                
+                                    <a href="/tags/automation/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🤖</span>自动化运维
+                                    </a>
+                                
+                                    <a href="/tags/network/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🌐</span>网络运维
+                                    </a>
+                                
+                                    <a href="/tags/security/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🔒</span>安全加固
+                                    </a>
+                                
+                            </div>
+                        </div>
+                    
+                
+                    
+                        
+                        <div x-data="{ mobileSubOpen: false }" class="space-y-1">
+                            <button @click="mobileSubOpen = !mobileSubOpen"
+                                    class="mobile-nav-item w-full flex items-center justify-between text-gray-700 dark:text-gray-300 ">
+                                <span>云架构</span>
+                                <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': mobileSubOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="mobileSubOpen" 
+                                 x-transition:enter="transition ease-out duration-200"
+                                 x-transition:enter-start="opacity-0 -translate-y-1"
+                                 x-transition:enter-end="opacity-100 translate-y-0"
+                                 class="pl-4 space-y-1"
+                                 style="display: none;">
+                                
+                                    <a href="/tags/aws/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">☁️</span>AWS
+                                    </a>
+                                
+                                    <a href="/tags/azure/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🌐</span>Azure
+                                    </a>
+                                
+                                    <a href="/tags/aliyun/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">☁️</span>阿里云
+                                    </a>
+                                
+                                    <a href="/tags/architecture/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🏗️</span>架构设计
+                                    </a>
+                                
+                                    <a href="/tags/cloud-native/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🚀</span>云原生
+                                    </a>
+                                
+                            </div>
+                        </div>
+                    
+                
+                    
+                        
+                        <div x-data="{ mobileSubOpen: false }" class="space-y-1">
+                            <button @click="mobileSubOpen = !mobileSubOpen"
+                                    class="mobile-nav-item w-full flex items-center justify-between text-gray-700 dark:text-gray-300 ">
+                                <span>DevOps</span>
+                                <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': mobileSubOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="mobileSubOpen" 
+                                 x-transition:enter="transition ease-out duration-200"
+                                 x-transition:enter-start="opacity-0 -translate-y-1"
+                                 x-transition:enter-end="opacity-100 translate-y-0"
+                                 class="pl-4 space-y-1"
+                                 style="display: none;">
+                                
+                                    <a href="/tags/cicd/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🔄</span>CI/CD
+                                    </a>
+                                
+                                    <a href="/tags/docker/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🐳</span>Docker
+                                    </a>
+                                
+                                    <a href="/tags/kubernetes/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">☸️</span>Kubernetes
+                                    </a>
+                                
+                                    <a href="/tags/gitops/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">🔀</span>GitOps
+                                    </a>
+                                
+                                    <a href="/tags/observability/" 
+                                       class="mobile-nav-subitem block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors ">
+                                        <span class="mr-2">👁️</span>可观测性
+                                    </a>
+                                
+                            </div>
+                        </div>
+                    
+                
+                    
+                        
+                        <a href="/about/" 
+                           class="mobile-nav-item block text-gray-700 dark:text-gray-300 ">
+                            关于
+                        </a>
+                    
+                
+            </div>
+        </div>
+    </div>
+    
+
+    </nav>
+</section>
+
+
+<script>
+
+function toggleTheme() {
+    if (window.themeManager) {
+        window.themeManager.toggleTheme();
+    } else {
+        
+        const html = document.documentElement;
+        const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        if (newTheme === 'dark') {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    }
+}
+
+
+function updateThemeIcon(theme) {
+    const button = document.querySelector('[data-toggle="dark-mode"]');
+    if (button) {
+        const svg = button.querySelector('svg path');
+        if (svg) {
+            if (theme === 'dark') {
+                
+                svg.setAttribute('d', 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z');
+            } else {
+                
+                svg.setAttribute('d', 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z');
+            }
+        }
+    }
+}
+
+
+document.addEventListener('alpine:init', () => {
+    Alpine.data('nav', () => ({
+        init() {
+            
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+
+            
+            if (window.location.pathname.includes('/search')) {
+                window['searchManager'] = new SearchManager();
+            }
+        }
+    }));
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    setTimeout(() => {
+        if (!window.themeManager) {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            
+            const html = document.documentElement;
+            if (theme === 'dark') {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+            
+            updateThemeIcon(theme);
+        }
+    }, 100);
+    
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+    </div>
+
+    
+    <main id="main-content" class="relative z-10 min-h-screen transition-all duration-500"
+        x-data="{ notificationVisible: !localStorage.getItem('notification-dismissed') }" x-init="
+              window.addEventListener('storage', () => {
+                  notificationVisible = !localStorage.getItem('notification-dismissed');
+              });
+          " :class="{
+              'pt-28': notificationVisible,
+              'pt-16': !notificationVisible
+          }">
+        
+<div
+    class="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-rose-100 dark:from-gray-900 dark:via-purple-900 dark:to-pink-900">
+    
+    <div
+        class="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 text-white py-16 mb-8">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-pattern-dots text-white"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-6">
+            
+            <nav class="flex items-center space-x-2 text-sm text-white/80 mb-6">
+                <a href="/" class="hover:text-white transition-colors duration-200">
+                    首页
+                </a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <a href="/tags/" class="hover:text-white transition-colors duration-200">
+                    标签
+                </a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="text-white">数据仓库</span>
+            </nav>
+
+            <div class="text-center">
+                <h1
+                    class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 flex items-center justify-center gap-4 text-white-force">
+                    <svg class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    数据仓库
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90">
+                    
+                    1 篇文章
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="max-w-7xl mx-auto px-6 pb-12">
+        
+        
+        <div id="articles-container" class="w-full max-w-full overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            
+            <article
+                class="article-card bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl shadow-lg hover:shadow-2xl hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 overflow-hidden group border border-gray-100 dark:border-gray-700/50 flex flex-col">
+                
+                
+                <div class="relative h-48 overflow-hidden flex-shrink-0">
+                    <img src="https://picsum.photos/seed/bigdata/800/450" alt="云数据架构：大数据与AI平台设计"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+                    
+                    
+                    <div
+                        class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-purple-800 px-3 py-1 rounded-full text-sm font-medium flex items-center">
+                        <svg class="w-3.5 h-3.5 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+                        </svg>
+                        云计算
+                    </div>
+                    
+
+                    
+                    <div
+                        class="absolute top-4 right-4 bg-purple-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                        38 分钟
+                    </div>
+                </div>
+                
+
+                <div class="p-6 flex flex-col flex-grow">
+                    
+                    <h2
+                        class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-200 line-clamp-2">
+                        <a href="/posts/cloud-data-architecture-big-data-ai-platform/" class="block">
+                            云数据架构：大数据与AI平台设计
+                        </a>
+                    </h2>
+
+                    
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 text-sm line-clamp-2">
+                        
+                        深入探讨云环境下大数据与AI平台的架构设计，包括数据湖、数据仓库、实时处理、机器学习平台等核心组件的设计与实现。
+                        
+                    </p>
+
+                    
+                    <div class="flex items-center justify-between gap-3 mt-auto">
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <svg class="w-4 h-4 mr-1.5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <time datetime="2025-12-31">
+                                2025-12-31
+                            </time>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 justify-end">
+                            
+                            
+                            
+                            <span
+                                class="inline-flex items-center px-2 py-0.5 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full">
+                                <svg class="w-3 h-3 mr-1 text-purple-600 dark:text-purple-400" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                云架构
+                            </span>
+                            
+                            
+                            
+                            
+                            <span
+                                class="inline-flex items-center px-2 py-0.5 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded-full">
+                                <svg class="w-3 h-3 mr-1 text-purple-600 dark:text-purple-400" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                大数据
+                            </span>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+
+        
+        
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const articles = document.querySelectorAll('.article-card');
+
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        
+        articles.forEach(article => {
+            article.style.opacity = '0';
+            article.style.transform = 'translateY(20px)';
+            article.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(article);
+        });
+    });
+</script>
+
+
+
+    </main>
+
+    
+    <div class="relative z-20">
+        <section role="contentinfo" aria-label="Site Footer" class="bg-gray-900 text-gray-300">
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <img src="/images/logo.png" alt="滴水恒心 Logo"
+                        class="w-10 h-10 object-contain">
+                    <span class="text-xl font-bold text-white">滴水恒心</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    
+                    专注于技术分享与交流，致力于帮助开发者成长。分享最新技术趋势、实战经验和开发技巧。
+                    
+                </p>
+
+                
+                <div class="flex flex-wrap gap-3">
+                    <a href="#ZgotmplZ" target="_blank"
+                        rel="noopener noreferrer"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all duration-200"
+                        aria-label="GitHub">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="#ZgotmplZ" target="_blank"
+                        rel="noopener noreferrer"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all duration-200"
+                        aria-label="Twitter">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                        </svg>
+                    </a>
+                    <a href="#ZgotmplZ" target="_blank"
+                        rel="noopener noreferrer"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all duration-200"
+                        aria-label="LinkedIn">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:%20contact@example.com"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all duration-200"
+                        aria-label="Email">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div>
+                <h3 class="text-white font-semibold mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    快速链接
+                </h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="/categories/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm flex items-center group">
+                            <svg class="w-4 h-4 mr-2 text-gray-500 group-hover:text-blue-400 transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                                </path>
+                            </svg>
+                            分类
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tags/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm flex items-center group">
+                            <svg class="w-4 h-4 mr-2 text-gray-500 group-hover:text-blue-400 transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+                                </path>
+                            </svg>
+                            标签
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/archive/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm flex items-center group">
+                            <svg class="w-4 h-4 mr-2 text-gray-500 group-hover:text-blue-400 transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4">
+                                </path>
+                            </svg>
+                            归档
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/about/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm flex items-center group">
+                            <svg class="w-4 h-4 mr-2 text-gray-500 group-hover:text-blue-400 transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            关于
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/changelog/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm flex items-center group">
+                            <svg class="w-4 h-4 mr-2 text-gray-500 group-hover:text-blue-400 transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                            更新日志
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div>
+                <h3 class="text-white font-semibold mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                        </path>
+                    </svg>
+                    推荐阅读
+                </h3>
+                <ul class="space-y-3">
+                    
+                    <li>
+                        <a href="https://www.dishuihengxin.com/posts/database-performance-optimization/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
+                            <div class="flex items-start">
+                                <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span class="truncate">Database Performance Optimization Strategies: From Query Tuning to System Architecture</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.dishuihengxin.com/posts/database-security-access-control/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
+                            <div class="flex items-start">
+                                <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span class="truncate">Database Security and Access Control: A Comprehensive Guide to Protecting Your Data</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.dishuihengxin.com/posts/database-elasticsearch-optimization/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
+                            <div class="flex items-start">
+                                <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span class="truncate">Elasticsearch搜索引擎优化：从索引设计到查询性能调优的完整指南</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.dishuihengxin.com/posts/database-influxdb-timeseries/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
+                            <div class="flex items-start">
+                                <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span class="truncate">InfluxDB时序数据库设计与实践：从数据建模到高性能查询优化</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.dishuihengxin.com/posts/kubernetes-container-orchestration-guide/"
+                            class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
+                            <div class="flex items-start">
+                                <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span class="truncate">Kubernetes Container Orchestration: A Comprehensive Guide to Cloud-Native Deployment</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div>
+                <h3 class="text-white font-semibold mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                        </path>
+                    </svg>
+                    关注我们
+                </h3>
+
+                
+                <img src="/images/qrcode.jpg" alt="Blog QR Code" class="w-24 h-24 rounded-lg shadow-lg mb-4">
+
+                <p class="text-xs text-gray-400">
+                    扫码关注公众号
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="border-t border-gray-800 mt-10 pt-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+                
+                <div class="text-gray-400 text-sm text-center md:text-left">
+                    © 2025 滴水恒心.
+                    
+                    保留所有权利。
+                    
+                </div>
+
+                
+                <div class="flex flex-wrap items-center justify-center gap-3 text-sm">
+                    <a href="/privacy/"
+                        class="text-gray-400 hover:text-white transition-colors duration-200">
+                        隐私政策
+                    </a>
+                    <span class="text-gray-700">|</span>
+                    <a href="/terms/"
+                        class="text-gray-400 hover:text-white transition-colors duration-200">
+                        使用条款
+                    </a>
+                    <span class="text-gray-700">|</span>
+                    <a href="/index.xml"
+                        class="text-gray-400 hover:text-white transition-colors duration-200 inline-flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z" />
+                        </svg>
+                        RSS
+                    </a>
+                    <span class="text-gray-700">|</span>
+                    <a href="/sitemap.xml"
+                        class="text-gray-400 hover:text-white transition-colors duration-200 inline-flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7">
+                            </path>
+                        </svg>
+                        网站地图
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+    </div>
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/config.min.4e32dae1da8cb8e073e384e9bf17d0c048ae80f1ab72ece6507a3171fbfe62ea.js"></script>
+    
+
+    
+    
+    
+    
+    
+    <script src="/js/theme-manager.min.80c7c5887d95e238a4626d07a137b2255878adff8f66394c2edb9a179f779739.js"></script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/security.min.7f0814c0037b61a39b8044f7a6d1357d4b794598eb75a62ee716f1f5621ad5f1.js" defer></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/analytics.min.e9c247ba215787d5828ba98cca7bb28ca42f0527f6054bc2f640f59a99a94aa7.js?v=1767197237" defer></script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/search.min.b0ead121c4ae8a19b5689d834fd825a1214aaa1d9979e170f900bb2879a23819.js" defer></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/interactions.min.ac95880fe48f06ba1594fc48c95de264f14b703f6e94ccafe53eaaefefa32682.js" defer></script>
+    
+
+
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/main.min.1db3c2db630282d627f674c53069de74db16f4265e72ab68e0a15e1477917e8c.js?v=1767197237" defer></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/fallback-theme.min.ad9490b67677d21ebf98c40c1cf51743318b6bc5d5e2c9f0e25f5ba57a1aecb1.js" defer></script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/hero-slider.min.1d6c0e80fe2af86085c169ed34bf8dd76f4bfc3cb37d92c063812c65a3ede326.js" defer></script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script src="/js/hero-particle-system.min.0bbe8a66b536f8652ac2006fb0a65ff3ca52367f952f7fe7c18082b1303bf9b6.js" defer></script>
+    
+</body>
+
+</html>

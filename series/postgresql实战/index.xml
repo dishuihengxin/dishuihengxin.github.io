@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PostgreSQL实战 on 滴水恒心</title><link>https://www.dishuihengxin.com/series/postgresql%E5%AE%9E%E6%88%98/</link><description>Recent content in PostgreSQL实战 on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 31 Dec 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/series/postgresql%E5%AE%9E%E6%88%98/index.xml" rel="self" type="application/rss+xml"/><item><title>PostgreSQL高可用架构设计与实践：从主从复制到分布式集群</title><link>https://www.dishuihengxin.com/posts/database-postgresql-ha/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-postgresql-ha/</guid><description>&lt;h1 id="postgresql高可用架构设计与实践从主从复制到分布式集群"&gt;PostgreSQL高可用架构设计与实践：从主从复制到分布式集群&lt;/h1&gt;
+&lt;p&gt;在现代企业级应用中，数据库的高可用性是系统稳定运行的基石。PostgreSQL作为功能强大的开源关系型数据库，提供了多种高可用解决方案。本文将深入探讨PostgreSQL高可用架构的设计原理和实践方案，从基础的主从复制到复杂的分布式集群部署。&lt;/p&gt;
+&lt;h2 id="postgresql高可用架构概述"&gt;PostgreSQL高可用架构概述&lt;/h2&gt;
+&lt;h3 id="高可用性指标定义"&gt;高可用性指标定义&lt;/h3&gt;
+&lt;p&gt;在设计PostgreSQL高可用架构时，我们需要明确以下关键指标：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;指标&lt;/th&gt;
+ &lt;th&gt;定义&lt;/th&gt;
+ &lt;th&gt;目标值&lt;/th&gt;
+ &lt;th&gt;影响因素&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;可用性(Availability)&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;系统正常运行时间比例&lt;/td&gt;
+ &lt;td&gt;99.9% - 99.99%&lt;/td&gt;
+ &lt;td&gt;故障检测、切换时间&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;恢复时间目标(RTO)&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;系统故障后恢复服务的最大时间&lt;/td&gt;
+ &lt;td&gt;&amp;lt; 5分钟&lt;/td&gt;
+ &lt;td&gt;自动化程度、网络延迟&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;恢复点目标(RPO)&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;可接受的最大数据丢失量&lt;/td&gt;
+ &lt;td&gt;&amp;lt; 1分钟&lt;/td&gt;
+ &lt;td&gt;复制延迟、同步策略&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;故障检测时间(MTTR)&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;从故障发生到检测到的时间&lt;/td&gt;
+ &lt;td&gt;&amp;lt; 30秒&lt;/td&gt;
+ &lt;td&gt;监控频率、健康检查&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="高可用架构模式"&gt;高可用架构模式&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-mermaid" data-lang="mermaid"&gt;graph TB
+ subgraph &amp;#34;单机模式&amp;#34;
+ A[Primary Server]
+ A1[定期备份]
+ A --&amp;gt; A1
+ end
+ 
+ subgraph &amp;#34;主从复制模式&amp;#34;
+ B[Primary Server]
+ B1[Standby Server 1]
+ B2[Standby Server 2]
+ B --&amp;gt; B1
+ B --&amp;gt; B2
+ end
+ 
+ subgraph &amp;#34;主从+负载均衡模式&amp;#34;
+ C[Primary Server]
+ C1[Standby Server 1]
+ C2[Standby Server 2]
+ C3[Load Balancer]
+ C3 --&amp;gt; C
+ C3 --&amp;gt; C1
+ C3 --&amp;gt; C2
+ C --&amp;gt; C1
+ C --&amp;gt; C2
+ end
+ 
+ subgraph &amp;#34;分布式集群模式&amp;#34;
+ D[Node 1]
+ D1[Node 2]
+ D2[Node 3]
+ D3[Coordinator]
+ D3 --&amp;gt; D
+ D3 --&amp;gt; D1
+ D3 --&amp;gt; D2
+ D &amp;lt;--&amp;gt; D1
+ D1 &amp;lt;--&amp;gt; D2
+ D2 &amp;lt;--&amp;gt; D
+ end
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="流复制streaming-replication配置"&gt;流复制(Streaming Replication)配置&lt;/h2&gt;
+&lt;h3 id="主服务器配置"&gt;主服务器配置&lt;/h3&gt;
+&lt;p&gt;首先配置主服务器的PostgreSQL参数：&lt;/p&gt;</description></item></channel></rss>

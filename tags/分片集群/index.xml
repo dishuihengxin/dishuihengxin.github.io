@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>分片集群 on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/</link><description>Recent content in 分片集群 on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 31 Dec 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/index.xml" rel="self" type="application/rss+xml"/><item><title>MongoDB分布式架构设计与实践：从副本集到分片集群的完整方案</title><link>https://www.dishuihengxin.com/posts/database-mongodb-distributed/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-mongodb-distributed/</guid><description>&lt;h1 id="mongodb分布式架构设计与实践从副本集到分片集群的完整方案"&gt;MongoDB分布式架构设计与实践：从副本集到分片集群的完整方案&lt;/h1&gt;
+&lt;p&gt;MongoDB作为领先的NoSQL文档数据库，在现代应用架构中广泛应用。随着数据量的增长和业务复杂度的提升，单机MongoDB已无法满足高可用、高性能的需求。本文将深入探讨MongoDB分布式架构的设计原理和实践方案，从基础的副本集到复杂的分片集群部署。&lt;/p&gt;
+&lt;h2 id="mongodb分布式架构概述"&gt;MongoDB分布式架构概述&lt;/h2&gt;
+&lt;h3 id="mongodb集群架构对比"&gt;MongoDB集群架构对比&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;架构模式&lt;/th&gt;
+ &lt;th&gt;特点&lt;/th&gt;
+ &lt;th&gt;适用场景&lt;/th&gt;
+ &lt;th&gt;优点&lt;/th&gt;
+ &lt;th&gt;缺点&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;单机模式&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;单个MongoDB实例&lt;/td&gt;
+ &lt;td&gt;开发测试、小型应用&lt;/td&gt;
+ &lt;td&gt;简单易用、性能高&lt;/td&gt;
+ &lt;td&gt;无高可用、容量受限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;副本集&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;一主多从，自动故障转移&lt;/td&gt;
+ &lt;td&gt;中等规模应用&lt;/td&gt;
+ &lt;td&gt;高可用、读扩展&lt;/td&gt;
+ &lt;td&gt;写性能无法扩展&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;分片集群&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;水平分片，分布式存储&lt;/td&gt;
+ &lt;td&gt;大规模应用&lt;/td&gt;
+ &lt;td&gt;水平扩展、高性能&lt;/td&gt;
+ &lt;td&gt;复杂度高、运维成本高&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;混合架构&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;分片+副本集&lt;/td&gt;
+ &lt;td&gt;企业级应用&lt;/td&gt;
+ &lt;td&gt;高可用+高性能&lt;/td&gt;
+ &lt;td&gt;架构复杂、资源消耗大&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="mongodb分布式架构演进"&gt;MongoDB分布式架构演进&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-mermaid" data-lang="mermaid"&gt;graph TB
+ subgraph &amp;#34;单机模式&amp;#34;
+ A[MongoDB Server]
+ A1[Application]
+ A1 --&amp;gt; A
+ end
+ 
+ subgraph &amp;#34;副本集模式&amp;#34;
+ B[Primary]
+ B1[Secondary 1]
+ B2[Secondary 2]
+ B3[Application]
+ B --&amp;gt; B1
+ B --&amp;gt; B2
+ B3 --&amp;gt; B
+ B3 -.-&amp;gt; B1
+ B3 -.-&amp;gt; B2
+ end
+ 
+ subgraph &amp;#34;分片集群模式&amp;#34;
+ C[mongos]
+ C1[Config Server RS]
+ C2[Shard 1 RS]
+ C3[Shard 2 RS]
+ C4[Shard 3 RS]
+ C5[Application]
+ C --&amp;gt; C1
+ C --&amp;gt; C2
+ C --&amp;gt; C3
+ C --&amp;gt; C4
+ C5 --&amp;gt; C
+ end
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="mongodb副本集配置与管理"&gt;MongoDB副本集配置与管理&lt;/h2&gt;
+&lt;h3 id="副本集架构设计"&gt;副本集架构设计&lt;/h3&gt;
+&lt;p&gt;MongoDB副本集是一组维护相同数据集的MongoDB服务器，提供冗余和高可用性。&lt;/p&gt;</description></item></channel></rss>

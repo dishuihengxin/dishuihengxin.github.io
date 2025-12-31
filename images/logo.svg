@@ -1,0 +1,99 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="secondaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 阴影效果 -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="256" cy="256" r="240" fill="url(#primaryGradient)" filter="url(#shadow)"/>
+  
+  <!-- 内层装饰圆环 -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <!-- 主要字母 T -->
+  <g transform="translate(256,256)" filter="url(#glow)">
+    <!-- T 的横线 -->
+    <rect x="-60" y="-80" width="120" height="20" rx="10" fill="white"/>
+    
+    <!-- T 的竖线 -->
+    <rect x="-15" y="-60" width="30" height="120" rx="15" fill="white"/>
+    
+    <!-- 装饰性代码符号 -->
+    <g opacity="0.8">
+      <!-- 左侧 < 符号 -->
+      <path d="M -100,-20 L -120,0 L -100,20" stroke="url(#secondaryGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      
+      <!-- 右侧 > 符号 -->
+      <path d="M 100,-20 L 120,0 L 100,20" stroke="url(#secondaryGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      
+      <!-- 底部 {} 符号 -->
+      <path d="M -40,80 Q -50,90 -40,100 Q -30,90 -40,80" stroke="url(#accentGradient)" stroke-width="4" fill="none"/>
+      <path d="M 40,80 Q 50,90 40,100 Q 30,90 40,80" stroke="url(#accentGradient)" stroke-width="4" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- 科技感装饰元素 -->
+  <g opacity="0.6">
+    <!-- 数据流线条 -->
+    <path d="M 80,150 Q 150,120 220,150" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M 292,150 Q 362,120 432,150" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- 节点点 -->
+    <circle cx="120" cy="180" r="4" fill="url(#secondaryGradient)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="392" cy="180" r="4" fill="url(#secondaryGradient)">
+      <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- 技术图标装饰 -->
+    <g transform="translate(150,350)" opacity="0.7">
+      <rect x="-8" y="-8" width="16" height="16" rx="2" fill="url(#accentGradient)"/>
+      <rect x="-4" y="-4" width="8" height="8" rx="1" fill="white"/>
+    </g>
+    
+    <g transform="translate(362,350)" opacity="0.7">
+      <circle cx="0" cy="0" r="8" fill="url(#secondaryGradient)"/>
+      <circle cx="0" cy="0" r="4" fill="white"/>
+    </g>
+  </g>
+  
+  <!-- 外层发光环 -->
+  <circle cx="256" cy="256" r="250" fill="none" stroke="url(#primaryGradient)" stroke-width="4" opacity="0.3" stroke-dasharray="20,10">
+    <animateTransform attributeName="transform" type="rotate" values="0 256 256;360 256 256" dur="20s" repeatCount="indefinite"/>
+  </circle>
+</svg>
