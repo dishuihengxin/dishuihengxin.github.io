@@ -110,8 +110,8 @@
   
   "keywords": ["aliyun", "cloud-native", "ack", "ecs", "architecture", "migration"],
   
-  "wordCount":  179 ,
-  "timeRequired": "PT1M",
+  "wordCount":  265 ,
+  "timeRequired": "PT2M",
   
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -1769,6 +1769,18 @@ document.addEventListener('DOMContentLoaded', function() {
             
 
             
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+                
+                <a href="/series/kubernetes-%E5%AE%9E%E6%88%98"
+                    class="inline-block px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors duration-200">
+                    📚 Kubernetes 实战
+                </a>
+                
+            </div>
+            
+
+            
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
                 阿里云云原生架构演进：从 ECS 到 ACK 的实战路径
             </h1>
@@ -1802,7 +1814,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <span>1 分钟</span>
+                    <span>2 分钟</span>
                 </div>
 
                 
@@ -1812,7 +1824,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                         </path>
                     </svg>
-                    <span>179 字</span>
+                    <span>265 字</span>
                 </div>
 
                 
@@ -1899,6 +1911,29 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><strong>标准化交付</strong>：Docker 镜像保证了“一次构建，到处运行”，消除了“我本地是好的，线上不行”的诡异问题。</li>
 </ul>
 <h2 id="2-演进路线图">2. 演进路线图</h2>
+<p>以下是典型的从 ECS 到 ACK 的迁移路径图：</p>
+<div class="mermaid">
+graph TD
+    subgraph "Phase 1: Infrastructure Prep"
+        VPC[VPC Network] -->|CEN Peering| ACK_Cluster[ACK Cluster]
+        ACK_Cluster -->|Terway Plugin| ENI[Elastic Network Interface]
+    end
+<pre><code>subgraph &quot;Phase 2: Stateless Migration&quot;
+    Web_App[Web Service] --&gt;|Dockerize| Container_Image[Container Image]
+    Container_Image --&gt;|Deploy| ACK_Pod[ACK Pod]
+    SLB[Server Load Balancer] --&gt;|Traffic Weight| ECS_Group[ECS Group]
+    SLB --&gt;|Traffic Weight| ACK_Group[ACK Node Group]
+end
+
+subgraph &quot;Phase 3: Stateful &amp; Optimization&quot;
+    DB_Self[Self-hosted DB on ECS] --&gt;|Data Migration| RDS[Aliyun RDS]
+    Middleware_Self[Self-hosted Middleware] --&gt;|Replace| PaaS[Aliyun PaaS (Redis/RocketMQ)]
+    Spot_Instance[Spot Instances] --&gt;|Cost Saving| Batch_Job[Batch Processing Jobs]
+end
+
+Phase_1 --&gt; Phase_2 --&gt; Phase_3
+</code></pre>
+</div>
 <h3 id="阶段一网络与基础设施准备">阶段一：网络与基础设施准备</h3>
 <p>在迁移之前，网络规划至关重要。</p>
 <ul>
@@ -1953,6 +1988,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             
             
+
+
+
+
+
 
             
             
@@ -2753,7 +2793,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <script src="/js/analytics.min.e9c247ba215787d5828ba98cca7bb28ca42f0527f6054bc2f640f59a99a94aa7.js?v=1772721989" defer></script>
+    <script src="/js/analytics.min.e9c247ba215787d5828ba98cca7bb28ca42f0527f6054bc2f640f59a99a94aa7.js?v=1772723017" defer></script>
     
 
     
@@ -2788,7 +2828,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <script src="/js/main.min.1db3c2db630282d627f674c53069de74db16f4265e72ab68e0a15e1477917e8c.js?v=1772721989" defer></script>
+    <script src="/js/main.min.1db3c2db630282d627f674c53069de74db16f4265e72ab68e0a15e1477917e8c.js?v=1772723017" defer></script>
     
 
     
@@ -2855,6 +2895,25 @@ var _hmt = _hmt || [];
     
     <script src="/js/hero-particle-system.min.0bbe8a66b536f8652ac2006fb0a65ff3ca52367f952f7fe7c18082b1303bf9b6.js" defer></script>
     
+    
+    
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#667eea',
+      primaryTextColor: '#fff',
+      primaryBorderColor: '#764ba2',
+      lineColor: '#F8B229',
+      secondaryColor: '#006100',
+      tertiaryColor: '#fff'
+    }
+  });
+</script>
+
+
 </body>
 
 </html>

@@ -110,7 +110,7 @@
   
   "keywords": ["jenkins", "cicd", "pipeline", "groovy", "automation", "k8s"],
   
-  "wordCount":  281 ,
+  "wordCount":  358 ,
   "timeRequired": "PT2M",
   
   "mainEntityOfPage": {
@@ -1769,6 +1769,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
 
             
+            
+
+            
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
                 Jenkins Pipeline as Code：构建现代化的 CI/CD 流水线
             </h1>
@@ -1812,7 +1815,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                         </path>
                     </svg>
-                    <span>281 字</span>
+                    <span>358 字</span>
                 </div>
 
                 
@@ -1894,6 +1897,29 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>传统的 Jenkins 使用方式是在 Web UI 上点击配置（Freestyle Job），这种方式维护难、不可复用、无法版本控制。<strong>Pipeline as Code</strong>（流水线即代码）是现代 Jenkins 的正确打开方式。</p>
 <h2 id="1-声明式流水线-declarative-pipeline">1. 声明式流水线 (Declarative Pipeline)</h2>
 <p>Jenkins 2.0 引入了 Pipeline，推荐使用声明式语法（Declarative），结构更清晰，错误处理更好。</p>
+<p>以下是一个典型的 CI/CD 流水线交互时序图：</p>
+<div class="mermaid">
+sequenceDiagram
+    participant Dev as Developer
+    participant Git as GitLab/GitHub
+    participant Jenkins as Jenkins Master
+    participant Slave as K8s Agent (Slave)
+    participant Registry as Docker Registry
+    participant K8s as Kubernetes Cluster
+<pre><code>Dev-&gt;&gt;Git: Push Code (git push)
+Git-&gt;&gt;Jenkins: Webhook Trigger
+Jenkins-&gt;&gt;K8s: Launch Pod (jnlp-slave)
+K8s--&gt;&gt;Slave: Pod Running
+Jenkins-&gt;&gt;Slave: Checkout SCM
+Slave-&gt;&gt;Slave: Build &amp; Test (Maven/Gradle)
+Slave-&gt;&gt;Slave: Docker Build
+Slave-&gt;&gt;Registry: Docker Push
+Slave-&gt;&gt;K8s: Helm Upgrade / Kubectl Apply
+K8s--&gt;&gt;Dev: Deployment Success
+Slave-&gt;&gt;Jenkins: Task Finished
+Jenkins-&gt;&gt;K8s: Terminate Pod
+</code></pre>
+</div>
 <p><strong>Jenkinsfile 示例</strong>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">pipeline</span> <span class="o">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">agent</span> <span class="n">any</span>
@@ -2837,7 +2863,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <script src="/js/analytics.min.e9c247ba215787d5828ba98cca7bb28ca42f0527f6054bc2f640f59a99a94aa7.js?v=1772721990" defer></script>
+    <script src="/js/analytics.min.e9c247ba215787d5828ba98cca7bb28ca42f0527f6054bc2f640f59a99a94aa7.js?v=1772723018" defer></script>
     
 
     
@@ -2872,7 +2898,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <script src="/js/main.min.1db3c2db630282d627f674c53069de74db16f4265e72ab68e0a15e1477917e8c.js?v=1772721990" defer></script>
+    <script src="/js/main.min.1db3c2db630282d627f674c53069de74db16f4265e72ab68e0a15e1477917e8c.js?v=1772723018" defer></script>
     
 
     
@@ -2939,6 +2965,25 @@ var _hmt = _hmt || [];
     
     <script src="/js/hero-particle-system.min.0bbe8a66b536f8652ac2006fb0a65ff3ca52367f952f7fe7c18082b1303bf9b6.js" defer></script>
     
+    
+    
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#667eea',
+      primaryTextColor: '#fff',
+      primaryBorderColor: '#764ba2',
+      lineColor: '#F8B229',
+      secondaryColor: '#006100',
+      tertiaryColor: '#fff'
+    }
+  });
+</script>
+
+
 </body>
 
 </html>

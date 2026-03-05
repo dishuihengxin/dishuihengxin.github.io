@@ -7,28 +7,28 @@
 &lt;li&gt;&lt;strong&gt;标准化交付&lt;/strong&gt;：Docker 镜像保证了“一次构建，到处运行”，消除了“我本地是好的，线上不行”的诡异问题。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="2-演进路线图"&gt;2. 演进路线图&lt;/h2&gt;
+&lt;p&gt;以下是典型的从 ECS 到 ACK 的迁移路径图：&lt;/p&gt;
+&lt;div class="mermaid"&gt;
+graph TD
+ subgraph "Phase 1: Infrastructure Prep"
+ VPC[VPC Network] --&gt;|CEN Peering| ACK_Cluster[ACK Cluster]
+ ACK_Cluster --&gt;|Terway Plugin| ENI[Elastic Network Interface]
+ end
+&lt;pre&gt;&lt;code&gt;subgraph &amp;quot;Phase 2: Stateless Migration&amp;quot;
+ Web_App[Web Service] --&amp;gt;|Dockerize| Container_Image[Container Image]
+ Container_Image --&amp;gt;|Deploy| ACK_Pod[ACK Pod]
+ SLB[Server Load Balancer] --&amp;gt;|Traffic Weight| ECS_Group[ECS Group]
+ SLB --&amp;gt;|Traffic Weight| ACK_Group[ACK Node Group]
+end
+
+subgraph &amp;quot;Phase 3: Stateful &amp;amp; Optimization&amp;quot;
+ DB_Self[Self-hosted DB on ECS] --&amp;gt;|Data Migration| RDS[Aliyun RDS]
+ Middleware_Self[Self-hosted Middleware] --&amp;gt;|Replace| PaaS[Aliyun PaaS (Redis/RocketMQ)]
+ Spot_Instance[Spot Instances] --&amp;gt;|Cost Saving| Batch_Job[Batch Processing Jobs]
+end
+
+Phase_1 --&amp;gt; Phase_2 --&amp;gt; Phase_3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h3 id="阶段一网络与基础设施准备"&gt;阶段一：网络与基础设施准备&lt;/h3&gt;
-&lt;p&gt;在迁移之前，网络规划至关重要。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;VPC 集成&lt;/strong&gt;：ACK 集群应部署在现有的 VPC 中，或者通过 CEN（云企业网）与现有 VPC 打通。确保 Pod 网段、Service 网段与现有 ECS 网段不冲突。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Terway 网络模式&lt;/strong&gt;：强烈建议选择阿里云自研的 &lt;strong&gt;Terway&lt;/strong&gt; 网络插件，而不是开源的 Flannel。
-&lt;ul&gt;
-&lt;li&gt;Terway 可以让 Pod 直接使用 VPC 的弹性网卡（ENI）IP，性能几乎无损耗。&lt;/li&gt;
-&lt;li&gt;支持 Pod 级别的安全组规则，便于复用现有的安全策略。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="阶段二无状态应用迁移-stateless"&gt;阶段二：无状态应用迁移 (Stateless)&lt;/h3&gt;
-&lt;p&gt;Web 服务、API 网关等无状态应用最容易迁移。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;容器化改造&lt;/strong&gt;：编写 Dockerfile，将应用打包。注意将配置（ConfigMap）、密钥（Secret）与镜像分离。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;日志收集&lt;/strong&gt;：ECS 时代通常是 Logtail 采集本地文件。在 ACK 中，建议使用 &lt;strong&gt;Logtail CRD&lt;/strong&gt; 方式，通过标准输出（Stdout）或挂载 HostPath 采集日志到阿里云 SLS（日志服务）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;负载均衡切换&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;流量切分&lt;/strong&gt;：在 SLB 后端服务器组中，同时挂载 ECS 和 ACK 的 Node（或者通过 ALB Ingress 转发）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;权重控制&lt;/strong&gt;：逐步调大 ACK 侧的权重，观察业务日志和监控，确认无误后下线 ECS。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="阶段三有状态应用迁移-stateful"&gt;阶段三：有状态应用迁移 (Stateful)&lt;/h3&gt;
-&lt;p&gt;数据库、中间件等有状态应用迁移风险较大。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;在迁移之前，网络规划至关重要。&lt;/p&gt;</description></item></channel></rss>

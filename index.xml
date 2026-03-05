@@ -161,6 +161,25 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过这种方式，最终镜像中不包含 Go 编译器和源代码，体积可缩减 90% 以上。&lt;/p&gt;</description></item><item><title>Linux 高性能网络调优与故障排查实战指南</title><link>https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/</link><pubDate>Wed, 28 Jan 2026 10:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/</guid><description>&lt;p&gt;在构建高并发、低延迟的分布式系统时，网络往往是性能的瓶颈所在。作为一名运维工程师或架构师，深入理解 Linux 网络栈并具备调优与排查能力是必修课。本文将结合我在生产环境中的实战经验，分享 Linux 网络调优的核心策略与故障排查方法论。&lt;/p&gt;
 &lt;h2 id="1-linux-网络栈概览与瓶颈点"&gt;1. Linux 网络栈概览与瓶颈点&lt;/h2&gt;
 &lt;p&gt;Linux 网络栈的设计非常通用，但这也意味着默认配置往往无法满足高负载场景的需求。数据包从网卡（NIC）到达用户态应用程序，主要经过以下路径：&lt;/p&gt;
+&lt;div class="mermaid"&gt;
+graph TD
+ subgraph "Hardware (NIC)"
+ NIC[Network Interface Card] --&gt;|DMA| RingBuffer[Ring Buffer]
+ NIC --&gt;|Hard IRQ| CPU[CPU Core]
+ end
+&lt;pre&gt;&lt;code&gt;subgraph &amp;quot;Kernel Space (SoftIRQ)&amp;quot;
+ CPU --&amp;gt;|Soft IRQ| Net_RX[NET_RX_ACTION]
+ Net_RX --&amp;gt;|Poll| RingBuffer
+ Net_RX --&amp;gt;|GRO| IP_Stack[IP Layer]
+ IP_Stack --&amp;gt;|Route| TCP_Stack[TCP Layer]
+ TCP_Stack --&amp;gt;|Socket Buffer| Recv_Buffer[Receive Buffer]
+end
+
+subgraph &amp;quot;User Space&amp;quot;
+ Recv_Buffer --&amp;gt;|Syscall: read/recv| App[Application]
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;网卡接收&lt;/strong&gt;：数据包到达网卡，DMA 写入内存（Ring Buffer）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;硬中断&lt;/strong&gt;：网卡触发 CPU 硬中断，通知内核有数据。&lt;/li&gt;
@@ -168,28 +187,7 @@
 &lt;li&gt;&lt;strong&gt;Socket 接收缓冲区&lt;/strong&gt;：数据包放入 Socket 的 Receive Buffer。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;用户态读取&lt;/strong&gt;：应用程序调用 &lt;code&gt;read()&lt;/code&gt; 或 &lt;code&gt;recv()&lt;/code&gt; 系统调用，将数据从内核态拷贝到用户态。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;常见的瓶颈点&lt;/strong&gt;通常出现在：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;硬中断集中&lt;/strong&gt;：导致单核 CPU 100%，其他核空闲（需配置网卡多队列与中断亲和性）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;软中断处理慢&lt;/strong&gt;：导致 &lt;code&gt;ksoftirqd&lt;/code&gt; 进程 CPU 占用过高，丢包。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;缓冲区溢出&lt;/strong&gt;：Ring Buffer 或 Socket Buffer 满，导致丢包。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;连接队列满&lt;/strong&gt;：SYN Queue 或 Accept Queue 满，导致连接建立失败。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="2-生产环境内核参数调优"&gt;2. 生产环境内核参数调优&lt;/h2&gt;
-&lt;p&gt;以下参数建议在 &lt;code&gt;/etc/sysctl.conf&lt;/code&gt; 中配置，并执行 &lt;code&gt;sysctl -p&lt;/code&gt; 生效。请注意，调优没有银弹，必须结合实际业务场景（长连接 vs 短连接，高吞吐 vs 低延迟）。&lt;/p&gt;
-&lt;h3 id="21-优化连接建立三次握手"&gt;2.1 优化连接建立（三次握手）&lt;/h3&gt;
-&lt;p&gt;高并发场景下，新建连接的速率非常快，容易在握手阶段发生溢出。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 增加半连接队列（SYN Queue）长度，防止 SYN Flood 攻击或并发连接丢失&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;net.ipv4.tcp_max_syn_backlog &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;8192&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 开启 SYN Cookies，当 SYN 队列满时仍能接受连接（但在高负载下可能会丢失某些 TCP 选项）&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;net.ipv4.tcp_syncookies &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 增加全连接队列（Accept Queue）长度&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 注意：该值受限于 somaxconn 和 nginx/tomcat 配置的 backlog&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;net.core.somaxconn &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;65535&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="22-优化端口资源与连接释放"&gt;2.2 优化端口资源与连接释放&lt;/h3&gt;
-&lt;p&gt;对于大量短连接场景（如 API 网关、爬虫），TIME_WAIT 状态的连接可能会耗尽端口资源。&lt;/p&gt;</description></item><item><title>Oracle RAC 与 DataGuard 高可用架构实战：从部署到灾备切换</title><link>https://www.dishuihengxin.com/posts/database-oracle-rac-dataguard-best-practices/</link><pubDate>Tue, 27 Jan 2026 08:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-oracle-rac-dataguard-best-practices/</guid><description>&lt;p&gt;在去 IOE 的浪潮下，虽然 MySQL 和 PostgreSQL 正在崛起，但在金融、电信等核心交易场景中，Oracle RAC (Real Application Clusters) 依然是高可用数据库的“皇冠明珠”。它提供了无与伦比的实例级高可用和透明的应用切换能力。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;常见的瓶颈点&lt;/strong&gt;通常出现在：&lt;/p&gt;</description></item><item><title>Oracle RAC 与 DataGuard 高可用架构实战：从部署到灾备切换</title><link>https://www.dishuihengxin.com/posts/database-oracle-rac-dataguard-best-practices/</link><pubDate>Tue, 27 Jan 2026 08:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-oracle-rac-dataguard-best-practices/</guid><description>&lt;p&gt;在去 IOE 的浪潮下，虽然 MySQL 和 PostgreSQL 正在崛起，但在金融、电信等核心交易场景中，Oracle RAC (Real Application Clusters) 依然是高可用数据库的“皇冠明珠”。它提供了无与伦比的实例级高可用和透明的应用切换能力。&lt;/p&gt;
 &lt;p&gt;本文将复盘我在维护一套核心交易系统（Oracle 19c RAC + ADG）时的实战经验，涵盖架构设计、稳定性优化及灾难恢复。&lt;/p&gt;
 &lt;h2 id="1-oracle-rac-架构稳定性优化"&gt;1. Oracle RAC 架构稳定性优化&lt;/h2&gt;
 &lt;p&gt;RAC 虽然提供了高可用，但如果配置不当，Cache Fusion 产生的内联通信（Interconnect）反而会成为性能杀手。&lt;/p&gt;
@@ -215,63 +213,30 @@
 &lt;p&gt;传统的 Jenkins 使用方式是在 Web UI 上点击配置（Freestyle Job），这种方式维护难、不可复用、无法版本控制。&lt;strong&gt;Pipeline as Code&lt;/strong&gt;（流水线即代码）是现代 Jenkins 的正确打开方式。&lt;/p&gt;
 &lt;h2 id="1-声明式流水线-declarative-pipeline"&gt;1. 声明式流水线 (Declarative Pipeline)&lt;/h2&gt;
 &lt;p&gt;Jenkins 2.0 引入了 Pipeline，推荐使用声明式语法（Declarative），结构更清晰，错误处理更好。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Jenkinsfile 示例&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-groovy" data-lang="groovy"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;pipeline&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;agent&lt;/span&gt; &lt;span class="n"&gt;any&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;buildDiscarder&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;logRotator&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;numToKeepStr:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;10&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;disableConcurrentBuilds&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;timestamps&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;environment&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;DOCKER_REGISTRY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;registry.example.com&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;IMAGE_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;myapp&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;stages&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;stage&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Checkout&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;steps&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="n"&gt;scm&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;stage&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Build &amp;amp; Test&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;steps&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;mvn clean package&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;junit&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;target/surefire-reports/*.xml&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;stage&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Docker Build&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;steps&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;docker&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;build&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;${DOCKER_REGISTRY}/${IMAGE_NAME}:${env.BUILD_NUMBER}&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;stage&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Deploy&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;when&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;branch&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;main&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;steps&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;kubectl apply -f k8s/deployment.yaml&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;always&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;cleanWs&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;failure&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;mail&lt;/span&gt; &lt;span class="nl"&gt;to:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;team@example.com&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nl"&gt;subject:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Build Failed&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将这个 &lt;code&gt;Jenkinsfile&lt;/code&gt; 放入项目源码仓库根目录，Jenkins 会自动读取并执行。&lt;/p&gt;</description></item><item><title>AWS 生产环境架构设计：从 Landing Zone 到高可用服务</title><link>https://www.dishuihengxin.com/posts/cloud-aws-production-best-practices/</link><pubDate>Fri, 16 Jan 2026 15:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/cloud-aws-production-best-practices/</guid><description>&lt;p&gt;随着企业上云的深入，仅仅在 AWS 上“开几台 EC2”已经远远不能满足安全、合规和可扩展性的需求。一个健壮的生产环境架构需要从地基（Foundation）开始规划。本文将分享我在构建企业级 AWS 环境时的核心设计思路和最佳实践。&lt;/p&gt;
+&lt;p&gt;以下是一个典型的 CI/CD 流水线交互时序图：&lt;/p&gt;
+&lt;div class="mermaid"&gt;
+sequenceDiagram
+ participant Dev as Developer
+ participant Git as GitLab/GitHub
+ participant Jenkins as Jenkins Master
+ participant Slave as K8s Agent (Slave)
+ participant Registry as Docker Registry
+ participant K8s as Kubernetes Cluster
+&lt;pre&gt;&lt;code&gt;Dev-&amp;gt;&amp;gt;Git: Push Code (git push)
+Git-&amp;gt;&amp;gt;Jenkins: Webhook Trigger
+Jenkins-&amp;gt;&amp;gt;K8s: Launch Pod (jnlp-slave)
+K8s--&amp;gt;&amp;gt;Slave: Pod Running
+Jenkins-&amp;gt;&amp;gt;Slave: Checkout SCM
+Slave-&amp;gt;&amp;gt;Slave: Build &amp;amp; Test (Maven/Gradle)
+Slave-&amp;gt;&amp;gt;Slave: Docker Build
+Slave-&amp;gt;&amp;gt;Registry: Docker Push
+Slave-&amp;gt;&amp;gt;K8s: Helm Upgrade / Kubectl Apply
+K8s--&amp;gt;&amp;gt;Dev: Deployment Success
+Slave-&amp;gt;&amp;gt;Jenkins: Task Finished
+Jenkins-&amp;gt;&amp;gt;K8s: Terminate Pod
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Jenkinsfile 示例&lt;/strong&gt;:&lt;/p&gt;</description></item><item><title>AWS 生产环境架构设计：从 Landing Zone 到高可用服务</title><link>https://www.dishuihengxin.com/posts/cloud-aws-production-best-practices/</link><pubDate>Fri, 16 Jan 2026 15:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/cloud-aws-production-best-practices/</guid><description>&lt;p&gt;随着企业上云的深入，仅仅在 AWS 上“开几台 EC2”已经远远不能满足安全、合规和可扩展性的需求。一个健壮的生产环境架构需要从地基（Foundation）开始规划。本文将分享我在构建企业级 AWS 环境时的核心设计思路和最佳实践。&lt;/p&gt;
 &lt;h2 id="1-多账号策略与-landing-zone"&gt;1. 多账号策略与 Landing Zone&lt;/h2&gt;
 &lt;p&gt;永远不要在单个 AWS 账号中运行所有环境（Dev/Test/Prod）。&lt;strong&gt;多账号架构&lt;/strong&gt;是隔离风险、简化计费和权限管理的最佳实践。&lt;/p&gt;
 &lt;h3 id="11-组织结构-aws-organizations"&gt;1.1 组织结构 (AWS Organizations)&lt;/h3&gt;
@@ -407,31 +372,31 @@
 &lt;li&gt;&lt;strong&gt;标准化交付&lt;/strong&gt;：Docker 镜像保证了“一次构建，到处运行”，消除了“我本地是好的，线上不行”的诡异问题。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="2-演进路线图"&gt;2. 演进路线图&lt;/h2&gt;
+&lt;p&gt;以下是典型的从 ECS 到 ACK 的迁移路径图：&lt;/p&gt;
+&lt;div class="mermaid"&gt;
+graph TD
+ subgraph "Phase 1: Infrastructure Prep"
+ VPC[VPC Network] --&gt;|CEN Peering| ACK_Cluster[ACK Cluster]
+ ACK_Cluster --&gt;|Terway Plugin| ENI[Elastic Network Interface]
+ end
+&lt;pre&gt;&lt;code&gt;subgraph &amp;quot;Phase 2: Stateless Migration&amp;quot;
+ Web_App[Web Service] --&amp;gt;|Dockerize| Container_Image[Container Image]
+ Container_Image --&amp;gt;|Deploy| ACK_Pod[ACK Pod]
+ SLB[Server Load Balancer] --&amp;gt;|Traffic Weight| ECS_Group[ECS Group]
+ SLB --&amp;gt;|Traffic Weight| ACK_Group[ACK Node Group]
+end
+
+subgraph &amp;quot;Phase 3: Stateful &amp;amp; Optimization&amp;quot;
+ DB_Self[Self-hosted DB on ECS] --&amp;gt;|Data Migration| RDS[Aliyun RDS]
+ Middleware_Self[Self-hosted Middleware] --&amp;gt;|Replace| PaaS[Aliyun PaaS (Redis/RocketMQ)]
+ Spot_Instance[Spot Instances] --&amp;gt;|Cost Saving| Batch_Job[Batch Processing Jobs]
+end
+
+Phase_1 --&amp;gt; Phase_2 --&amp;gt; Phase_3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h3 id="阶段一网络与基础设施准备"&gt;阶段一：网络与基础设施准备&lt;/h3&gt;
-&lt;p&gt;在迁移之前，网络规划至关重要。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;VPC 集成&lt;/strong&gt;：ACK 集群应部署在现有的 VPC 中，或者通过 CEN（云企业网）与现有 VPC 打通。确保 Pod 网段、Service 网段与现有 ECS 网段不冲突。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Terway 网络模式&lt;/strong&gt;：强烈建议选择阿里云自研的 &lt;strong&gt;Terway&lt;/strong&gt; 网络插件，而不是开源的 Flannel。
-&lt;ul&gt;
-&lt;li&gt;Terway 可以让 Pod 直接使用 VPC 的弹性网卡（ENI）IP，性能几乎无损耗。&lt;/li&gt;
-&lt;li&gt;支持 Pod 级别的安全组规则，便于复用现有的安全策略。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="阶段二无状态应用迁移-stateless"&gt;阶段二：无状态应用迁移 (Stateless)&lt;/h3&gt;
-&lt;p&gt;Web 服务、API 网关等无状态应用最容易迁移。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;容器化改造&lt;/strong&gt;：编写 Dockerfile，将应用打包。注意将配置（ConfigMap）、密钥（Secret）与镜像分离。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;日志收集&lt;/strong&gt;：ECS 时代通常是 Logtail 采集本地文件。在 ACK 中，建议使用 &lt;strong&gt;Logtail CRD&lt;/strong&gt; 方式，通过标准输出（Stdout）或挂载 HostPath 采集日志到阿里云 SLS（日志服务）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;负载均衡切换&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;流量切分&lt;/strong&gt;：在 SLB 后端服务器组中，同时挂载 ECS 和 ACK 的 Node（或者通过 ALB Ingress 转发）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;权重控制&lt;/strong&gt;：逐步调大 ACK 侧的权重，观察业务日志和监控，确认无误后下线 ECS。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="阶段三有状态应用迁移-stateful"&gt;阶段三：有状态应用迁移 (Stateful)&lt;/h3&gt;
-&lt;p&gt;数据库、中间件等有状态应用迁移风险较大。&lt;/p&gt;</description></item><item><title>Database Performance Optimization Strategies: From Query Tuning to System Architecture</title><link>https://www.dishuihengxin.com/posts/database-performance-optimization/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-performance-optimization/</guid><description>&lt;h1 id="database-performance-optimization-strategies-from-query-tuning-to-system-architecture"&gt;Database Performance Optimization Strategies: From Query Tuning to System Architecture&lt;/h1&gt;
+&lt;p&gt;在迁移之前，网络规划至关重要。&lt;/p&gt;</description></item><item><title>Database Performance Optimization Strategies: From Query Tuning to System Architecture</title><link>https://www.dishuihengxin.com/posts/database-performance-optimization/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-performance-optimization/</guid><description>&lt;h1 id="database-performance-optimization-strategies-from-query-tuning-to-system-architecture"&gt;Database Performance Optimization Strategies: From Query Tuning to System Architecture&lt;/h1&gt;
 &lt;p&gt;Database performance optimization is a critical aspect of modern application development. As data volumes grow and user expectations increase, the ability to efficiently query and manipulate data becomes paramount. This comprehensive guide explores various strategies and techniques for optimizing database performance, from basic query tuning to advanced architectural considerations.&lt;/p&gt;
 &lt;h2 id="table-of-contents"&gt;Table of Contents&lt;/h2&gt;
 &lt;ol&gt;

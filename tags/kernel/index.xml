@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kernel on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/kernel/</link><description>Recent content in Kernel on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 28 Jan 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/kernel/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 高性能网络调优与故障排查实战指南</title><link>https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/</link><pubDate>Wed, 28 Jan 2026 10:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/</guid><description>&lt;p&gt;在构建高并发、低延迟的分布式系统时，网络往往是性能的瓶颈所在。作为一名运维工程师或架构师，深入理解 Linux 网络栈并具备调优与排查能力是必修课。本文将结合我在生产环境中的实战经验，分享 Linux 网络调优的核心策略与故障排查方法论。&lt;/p&gt;
 &lt;h2 id="1-linux-网络栈概览与瓶颈点"&gt;1. Linux 网络栈概览与瓶颈点&lt;/h2&gt;
 &lt;p&gt;Linux 网络栈的设计非常通用，但这也意味着默认配置往往无法满足高负载场景的需求。数据包从网卡（NIC）到达用户态应用程序，主要经过以下路径：&lt;/p&gt;
+&lt;div class="mermaid"&gt;
+graph TD
+ subgraph "Hardware (NIC)"
+ NIC[Network Interface Card] --&gt;|DMA| RingBuffer[Ring Buffer]
+ NIC --&gt;|Hard IRQ| CPU[CPU Core]
+ end
+&lt;pre&gt;&lt;code&gt;subgraph &amp;quot;Kernel Space (SoftIRQ)&amp;quot;
+ CPU --&amp;gt;|Soft IRQ| Net_RX[NET_RX_ACTION]
+ Net_RX --&amp;gt;|Poll| RingBuffer
+ Net_RX --&amp;gt;|GRO| IP_Stack[IP Layer]
+ IP_Stack --&amp;gt;|Route| TCP_Stack[TCP Layer]
+ TCP_Stack --&amp;gt;|Socket Buffer| Recv_Buffer[Receive Buffer]
+end
+
+subgraph &amp;quot;User Space&amp;quot;
+ Recv_Buffer --&amp;gt;|Syscall: read/recv| App[Application]
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;网卡接收&lt;/strong&gt;：数据包到达网卡，DMA 写入内存（Ring Buffer）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;硬中断&lt;/strong&gt;：网卡触发 CPU 硬中断，通知内核有数据。&lt;/li&gt;
@@ -8,25 +27,4 @@
 &lt;li&gt;&lt;strong&gt;Socket 接收缓冲区&lt;/strong&gt;：数据包放入 Socket 的 Receive Buffer。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;用户态读取&lt;/strong&gt;：应用程序调用 &lt;code&gt;read()&lt;/code&gt; 或 &lt;code&gt;recv()&lt;/code&gt; 系统调用，将数据从内核态拷贝到用户态。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;常见的瓶颈点&lt;/strong&gt;通常出现在：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;硬中断集中&lt;/strong&gt;：导致单核 CPU 100%，其他核空闲（需配置网卡多队列与中断亲和性）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;软中断处理慢&lt;/strong&gt;：导致 &lt;code&gt;ksoftirqd&lt;/code&gt; 进程 CPU 占用过高，丢包。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;缓冲区溢出&lt;/strong&gt;：Ring Buffer 或 Socket Buffer 满，导致丢包。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;连接队列满&lt;/strong&gt;：SYN Queue 或 Accept Queue 满，导致连接建立失败。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="2-生产环境内核参数调优"&gt;2. 生产环境内核参数调优&lt;/h2&gt;
-&lt;p&gt;以下参数建议在 &lt;code&gt;/etc/sysctl.conf&lt;/code&gt; 中配置，并执行 &lt;code&gt;sysctl -p&lt;/code&gt; 生效。请注意，调优没有银弹，必须结合实际业务场景（长连接 vs 短连接，高吞吐 vs 低延迟）。&lt;/p&gt;
-&lt;h3 id="21-优化连接建立三次握手"&gt;2.1 优化连接建立（三次握手）&lt;/h3&gt;
-&lt;p&gt;高并发场景下，新建连接的速率非常快，容易在握手阶段发生溢出。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 增加半连接队列（SYN Queue）长度，防止 SYN Flood 攻击或并发连接丢失&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;net.ipv4.tcp_max_syn_backlog &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;8192&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 开启 SYN Cookies，当 SYN 队列满时仍能接受连接（但在高负载下可能会丢失某些 TCP 选项）&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;net.ipv4.tcp_syncookies &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 增加全连接队列（Accept Queue）长度&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 注意：该值受限于 somaxconn 和 nginx/tomcat 配置的 backlog&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;net.core.somaxconn &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;65535&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="22-优化端口资源与连接释放"&gt;2.2 优化端口资源与连接释放&lt;/h3&gt;
-&lt;p&gt;对于大量短连接场景（如 API 网关、爬虫），TIME_WAIT 状态的连接可能会耗尽端口资源。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;strong&gt;常见的瓶颈点&lt;/strong&gt;通常出现在：&lt;/p&gt;</description></item></channel></rss>
