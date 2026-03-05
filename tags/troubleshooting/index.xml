@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Troubleshooting on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/troubleshooting/</link><description>Recent content in Troubleshooting on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 28 Jan 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 高性能网络调优与故障排查实战指南</title><link>https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/</link><pubDate>Wed, 28 Jan 2026 10:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/</guid><description>&lt;p&gt;在构建高并发、低延迟的分布式系统时，网络往往是性能的瓶颈所在。作为一名运维工程师或架构师，深入理解 Linux 网络栈并具备调优与排查能力是必修课。本文将结合我在生产环境中的实战经验，分享 Linux 网络调优的核心策略与故障排查方法论。&lt;/p&gt;
 &lt;h2 id="1-linux-网络栈概览与瓶颈点"&gt;1. Linux 网络栈概览与瓶颈点&lt;/h2&gt;
 &lt;p&gt;Linux 网络栈的设计非常通用，但这也意味着默认配置往往无法满足高负载场景的需求。数据包从网卡（NIC）到达用户态应用程序，主要经过以下路径：&lt;/p&gt;
-&lt;div class="mermaid"&gt;
+&lt;pre class="mermaid"&gt;
 graph TD
  subgraph "Hardware (NIC)"
  NIC[Network Interface Card] --&gt;|DMA| RingBuffer[Ring Buffer]
  NIC --&gt;|Hard IRQ| CPU[CPU Core]
  end
-&lt;pre&gt;&lt;code&gt;subgraph &amp;quot;Kernel Space (SoftIRQ)&amp;quot;
- CPU --&amp;gt;|Soft IRQ| Net_RX[NET_RX_ACTION]
- Net_RX --&amp;gt;|Poll| RingBuffer
- Net_RX --&amp;gt;|GRO| IP_Stack[IP Layer]
- IP_Stack --&amp;gt;|Route| TCP_Stack[TCP Layer]
- TCP_Stack --&amp;gt;|Socket Buffer| Recv_Buffer[Receive Buffer]
-end
 
-subgraph &amp;quot;User Space&amp;quot;
- Recv_Buffer --&amp;gt;|Syscall: read/recv| App[Application]
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+ subgraph "Kernel Space (SoftIRQ)"
+ CPU --&gt;|Soft IRQ| Net_RX[NET_RX_ACTION]
+ Net_RX --&gt;|Poll| RingBuffer
+ Net_RX --&gt;|GRO| IP_Stack[IP Layer]
+ IP_Stack --&gt;|Route| TCP_Stack[TCP Layer]
+ TCP_Stack --&gt;|Socket Buffer| Recv_Buffer[Receive Buffer]
+ end
+
+ subgraph "User Space"
+ Recv_Buffer --&gt;|Syscall: read/recv| App[Application]
+ end
+&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;网卡接收&lt;/strong&gt;：数据包到达网卡，DMA 写入内存（Ring Buffer）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;硬中断&lt;/strong&gt;：网卡触发 CPU 硬中断，通知内核有数据。&lt;/li&gt;

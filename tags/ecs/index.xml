@@ -8,27 +8,27 @@
 &lt;/ul&gt;
 &lt;h2 id="2-演进路线图"&gt;2. 演进路线图&lt;/h2&gt;
 &lt;p&gt;以下是典型的从 ECS 到 ACK 的迁移路径图：&lt;/p&gt;
-&lt;div class="mermaid"&gt;
+&lt;pre class="mermaid"&gt;
 graph TD
  subgraph "Phase 1: Infrastructure Prep"
  VPC[VPC Network] --&gt;|CEN Peering| ACK_Cluster[ACK Cluster]
  ACK_Cluster --&gt;|Terway Plugin| ENI[Elastic Network Interface]
  end
-&lt;pre&gt;&lt;code&gt;subgraph &amp;quot;Phase 2: Stateless Migration&amp;quot;
- Web_App[Web Service] --&amp;gt;|Dockerize| Container_Image[Container Image]
- Container_Image --&amp;gt;|Deploy| ACK_Pod[ACK Pod]
- SLB[Server Load Balancer] --&amp;gt;|Traffic Weight| ECS_Group[ECS Group]
- SLB --&amp;gt;|Traffic Weight| ACK_Group[ACK Node Group]
-end
 
-subgraph &amp;quot;Phase 3: Stateful &amp;amp; Optimization&amp;quot;
- DB_Self[Self-hosted DB on ECS] --&amp;gt;|Data Migration| RDS[Aliyun RDS]
- Middleware_Self[Self-hosted Middleware] --&amp;gt;|Replace| PaaS[Aliyun PaaS (Redis/RocketMQ)]
- Spot_Instance[Spot Instances] --&amp;gt;|Cost Saving| Batch_Job[Batch Processing Jobs]
-end
+ subgraph "Phase 2: Stateless Migration"
+ Web_App[Web Service] --&gt;|Dockerize| Container_Image[Container Image]
+ Container_Image --&gt;|Deploy| ACK_Pod[ACK Pod]
+ SLB[Server Load Balancer] --&gt;|Traffic Weight| ECS_Group[ECS Group]
+ SLB --&gt;|Traffic Weight| ACK_Group[ACK Node Group]
+ end
 
-Phase_1 --&amp;gt; Phase_2 --&amp;gt; Phase_3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+ subgraph "Phase 3: Stateful &amp; Optimization"
+ DB_Self[Self-hosted DB on ECS] --&gt;|Data Migration| RDS[Aliyun RDS]
+ Middleware_Self[Self-hosted Middleware] --&gt;|Replace| PaaS[Aliyun PaaS (Redis/RocketMQ)]
+ Spot_Instance[Spot Instances] --&gt;|Cost Saving| Batch_Job[Batch Processing Jobs]
+ end
+
+ Phase_1 --&gt; Phase_2 --&gt; Phase_3
+&lt;/pre&gt;
 &lt;h3 id="阶段一网络与基础设施准备"&gt;阶段一：网络与基础设施准备&lt;/h3&gt;
 &lt;p&gt;在迁移之前，网络规划至关重要。&lt;/p&gt;</description></item></channel></rss>

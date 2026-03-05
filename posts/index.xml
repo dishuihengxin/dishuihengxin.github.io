@@ -93,25 +93,25 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过这种方式，最终镜像中不包含 Go 编译器和源代码，体积可缩减 90% 以上。&lt;/p&gt;</description></item><item><title>Linux 高性能网络调优与故障排查实战指南</title><link>https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/</link><pubDate>Wed, 28 Jan 2026 10:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/</guid><description>&lt;p&gt;在构建高并发、低延迟的分布式系统时，网络往往是性能的瓶颈所在。作为一名运维工程师或架构师，深入理解 Linux 网络栈并具备调优与排查能力是必修课。本文将结合我在生产环境中的实战经验，分享 Linux 网络调优的核心策略与故障排查方法论。&lt;/p&gt;
 &lt;h2 id="1-linux-网络栈概览与瓶颈点"&gt;1. Linux 网络栈概览与瓶颈点&lt;/h2&gt;
 &lt;p&gt;Linux 网络栈的设计非常通用，但这也意味着默认配置往往无法满足高负载场景的需求。数据包从网卡（NIC）到达用户态应用程序，主要经过以下路径：&lt;/p&gt;
-&lt;div class="mermaid"&gt;
+&lt;pre class="mermaid"&gt;
 graph TD
  subgraph "Hardware (NIC)"
  NIC[Network Interface Card] --&gt;|DMA| RingBuffer[Ring Buffer]
  NIC --&gt;|Hard IRQ| CPU[CPU Core]
  end
-&lt;pre&gt;&lt;code&gt;subgraph &amp;quot;Kernel Space (SoftIRQ)&amp;quot;
- CPU --&amp;gt;|Soft IRQ| Net_RX[NET_RX_ACTION]
- Net_RX --&amp;gt;|Poll| RingBuffer
- Net_RX --&amp;gt;|GRO| IP_Stack[IP Layer]
- IP_Stack --&amp;gt;|Route| TCP_Stack[TCP Layer]
- TCP_Stack --&amp;gt;|Socket Buffer| Recv_Buffer[Receive Buffer]
-end
 
-subgraph &amp;quot;User Space&amp;quot;
- Recv_Buffer --&amp;gt;|Syscall: read/recv| App[Application]
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+ subgraph "Kernel Space (SoftIRQ)"
+ CPU --&gt;|Soft IRQ| Net_RX[NET_RX_ACTION]
+ Net_RX --&gt;|Poll| RingBuffer
+ Net_RX --&gt;|GRO| IP_Stack[IP Layer]
+ IP_Stack --&gt;|Route| TCP_Stack[TCP Layer]
+ TCP_Stack --&gt;|Socket Buffer| Recv_Buffer[Receive Buffer]
+ end
+
+ subgraph "User Space"
+ Recv_Buffer --&gt;|Syscall: read/recv| App[Application]
+ end
+&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;网卡接收&lt;/strong&gt;：数据包到达网卡，DMA 写入内存（Ring Buffer）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;硬中断&lt;/strong&gt;：网卡触发 CPU 硬中断，通知内核有数据。&lt;/li&gt;
@@ -146,7 +146,7 @@ end
 &lt;h2 id="1-声明式流水线-declarative-pipeline"&gt;1. 声明式流水线 (Declarative Pipeline)&lt;/h2&gt;
 &lt;p&gt;Jenkins 2.0 引入了 Pipeline，推荐使用声明式语法（Declarative），结构更清晰，错误处理更好。&lt;/p&gt;
 &lt;p&gt;以下是一个典型的 CI/CD 流水线交互时序图：&lt;/p&gt;
-&lt;div class="mermaid"&gt;
+&lt;pre class="mermaid"&gt;
 sequenceDiagram
  participant Dev as Developer
  participant Git as GitLab/GitHub
@@ -154,20 +154,20 @@ sequenceDiagram
  participant Slave as K8s Agent (Slave)
  participant Registry as Docker Registry
  participant K8s as Kubernetes Cluster
-&lt;pre&gt;&lt;code&gt;Dev-&amp;gt;&amp;gt;Git: Push Code (git push)
-Git-&amp;gt;&amp;gt;Jenkins: Webhook Trigger
-Jenkins-&amp;gt;&amp;gt;K8s: Launch Pod (jnlp-slave)
-K8s--&amp;gt;&amp;gt;Slave: Pod Running
-Jenkins-&amp;gt;&amp;gt;Slave: Checkout SCM
-Slave-&amp;gt;&amp;gt;Slave: Build &amp;amp; Test (Maven/Gradle)
-Slave-&amp;gt;&amp;gt;Slave: Docker Build
-Slave-&amp;gt;&amp;gt;Registry: Docker Push
-Slave-&amp;gt;&amp;gt;K8s: Helm Upgrade / Kubectl Apply
-K8s--&amp;gt;&amp;gt;Dev: Deployment Success
-Slave-&amp;gt;&amp;gt;Jenkins: Task Finished
-Jenkins-&amp;gt;&amp;gt;K8s: Terminate Pod
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+
+ Dev-&gt;&gt;Git: Push Code (git push)
+ Git-&gt;&gt;Jenkins: Webhook Trigger
+ Jenkins-&gt;&gt;K8s: Launch Pod (jnlp-slave)
+ K8s--&gt;&gt;Slave: Pod Running
+ Jenkins-&gt;&gt;Slave: Checkout SCM
+ Slave-&gt;&gt;Slave: Build &amp; Test (Maven/Gradle)
+ Slave-&gt;&gt;Slave: Docker Build
+ Slave-&gt;&gt;Registry: Docker Push
+ Slave-&gt;&gt;K8s: Helm Upgrade / Kubectl Apply
+ K8s--&gt;&gt;Dev: Deployment Success
+ Slave-&gt;&gt;Jenkins: Task Finished
+ Jenkins-&gt;&gt;K8s: Terminate Pod
+&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Jenkinsfile 示例&lt;/strong&gt;:&lt;/p&gt;</description></item><item><title>AWS 生产环境架构设计：从 Landing Zone 到高可用服务</title><link>https://www.dishuihengxin.com/posts/cloud-aws-production-best-practices/</link><pubDate>Fri, 16 Jan 2026 15:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/cloud-aws-production-best-practices/</guid><description>&lt;p&gt;随着企业上云的深入，仅仅在 AWS 上“开几台 EC2”已经远远不能满足安全、合规和可扩展性的需求。一个健壮的生产环境架构需要从地基（Foundation）开始规划。本文将分享我在构建企业级 AWS 环境时的核心设计思路和最佳实践。&lt;/p&gt;
 &lt;h2 id="1-多账号策略与-landing-zone"&gt;1. 多账号策略与 Landing Zone&lt;/h2&gt;
 &lt;p&gt;永远不要在单个 AWS 账号中运行所有环境（Dev/Test/Prod）。&lt;strong&gt;多账号架构&lt;/strong&gt;是隔离风险、简化计费和权限管理的最佳实践。&lt;/p&gt;
@@ -305,28 +305,28 @@ Jenkins-&amp;gt;&amp;gt;K8s: Terminate Pod
 &lt;/ul&gt;
 &lt;h2 id="2-演进路线图"&gt;2. 演进路线图&lt;/h2&gt;
 &lt;p&gt;以下是典型的从 ECS 到 ACK 的迁移路径图：&lt;/p&gt;
-&lt;div class="mermaid"&gt;
+&lt;pre class="mermaid"&gt;
 graph TD
  subgraph "Phase 1: Infrastructure Prep"
  VPC[VPC Network] --&gt;|CEN Peering| ACK_Cluster[ACK Cluster]
  ACK_Cluster --&gt;|Terway Plugin| ENI[Elastic Network Interface]
  end
-&lt;pre&gt;&lt;code&gt;subgraph &amp;quot;Phase 2: Stateless Migration&amp;quot;
- Web_App[Web Service] --&amp;gt;|Dockerize| Container_Image[Container Image]
- Container_Image --&amp;gt;|Deploy| ACK_Pod[ACK Pod]
- SLB[Server Load Balancer] --&amp;gt;|Traffic Weight| ECS_Group[ECS Group]
- SLB --&amp;gt;|Traffic Weight| ACK_Group[ACK Node Group]
-end
 
-subgraph &amp;quot;Phase 3: Stateful &amp;amp; Optimization&amp;quot;
- DB_Self[Self-hosted DB on ECS] --&amp;gt;|Data Migration| RDS[Aliyun RDS]
- Middleware_Self[Self-hosted Middleware] --&amp;gt;|Replace| PaaS[Aliyun PaaS (Redis/RocketMQ)]
- Spot_Instance[Spot Instances] --&amp;gt;|Cost Saving| Batch_Job[Batch Processing Jobs]
-end
+ subgraph "Phase 2: Stateless Migration"
+ Web_App[Web Service] --&gt;|Dockerize| Container_Image[Container Image]
+ Container_Image --&gt;|Deploy| ACK_Pod[ACK Pod]
+ SLB[Server Load Balancer] --&gt;|Traffic Weight| ECS_Group[ECS Group]
+ SLB --&gt;|Traffic Weight| ACK_Group[ACK Node Group]
+ end
 
-Phase_1 --&amp;gt; Phase_2 --&amp;gt; Phase_3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+ subgraph "Phase 3: Stateful &amp; Optimization"
+ DB_Self[Self-hosted DB on ECS] --&gt;|Data Migration| RDS[Aliyun RDS]
+ Middleware_Self[Self-hosted Middleware] --&gt;|Replace| PaaS[Aliyun PaaS (Redis/RocketMQ)]
+ Spot_Instance[Spot Instances] --&gt;|Cost Saving| Batch_Job[Batch Processing Jobs]
+ end
+
+ Phase_1 --&gt; Phase_2 --&gt; Phase_3
+&lt;/pre&gt;
 &lt;h3 id="阶段一网络与基础设施准备"&gt;阶段一：网络与基础设施准备&lt;/h3&gt;
 &lt;p&gt;在迁移之前，网络规划至关重要。&lt;/p&gt;</description></item><item><title>Database Performance Optimization Strategies: From Query Tuning to System Architecture</title><link>https://www.dishuihengxin.com/posts/database-performance-optimization/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-performance-optimization/</guid><description>&lt;h1 id="database-performance-optimization-strategies-from-query-tuning-to-system-architecture"&gt;Database Performance Optimization Strategies: From Query Tuning to System Architecture&lt;/h1&gt;
 &lt;p&gt;Database performance optimization is a critical aspect of modern application development. As data volumes grow and user expectations increase, the ability to efficiently query and manipulate data becomes paramount. This comprehensive guide explores various strategies and techniques for optimizing database performance, from basic query tuning to advanced architectural considerations.&lt;/p&gt;

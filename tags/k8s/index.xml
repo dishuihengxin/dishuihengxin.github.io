@@ -3,7 +3,7 @@
 &lt;h2 id="1-声明式流水线-declarative-pipeline"&gt;1. 声明式流水线 (Declarative Pipeline)&lt;/h2&gt;
 &lt;p&gt;Jenkins 2.0 引入了 Pipeline，推荐使用声明式语法（Declarative），结构更清晰，错误处理更好。&lt;/p&gt;
 &lt;p&gt;以下是一个典型的 CI/CD 流水线交互时序图：&lt;/p&gt;
-&lt;div class="mermaid"&gt;
+&lt;pre class="mermaid"&gt;
 sequenceDiagram
  participant Dev as Developer
  participant Git as GitLab/GitHub
@@ -11,20 +11,20 @@ sequenceDiagram
  participant Slave as K8s Agent (Slave)
  participant Registry as Docker Registry
  participant K8s as Kubernetes Cluster
-&lt;pre&gt;&lt;code&gt;Dev-&amp;gt;&amp;gt;Git: Push Code (git push)
-Git-&amp;gt;&amp;gt;Jenkins: Webhook Trigger
-Jenkins-&amp;gt;&amp;gt;K8s: Launch Pod (jnlp-slave)
-K8s--&amp;gt;&amp;gt;Slave: Pod Running
-Jenkins-&amp;gt;&amp;gt;Slave: Checkout SCM
-Slave-&amp;gt;&amp;gt;Slave: Build &amp;amp; Test (Maven/Gradle)
-Slave-&amp;gt;&amp;gt;Slave: Docker Build
-Slave-&amp;gt;&amp;gt;Registry: Docker Push
-Slave-&amp;gt;&amp;gt;K8s: Helm Upgrade / Kubectl Apply
-K8s--&amp;gt;&amp;gt;Dev: Deployment Success
-Slave-&amp;gt;&amp;gt;Jenkins: Task Finished
-Jenkins-&amp;gt;&amp;gt;K8s: Terminate Pod
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+
+ Dev-&gt;&gt;Git: Push Code (git push)
+ Git-&gt;&gt;Jenkins: Webhook Trigger
+ Jenkins-&gt;&gt;K8s: Launch Pod (jnlp-slave)
+ K8s--&gt;&gt;Slave: Pod Running
+ Jenkins-&gt;&gt;Slave: Checkout SCM
+ Slave-&gt;&gt;Slave: Build &amp; Test (Maven/Gradle)
+ Slave-&gt;&gt;Slave: Docker Build
+ Slave-&gt;&gt;Registry: Docker Push
+ Slave-&gt;&gt;K8s: Helm Upgrade / Kubectl Apply
+ K8s--&gt;&gt;Dev: Deployment Success
+ Slave-&gt;&gt;Jenkins: Task Finished
+ Jenkins-&gt;&gt;K8s: Terminate Pod
+&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Jenkinsfile 示例&lt;/strong&gt;:&lt;/p&gt;</description></item><item><title>Kubernetes 故障排查终极指南：从 Pod 到 Cluster</title><link>https://www.dishuihengxin.com/posts/devops-kubernetes-troubleshooting-guide/</link><pubDate>Thu, 08 Jan 2026 12:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/devops-kubernetes-troubleshooting-guide/</guid><description>&lt;p&gt;Kubernetes (K8s) 是现代容器编排的事实标准，但其复杂的架构也让故障排查（Troubleshooting）成为了运维人员的噩梦。当你的 Pod 状态变成了 &lt;code&gt;CrashLoopBackOff&lt;/code&gt;，或者 Service 突然访问不通时，该从何下手？&lt;/p&gt;
 &lt;p&gt;本文将提供一套系统化的排查思路和 checklist，助你快速定位根因。&lt;/p&gt;
 &lt;h2 id="1-核心排查思路自下而上"&gt;1. 核心排查思路：自下而上&lt;/h2&gt;
