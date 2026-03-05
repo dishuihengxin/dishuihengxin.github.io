@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hardening on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/hardening/</link><description>Recent content in Hardening on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Thu, 15 Jan 2026 13:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/hardening/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 主机安全加固：构建防御纵深的基石</title><link>https://www.dishuihengxin.com/posts/ops-linux-security-hardening/</link><pubDate>Thu, 15 Jan 2026 13:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/ops-linux-security-hardening/</guid><description>&lt;p&gt;在公有云环境下，虽然厂商提供了安全组和 DDoS 防护，但主机本身的安全（Host Security）依然是用户的责任。一旦攻击者突破边界防火墙，裸奔的 Linux 主机就是待宰的羔羊。&lt;/p&gt;
+&lt;p&gt;本文整理了一份标准化的 Linux 主机安全加固清单（Hardening Checklist），适用于生产环境的初始化配置。&lt;/p&gt;
+&lt;h2 id="1-账户与认证安全"&gt;1. 账户与认证安全&lt;/h2&gt;
+&lt;p&gt;身份认证是第一道大门。&lt;/p&gt;
+&lt;h3 id="11-ssh-强化配置"&gt;1.1 SSH 强化配置&lt;/h3&gt;
+&lt;p&gt;修改 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;禁止 Root 登录&lt;/strong&gt;: &lt;code&gt;PermitRootLogin no&lt;/code&gt;。强制使用普通用户登录后 &lt;code&gt;sudo&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;禁用密码认证&lt;/strong&gt;: &lt;code&gt;PasswordAuthentication no&lt;/code&gt;。仅允许 SSH Key 密钥认证，彻底杜绝暴力破解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;修改默认端口&lt;/strong&gt;: 将 Port 22 修改为高位端口（如 22222），减少扫描噪音（虽然不能防定点攻击，但能防脚本小子）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;限制重试次数&lt;/strong&gt;: &lt;code&gt;MaxAuthTries 3&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="12-密码策略"&gt;1.2 密码策略&lt;/h3&gt;
+&lt;p&gt;虽然禁用了 SSH 密码登录，但本地 &lt;code&gt;sudo&lt;/code&gt; 仍需密码。使用 &lt;code&gt;pam_pwquality&lt;/code&gt; 模块强制复杂度：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最小长度 12 位。&lt;/li&gt;
+&lt;li&gt;必须包含大小写字母、数字和特殊符号。&lt;/li&gt;
+&lt;li&gt;定期轮换（例如 90 天）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-最小权限原则"&gt;2. 最小权限原则&lt;/h2&gt;
+&lt;h3 id="21-sudo-权限控制"&gt;2.1 Sudo 权限控制&lt;/h3&gt;
+&lt;p&gt;不要给所有人都配置 &lt;code&gt;ALL=(ALL) NOPASSWD: ALL&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;精细化授权&lt;/strong&gt;: 只给开发人员开启特定命令的 sudo 权限（如重启服务、查看日志），禁止 &lt;code&gt;su&lt;/code&gt; 或 &lt;code&gt;visudo&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;审计&lt;/strong&gt;: 所有的 sudo 操作都会记录在 &lt;code&gt;/var/log/secure&lt;/code&gt; 或 &lt;code&gt;/var/log/auth.log&lt;/code&gt; 中，必须接入日志审计系统。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="22-文件系统权限"&gt;2.2 文件系统权限&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;UMASK&lt;/strong&gt;: 设置默认 &lt;code&gt;umask 027&lt;/code&gt;，确保新建文件对“其他组”不可写。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SUID/SGID&lt;/strong&gt;: 查找并移除不必要的 SUID 程序（如 &lt;code&gt;ping&lt;/code&gt;, &lt;code&gt;mount&lt;/code&gt; 如果业务不需要）。这些程序以 root 权限运行，若有漏洞极易提权。
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;find / -type f -perm -4000 -o -perm -2000
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-网络与服务加固"&gt;3. 网络与服务加固&lt;/h2&gt;
+&lt;h3 id="31-最小化服务"&gt;3.1 最小化服务&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关闭不必要的端口&lt;/strong&gt;: 使用 &lt;code&gt;netstat -tulpn&lt;/code&gt; 检查。停用 Postfix (25), RPC (111) 等非业务必须服务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地监听&lt;/strong&gt;: 对于仅供本机使用的服务（如 Redis, MongoDB），配置 &lt;code&gt;bind 127.0.0.1&lt;/code&gt;，防止监听 0.0.0.0 暴露到外网。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="32-主机防火墙-iptablesfirewalld"&gt;3.2 主机防火墙 (Iptables/Firewalld)&lt;/h3&gt;
+&lt;p&gt;即使有云安全组，主机防火墙也是必要的第二道防线（Defense in Depth）。&lt;/p&gt;</description></item></channel></rss>

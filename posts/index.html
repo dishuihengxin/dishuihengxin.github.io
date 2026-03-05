@@ -1741,7 +1741,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     class="group text-center backdrop-blur-md bg-white/10 hover:bg-white/20 rounded-xl px-6 py-4 border border-white/20 hover:border-cyan-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
                     <div
                         class="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:scale-110 transition-transform duration-300">
-                        30
+                        41
                     </div>
                     <div class="text-white/90 text-xs uppercase tracking-wider">
                         文章
@@ -1751,7 +1751,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     class="group text-center backdrop-blur-md bg-white/10 hover:bg-white/20 rounded-xl px-6 py-4 border border-white/20 hover:border-purple-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
                     <div
                         class="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:scale-110 transition-transform duration-300">
-                        11
+                        15
                     </div>
                     <div class="text-white/90 text-xs uppercase tracking-wider">
                         分类
@@ -1761,7 +1761,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     class="group text-center backdrop-blur-md bg-white/10 hover:bg-white/20 rounded-xl px-6 py-4 border border-white/20 hover:border-pink-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
                     <div
                         class="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:scale-110 transition-transform duration-300">
-                        130
+                        165
                     </div>
                     <div class="text-white/90 text-xs uppercase tracking-wider">
                         标签
@@ -1843,6 +1843,36 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </button>
                                 
                                 <button
+                                    @click="filterByCategory('ops'); selectedCategory = 'ops'; open = false"
+                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
+                                    <div class="flex items-center justify-between">
+                                        <span>ops</span>
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">4</span>
+                                    </div>
+                                </button>
+                                
+                                <button
+                                    @click="filterByCategory('cloud'); selectedCategory = 'cloud'; open = false"
+                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
+                                    <div class="flex items-center justify-between">
+                                        <span>cloud</span>
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">3</span>
+                                    </div>
+                                </button>
+                                
+                                <button
+                                    @click="filterByCategory('devops'); selectedCategory = 'devops'; open = false"
+                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
+                                    <div class="flex items-center justify-between">
+                                        <span>devops</span>
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">3</span>
+                                    </div>
+                                </button>
+                                
+                                <button
                                     @click="filterByCategory('database'); selectedCategory = 'database'; open = false"
                                     class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
                                     <div class="flex items-center justify-between">
@@ -1877,6 +1907,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                     class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
                                     <div class="flex items-center justify-between">
                                         <span>cloud native</span>
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">1</span>
+                                    </div>
+                                </button>
+                                
+                                <button
+                                    @click="filterByCategory('dba'); selectedCategory = 'dba'; open = false"
+                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
+                                    <div class="flex items-center justify-between">
+                                        <span>dba</span>
                                         <span
                                             class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">1</span>
                                     </div>
@@ -1956,6 +1996,1040 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div id="postsContainer" class="w-full max-w-full">
                     
                     <div id="cardView" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/cloud-azure-enterprise-architecture/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/0112c5d6f8b082521c11e546efa3cad9/800/450?grayscale&amp;blur=2" alt="Azure 企业级 Landing Zone 设计：构建合规的云上数据中心"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    cloud
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/cloud-azure-enterprise-architecture/" class="line-clamp-2">
+                Azure 企业级 Landing Zone 设计：构建合规的云上数据中心
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            对比 AWS Landing Zone，解析 Microsoft Azure 的云采用框架 (CAF)。如何利用 Management Groups、Policy 和 Blueprint 构建可扩展、强管控的企业级云环境。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-02-23" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-02-23
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    azure
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    architecture
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +3
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/ops-ansible-automation-guide/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/114e199e3e3061de421968d8caa77577/800/450?grayscale&amp;blur=2" alt="Ansible 自动化运维实战：从 Playbook 编写到大规模集群管理"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    ops
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/ops-ansible-automation-guide/" class="line-clamp-2">
+                Ansible 自动化运维实战：从 Playbook 编写到大规模集群管理
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            告别 Shell 脚本的痛苦。本文介绍 Ansible 的核心概念、Inventory 动态管理、Role 的模块化设计，以及如何优化执行效率管理千台服务器。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-02-17" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-02-17
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    ansible
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    automation
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +3
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/devops-docker-image-optimization/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/0fd418ad246b9b538cbe400d2143fc9c/800/450?grayscale&amp;blur=2" alt="Docker 镜像瘦身与安全加固：最佳实践指南"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    devops
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/devops-docker-image-optimization/" class="line-clamp-2">
+                Docker 镜像瘦身与安全加固：最佳实践指南
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            如何构建更小、更快、更安全的 Docker 镜像？本文详细介绍多阶段构建、Distroless 基础镜像、层级优化及镜像扫描等实战技巧。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-02-05" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-02-05
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    docker
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    containers
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +3
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/ops-linux-network-tuning-troubleshooting/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/f2654b08d70be327ab0f83e8b507481b/800/450?grayscale&amp;blur=2" alt="Linux 高性能网络调优与故障排查实战指南"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    ops
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/ops-linux-network-tuning-troubleshooting/" class="line-clamp-2">
+                Linux 高性能网络调优与故障排查实战指南
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            深入解析 Linux 网络栈工作原理，分享生产环境下的 TCP/IP 内核参数调优策略，以及基于 tcpdump、ss、netstat 的网络问题排查方法论。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-01-28" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-01-28
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    linux
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    network
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +3
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/database-oracle-rac-dataguard-best-practices/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/be70eca38ba9257734cd791ebfb633e3/800/450?grayscale&amp;blur=2" alt="Oracle RAC 与 DataGuard 高可用架构实战：从部署到灾备切换"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    dba
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/database-oracle-rac-dataguard-best-practices/" class="line-clamp-2">
+                Oracle RAC 与 DataGuard 高可用架构实战：从部署到灾备切换
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            结合多年金融核心系统维护经验，深度解析 Oracle RAC 集群的稳定性优化策略，以及 DataGuard 容灾建设中的关键配置与 Switchover/Failover 实战演练。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-01-27" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-01-27
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    oracle
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    rac
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +4
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/devops-jenkins-pipeline-as-code/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/df19b071fc487ff05bc4cef77c1e22aa/800/450?grayscale&amp;blur=2" alt="Jenkins Pipeline as Code：构建现代化的 CI/CD 流水线"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    devops
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/devops-jenkins-pipeline-as-code/" class="line-clamp-2">
+                Jenkins Pipeline as Code：构建现代化的 CI/CD 流水线
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            从 UI 配置走向代码化管理。深入解析 Jenkinsfile 语法、Shared Libraries 封装通用逻辑，以及在 Kubernetes 环境下动态创建 Slave 节点的最佳实践。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-01-26" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-01-26
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    jenkins
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    cicd
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +4
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/cloud-aws-production-best-practices/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/116892bd5ac53fa8509ceb8cf718b28a/800/450?grayscale&amp;blur=2" alt="AWS 生产环境架构设计：从 Landing Zone 到高可用服务"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    cloud
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/cloud-aws-production-best-practices/" class="line-clamp-2">
+                AWS 生产环境架构设计：从 Landing Zone 到高可用服务
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            基于 AWS Well-Architected Framework，详细阐述企业级 Landing Zone 设计、多账号管理、网络规划及高可用服务架构的最佳实践。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-01-16" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-01-16
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    aws
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    architecture
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +3
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/ops-linux-security-hardening/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/1d6e1871aaebe5f510221cb091c175d8/800/450?grayscale&amp;blur=2" alt="Linux 主机安全加固：构建防御纵深的基石"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    ops
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/ops-linux-security-hardening/" class="line-clamp-2">
+                Linux 主机安全加固：构建防御纵深的基石
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            安全不是买个防火墙就万事大吉。本文从 SSH 强化、用户权限控制、文件系统加固到入侵检测，详述 Linux 服务器的系统级安全加固清单。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-01-15" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-01-15
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    security
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    linux
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +4
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/devops-kubernetes-troubleshooting-guide/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/d3cca7ea17a48cc4a58edc64b05bca37/800/450?grayscale&amp;blur=2" alt="Kubernetes 故障排查终极指南：从 Pod 到 Cluster"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    devops
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/devops-kubernetes-troubleshooting-guide/" class="line-clamp-2">
+                Kubernetes 故障排查终极指南：从 Pod 到 Cluster
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            K8s 环境极其复杂，当 Pod 起不来或服务不可达时该怎么办？本文总结了一套系统化的排查流程，涵盖 CrashLoopBackOff、Pending、Service 不通等经典场景。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-01-08" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-01-08
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    kubernetes
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    k8s
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +3
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/ops-linux-performance-analysis-guide/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/fbfc0db9f5623c6a2912d3fbe2a3b7f6/800/450?grayscale&amp;blur=2" alt="Linux 系统性能分析方法论：超越 top 和 free"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    ops
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/ops-linux-performance-analysis-guide/" class="line-clamp-2">
+                Linux 系统性能分析方法论：超越 top 和 free
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            当系统变慢时，如何科学地定位瓶颈？本文介绍 USE 方法论、CPU/内存/IO 的深度指标解读，以及 perf、eBPF 等高级分析工具的使用。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-01-06" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-01-06
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    linux
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    performance
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +3
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+<div class="group article-card card-liquid-glass rounded-2xl overflow-hidden">
+    
+    
+    
+        
+        
+            
+            
+        
+    
+
+    <a href="/posts/cloud-aliyun-cloud-native-evolution/" class="block relative overflow-hidden rounded-t-2xl">
+        <div class="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden rounded-t-2xl">
+            <img src="https://picsum.photos/seed/266c8f5faeade28633841d94e70ad3ca/800/450?grayscale&amp;blur=2" alt="阿里云云原生架构演进：从 ECS 到 ACK 的实战路径"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            
+            
+            
+            <div class="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)] z-10">
+                
+                <span class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                    cloud
+                </span>
+                
+            </div>
+            
+        </div>
+    </a>
+
+    
+    <div class="p-3">
+        
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+            <a href="/posts/cloud-aliyun-cloud-native-evolution/" class="line-clamp-2">
+                阿里云云原生架构演进：从 ECS 到 ACK 的实战路径
+            </a>
+        </h3>
+
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+            
+            结合国内企业上云现状，详细解析如何将传统 ECS 单体/微服务架构平滑迁移至阿里云容器服务 ACK，涵盖网络打通、存储迁移、SLB 切换及发布策略。
+            
+        </p>
+
+        
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+            
+            <time datetime="2026-01-04" class="flex items-center">
+                <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                </svg>
+                2026-01-04
+            </time>
+
+            
+            
+            <div class="flex gap-1">
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    aliyun
+                </span>
+                
+                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                    <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    cloud-native
+                </span>
+                
+                
+                <span class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                    +4
+                </span>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
                         
                             
                             
@@ -4746,7 +5820,1206 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="0" data-categories='[&#34;Database&#34;]'>
+                            <div class="post-item" data-post-id="0" data-categories='[&#34;cloud&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/cloud-azure-enterprise-architecture/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/0112c5d6f8b082521c11e546efa3cad9/600/400?grayscale&amp;blur=2" alt="Azure 企业级 Landing Zone 设计：构建合规的云上数据中心"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        cloud
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/cloud-azure-enterprise-architecture/">
+                    Azure 企业级 Landing Zone 设计：构建合规的云上数据中心
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                对比 AWS Landing Zone，解析 Microsoft Azure 的云采用框架 (CAF)。如何利用 Management Groups、Policy 和 Blueprint 构建可扩展、强管控的企业级云环境。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-02-23" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-02-23
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        azure
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        architecture
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +3
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="1" data-categories='[&#34;ops&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/ops-ansible-automation-guide/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/114e199e3e3061de421968d8caa77577/600/400?grayscale&amp;blur=2" alt="Ansible 自动化运维实战：从 Playbook 编写到大规模集群管理"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        ops
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/ops-ansible-automation-guide/">
+                    Ansible 自动化运维实战：从 Playbook 编写到大规模集群管理
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                告别 Shell 脚本的痛苦。本文介绍 Ansible 的核心概念、Inventory 动态管理、Role 的模块化设计，以及如何优化执行效率管理千台服务器。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-02-17" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-02-17
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        ansible
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        automation
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +3
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="2" data-categories='[&#34;devops&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/devops-docker-image-optimization/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/0fd418ad246b9b538cbe400d2143fc9c/600/400?grayscale&amp;blur=2" alt="Docker 镜像瘦身与安全加固：最佳实践指南"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        devops
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/devops-docker-image-optimization/">
+                    Docker 镜像瘦身与安全加固：最佳实践指南
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                如何构建更小、更快、更安全的 Docker 镜像？本文详细介绍多阶段构建、Distroless 基础镜像、层级优化及镜像扫描等实战技巧。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-02-05" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-02-05
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        docker
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        containers
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +3
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="3" data-categories='[&#34;ops&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/ops-linux-network-tuning-troubleshooting/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/f2654b08d70be327ab0f83e8b507481b/600/400?grayscale&amp;blur=2" alt="Linux 高性能网络调优与故障排查实战指南"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        ops
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/ops-linux-network-tuning-troubleshooting/">
+                    Linux 高性能网络调优与故障排查实战指南
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                深入解析 Linux 网络栈工作原理，分享生产环境下的 TCP/IP 内核参数调优策略，以及基于 tcpdump、ss、netstat 的网络问题排查方法论。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-01-28" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-01-28
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        linux
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        network
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +3
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="4" data-categories='[&#34;dba&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/database-oracle-rac-dataguard-best-practices/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/be70eca38ba9257734cd791ebfb633e3/600/400?grayscale&amp;blur=2" alt="Oracle RAC 与 DataGuard 高可用架构实战：从部署到灾备切换"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        dba
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/database-oracle-rac-dataguard-best-practices/">
+                    Oracle RAC 与 DataGuard 高可用架构实战：从部署到灾备切换
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                结合多年金融核心系统维护经验，深度解析 Oracle RAC 集群的稳定性优化策略，以及 DataGuard 容灾建设中的关键配置与 Switchover/Failover 实战演练。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-01-27" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-01-27
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        oracle
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        rac
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +4
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="5" data-categories='[&#34;devops&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/devops-jenkins-pipeline-as-code/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/df19b071fc487ff05bc4cef77c1e22aa/600/400?grayscale&amp;blur=2" alt="Jenkins Pipeline as Code：构建现代化的 CI/CD 流水线"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        devops
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/devops-jenkins-pipeline-as-code/">
+                    Jenkins Pipeline as Code：构建现代化的 CI/CD 流水线
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                从 UI 配置走向代码化管理。深入解析 Jenkinsfile 语法、Shared Libraries 封装通用逻辑，以及在 Kubernetes 环境下动态创建 Slave 节点的最佳实践。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-01-26" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-01-26
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        jenkins
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        cicd
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +4
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="6" data-categories='[&#34;cloud&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/cloud-aws-production-best-practices/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/116892bd5ac53fa8509ceb8cf718b28a/600/400?grayscale&amp;blur=2" alt="AWS 生产环境架构设计：从 Landing Zone 到高可用服务"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        cloud
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/cloud-aws-production-best-practices/">
+                    AWS 生产环境架构设计：从 Landing Zone 到高可用服务
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                基于 AWS Well-Architected Framework，详细阐述企业级 Landing Zone 设计、多账号管理、网络规划及高可用服务架构的最佳实践。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-01-16" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-01-16
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        aws
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        architecture
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +3
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="7" data-categories='[&#34;ops&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/ops-linux-security-hardening/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/1d6e1871aaebe5f510221cb091c175d8/600/400?grayscale&amp;blur=2" alt="Linux 主机安全加固：构建防御纵深的基石"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        ops
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/ops-linux-security-hardening/">
+                    Linux 主机安全加固：构建防御纵深的基石
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                安全不是买个防火墙就万事大吉。本文从 SSH 强化、用户权限控制、文件系统加固到入侵检测，详述 Linux 服务器的系统级安全加固清单。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-01-15" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-01-15
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        security
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        linux
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +4
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="8" data-categories='[&#34;devops&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/devops-kubernetes-troubleshooting-guide/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/d3cca7ea17a48cc4a58edc64b05bca37/600/400?grayscale&amp;blur=2" alt="Kubernetes 故障排查终极指南：从 Pod 到 Cluster"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        devops
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/devops-kubernetes-troubleshooting-guide/">
+                    Kubernetes 故障排查终极指南：从 Pod 到 Cluster
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                K8s 环境极其复杂，当 Pod 起不来或服务不可达时该怎么办？本文总结了一套系统化的排查流程，涵盖 CrashLoopBackOff、Pending、Service 不通等经典场景。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-01-08" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-01-08
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        kubernetes
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        k8s
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +3
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="9" data-categories='[&#34;ops&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/ops-linux-performance-analysis-guide/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/fbfc0db9f5623c6a2912d3fbe2a3b7f6/600/400?grayscale&amp;blur=2" alt="Linux 系统性能分析方法论：超越 top 和 free"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        ops
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/ops-linux-performance-analysis-guide/">
+                    Linux 系统性能分析方法论：超越 top 和 free
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                当系统变慢时，如何科学地定位瓶颈？本文介绍 USE 方法论、CPU/内存/IO 的深度指标解读，以及 perf、eBPF 等高级分析工具的使用。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-01-06" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-01-06
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        linux
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        performance
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +3
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="10" data-categories='[&#34;cloud&#34;]'>
+                                
+<div
+    class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
+    <div class="flex flex-col sm:flex-row sm:min-h-[180px]">
+        
+        <div
+            class="sm:w-48 flex-shrink-0 relative h-40 sm:h-auto overflow-hidden rounded-t-xl sm:rounded-t-none sm:rounded-l-xl">
+            
+            
+                
+                
+                    
+                    
+                
+            
+
+            <a href="/posts/cloud-aliyun-cloud-native-evolution/" class="block w-full h-full relative group/img">
+                <img src="https://picsum.photos/seed/266c8f5faeade28633841d94e70ad3ca/600/400?grayscale&amp;blur=2" alt="阿里云云原生架构演进：从 ECS 到 ACK 的实战路径"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-black/60 transition-all duration-500">
+                </div>
+
+                
+                
+                <div class="absolute top-3 left-3 z-10">
+                    
+                    <span
+                        class="inline-block px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md bg-gradient-to-r from-orange-500/80 to-pink-500/80 rounded-lg shadow-lg">
+                        cloud
+                    </span>
+                    
+                </div>
+                
+            </a>
+        </div>
+
+        
+        <div class="flex-1 p-3 flex flex-col justify-between">
+            
+            <h3
+                class="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                <a href="/posts/cloud-aliyun-cloud-native-evolution/">
+                    阿里云云原生架构演进：从 ECS 到 ACK 的实战路径
+                </a>
+            </h3>
+
+            
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-3 leading-relaxed">
+                
+                结合国内企业上云现状，详细解析如何将传统 ECS 单体/微服务架构平滑迁移至阿里云容器服务 ACK，涵盖网络打通、存储迁移、SLB 切换及发布策略。
+                
+            </p>
+
+            
+            <div class="flex items-center justify-between gap-3 text-xs text-gray-500 dark:text-gray-400">
+                
+                <time datetime=" 2026-01-04" class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    2026-01-04
+                </time>
+
+                
+                
+                <div class="flex gap-1">
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        aliyun
+                    </span>
+                    
+                    <span
+                        class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-gray-500/10 dark:bg-gray-400/20 text-gray-600 dark:text-gray-300 rounded backdrop-blur-sm border border-gray-300/20 dark:border-gray-600/30">
+                        <svg class="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M5.5 2A3.5 3.5 0 002 5.5v5.086a3.5 3.5 0 001.025 2.475l8.5 8.5a3.5 3.5 0 004.95 0l5.086-5.086a3.5 3.5 0 000-4.95l-8.5-8.5A3.5 3.5 0 0010.586 2H5.5zM7 7a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        cloud-native
+                    </span>
+                    
+                    
+                    <span
+                        class="px-2 py-1 text-xs bg-indigo-500/15 dark:bg-indigo-400/25 text-indigo-600 dark:text-indigo-400 rounded backdrop-blur-sm border border-indigo-300/30 dark:border-indigo-600/40">
+                        +4
+                    </span>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        
+                            
+                            
+                                
+                            
+                            <div class="post-item" data-post-id="11" data-categories='[&#34;Database&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -4855,7 +7128,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="1" data-categories='[&#34;Database&#34;]'>
+                            <div class="post-item" data-post-id="12" data-categories='[&#34;Database&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -4964,7 +7237,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="2" data-categories='[&#34;数据库&#34;]'>
+                            <div class="post-item" data-post-id="13" data-categories='[&#34;数据库&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -5069,7 +7342,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="3" data-categories='[&#34;数据库&#34;]'>
+                            <div class="post-item" data-post-id="14" data-categories='[&#34;数据库&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -5178,7 +7451,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="4" data-categories='[&#34;Cloud Native&#34;]'>
+                            <div class="post-item" data-post-id="15" data-categories='[&#34;Cloud Native&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -5287,7 +7560,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="5" data-categories='[&#34;运维&#34;]'>
+                            <div class="post-item" data-post-id="16" data-categories='[&#34;运维&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -5396,7 +7669,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="6" data-categories='[&#34;数据库&#34;]'>
+                            <div class="post-item" data-post-id="17" data-categories='[&#34;数据库&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -5505,7 +7778,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="7" data-categories='[&#34;数据库&#34;]'>
+                            <div class="post-item" data-post-id="18" data-categories='[&#34;数据库&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -5614,7 +7887,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="8" data-categories='[&#34;数据库&#34;]'>
+                            <div class="post-item" data-post-id="19" data-categories='[&#34;数据库&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -5723,7 +7996,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="9" data-categories='[&#34;运维&#34;]'>
+                            <div class="post-item" data-post-id="20" data-categories='[&#34;运维&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -5832,7 +8105,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="10" data-categories='[&#34;数据库&#34;]'>
+                            <div class="post-item" data-post-id="21" data-categories='[&#34;数据库&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -5941,7 +8214,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="11" data-categories='[&#34;云架构&#34;]'>
+                            <div class="post-item" data-post-id="22" data-categories='[&#34;云架构&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -6046,7 +8319,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="12" data-categories='[&#34;云架构&#34;]'>
+                            <div class="post-item" data-post-id="23" data-categories='[&#34;云架构&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -6155,7 +8428,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="13" data-categories='[&#34;云架构&#34;]'>
+                            <div class="post-item" data-post-id="24" data-categories='[&#34;云架构&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -6260,7 +8533,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="14" data-categories='[&#34;数据库技术&#34;]'>
+                            <div class="post-item" data-post-id="25" data-categories='[&#34;数据库技术&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -6369,7 +8642,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="15" data-categories='[&#34;运维&#34;]'>
+                            <div class="post-item" data-post-id="26" data-categories='[&#34;运维&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -6478,7 +8751,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="16" data-categories='[&#34;运维&#34;]'>
+                            <div class="post-item" data-post-id="27" data-categories='[&#34;运维&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -6587,7 +8860,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="17" data-categories='[&#34;运维&#34;]'>
+                            <div class="post-item" data-post-id="28" data-categories='[&#34;运维&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -6696,7 +8969,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="18" data-categories='[&#34;运维&#34;]'>
+                            <div class="post-item" data-post-id="29" data-categories='[&#34;运维&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -6805,7 +9078,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="19" data-categories='[&#34;数据库&#34;]'>
+                            <div class="post-item" data-post-id="30" data-categories='[&#34;数据库&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -6914,7 +9187,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="20" data-categories='[&#34;数据库&#34;]'>
+                            <div class="post-item" data-post-id="31" data-categories='[&#34;数据库&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -7023,7 +9296,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="21" data-categories='[&#34;云架构&#34;]'>
+                            <div class="post-item" data-post-id="32" data-categories='[&#34;云架构&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -7132,7 +9405,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="22" data-categories='[&#34;云架构&#34;]'>
+                            <div class="post-item" data-post-id="33" data-categories='[&#34;云架构&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -7241,7 +9514,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="23" data-categories='[&#34;云架构&#34;]'>
+                            <div class="post-item" data-post-id="34" data-categories='[&#34;云架构&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -7346,7 +9619,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="24" data-categories='[&#34;云架构&#34;]'>
+                            <div class="post-item" data-post-id="35" data-categories='[&#34;云架构&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -7451,7 +9724,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="25" data-categories='[&#34;技术分享&#34;]'>
+                            <div class="post-item" data-post-id="36" data-categories='[&#34;技术分享&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -7556,7 +9829,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="26" data-categories='[&#34;云计算&#34;,&#34;数据架构&#34;]'>
+                            <div class="post-item" data-post-id="37" data-categories='[&#34;云计算&#34;,&#34;数据架构&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -7661,7 +9934,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="27" data-categories='[&#34;云计算&#34;]'>
+                            <div class="post-item" data-post-id="38" data-categories='[&#34;云计算&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -7766,7 +10039,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="28" data-categories='[&#34;云架构&#34;]'>
+                            <div class="post-item" data-post-id="39" data-categories='[&#34;云架构&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -7871,7 +10144,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 
                             
-                            <div class="post-item" data-post-id="29" data-categories='[&#34;设计&#34;]'>
+                            <div class="post-item" data-post-id="40" data-categories='[&#34;设计&#34;]'>
                                 
 <div
     class="group card-liquid-glass rounded-xl overflow-hidden transition-all duration-500 hover:transform hover:-translate-y-1 hover:scale-[1.01]">
@@ -8084,6 +10357,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 <span class="badge badge-primary">6</span>
             </a>
             
+            <a href="/categories/ops" 
+               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
+                <div class="flex items-center">
+                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                        Ops
+                    </span>
+                </div>
+                <span class="badge badge-primary">4</span>
+            </a>
+            
+            <a href="/categories/cloud" 
+               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
+                <div class="flex items-center">
+                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                        Cloud
+                    </span>
+                </div>
+                <span class="badge badge-primary">3</span>
+            </a>
+            
+            <a href="/categories/devops" 
+               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
+                <div class="flex items-center">
+                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                        Devops
+                    </span>
+                </div>
+                <span class="badge badge-primary">3</span>
+            </a>
+            
             <a href="/categories/database" 
                class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
                 <div class="flex items-center">
@@ -8104,39 +10410,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     </span>
                 </div>
                 <span class="badge badge-primary">2</span>
-            </a>
-            
-            <a href="/categories/%E6%95%99%E7%A8%8B" 
-               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
-                <div class="flex items-center">
-                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                        教程
-                    </span>
-                </div>
-                <span class="badge badge-primary">2</span>
-            </a>
-            
-            <a href="/categories/cloud-native" 
-               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
-                <div class="flex items-center">
-                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                        Cloud Native
-                    </span>
-                </div>
-                <span class="badge badge-primary">1</span>
-            </a>
-            
-            <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB" 
-               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
-                <div class="flex items-center">
-                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                        技术分享
-                    </span>
-                </div>
-                <span class="badge badge-primary">1</span>
             </a>
             
         </div>
@@ -8168,6 +10441,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 devops
             </a>
             
+            <a href="/tags/security" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                security
+            </a>
+            
             <a href="/tags/%E4%BA%91%E6%9E%B6%E6%9E%84" 
                class="tag hover:scale-105 transition-transform duration-200">
                 云架构
@@ -8183,19 +10461,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 高可用
             </a>
             
+            <a href="/tags/linux" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                linux
+            </a>
+            
             <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" 
                class="tag hover:scale-105 transition-transform duration-200">
                 性能优化
             </a>
             
-            <a href="/tags/%E6%95%85%E9%9A%9C%E8%BD%AC%E7%A7%BB" 
+            <a href="/tags/architecture" 
                class="tag hover:scale-105 transition-transform duration-200">
-                故障转移
+                architecture
             </a>
             
-            <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1" 
+            <a href="/tags/cloud-native" 
                class="tag hover:scale-105 transition-transform duration-200">
-                架构设计
+                cloud native
             </a>
             
             <a href="/tags/database" 
@@ -8208,6 +10491,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 docker
             </a>
             
+            <a href="/tags/%E6%95%85%E9%9A%9C%E8%BD%AC%E7%A7%BB" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                故障转移
+            </a>
+            
+            <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                架构设计
+            </a>
+            
+            <a href="/tags/ansible" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                ansible
+            </a>
+            
+            <a href="/tags/automation" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                automation
+            </a>
+            
+            <a href="/tags/best-practices" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                best-practices
+            </a>
+            
+            <a href="/tags/containers" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                containers
+            </a>
+            
+            <a href="/tags/jenkins" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                jenkins
+            </a>
+            
+            <a href="/tags/k8s" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                k8s
+            </a>
+            
             <a href="/tags/mongodb" 
                class="tag hover:scale-105 transition-transform duration-200">
                 mongodb
@@ -8216,6 +10539,16 @@ document.addEventListener('DOMContentLoaded', function() {
             <a href="/tags/mysql" 
                class="tag hover:scale-105 transition-transform duration-200">
                 mysql
+            </a>
+            
+            <a href="/tags/optimization" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                optimization
+            </a>
+            
+            <a href="/tags/performance" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                performance
             </a>
             
             <a href="/tags/postgresql" 
@@ -8231,6 +10564,11 @@ document.addEventListener('DOMContentLoaded', function() {
             <a href="/tags/react" 
                class="tag hover:scale-105 transition-transform duration-200">
                 react
+            </a>
+            
+            <a href="/tags/troubleshooting" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                troubleshooting
             </a>
             
             <a href="/tags/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6" 
@@ -8271,71 +10609,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F" 
                class="tag hover:scale-105 transition-transform duration-200">
                 分布式系统
-            </a>
-            
-            <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                前端开发
-            </a>
-            
-            <a href="/tags/%E5%A4%9A%E4%BA%91%E6%9E%B6%E6%9E%84" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                多云架构
-            </a>
-            
-            <a href="/tags/%E5%AE%B9%E5%99%A8%E5%8C%96" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                容器化
-            </a>
-            
-            <a href="/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                成本优化
-            </a>
-            
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                数据库
-            </a>
-            
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9E%B6%E6%9E%84" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                数据库架构
-            </a>
-            
-            <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                服务网格
-            </a>
-            
-            <a href="/tags/%E7%9B%91%E6%8E%A7" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                监控
-            </a>
-            
-            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                网络安全
-            </a>
-            
-            <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                自动化
-            </a>
-            
-            <a href="/tags/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                身份认证
-            </a>
-            
-            <a href="/tags/%E8%BF%90%E7%BB%B4" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                运维
-            </a>
-            
-            <a href="/tags/%E9%9B%B6%E4%BF%A1%E4%BB%BB" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                零信任
             </a>
             
         </div>
@@ -8913,7 +11186,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul class="space-y-3">
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/database-performance-optimization/"
+                        <a href="https://www.dishuihengxin.com/posts/cloud-azure-enterprise-architecture/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -8921,13 +11194,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">Database Performance Optimization Strategies: From Query Tuning to System Architecture</span>
+                                <span class="truncate">Azure 企业级 Landing Zone 设计：构建合规的云上数据中心</span>
                             </div>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/database-security-access-control/"
+                        <a href="https://www.dishuihengxin.com/posts/ops-ansible-automation-guide/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -8935,13 +11208,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">Database Security and Access Control: A Comprehensive Guide to Protecting Your Data</span>
+                                <span class="truncate">Ansible 自动化运维实战：从 Playbook 编写到大规模集群管理</span>
                             </div>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/database-elasticsearch-optimization/"
+                        <a href="https://www.dishuihengxin.com/posts/devops-docker-image-optimization/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -8949,13 +11222,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">Elasticsearch搜索引擎优化：从索引设计到查询性能调优的完整指南</span>
+                                <span class="truncate">Docker 镜像瘦身与安全加固：最佳实践指南</span>
                             </div>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/database-influxdb-timeseries/"
+                        <a href="https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -8963,13 +11236,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">InfluxDB时序数据库设计与实践：从数据建模到高性能查询优化</span>
+                                <span class="truncate">Linux 高性能网络调优与故障排查实战指南</span>
                             </div>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/kubernetes-container-orchestration-guide/"
+                        <a href="https://www.dishuihengxin.com/posts/database-oracle-rac-dataguard-best-practices/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -8977,7 +11250,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">Kubernetes Container Orchestration: A Comprehensive Guide to Cloud-Native Deployment</span>
+                                <span class="truncate">Oracle RAC 与 DataGuard 高可用架构实战：从部署到灾备切换</span>
                             </div>
                         </a>
                     </li>
@@ -9102,7 +11375,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <script src="/js/analytics.min.e9c247ba215787d5828ba98cca7bb28ca42f0527f6054bc2f640f59a99a94aa7.js?v=1772719807" defer></script>
+    <script src="/js/analytics.min.e9c247ba215787d5828ba98cca7bb28ca42f0527f6054bc2f640f59a99a94aa7.js?v=1772721989" defer></script>
     
 
     
@@ -9137,7 +11410,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <script src="/js/main.min.1db3c2db630282d627f674c53069de74db16f4265e72ab68e0a15e1477917e8c.js?v=1772719807" defer></script>
+    <script src="/js/main.min.1db3c2db630282d627f674c53069de74db16f4265e72ab68e0a15e1477917e8c.js?v=1772721989" defer></script>
     
 
     

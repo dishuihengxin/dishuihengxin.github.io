@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Azure on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/azure/</link><description>Recent content in Azure on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Mon, 23 Feb 2026 20:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/azure/index.xml" rel="self" type="application/rss+xml"/><item><title>Azure 企业级 Landing Zone 设计：构建合规的云上数据中心</title><link>https://www.dishuihengxin.com/posts/cloud-azure-enterprise-architecture/</link><pubDate>Mon, 23 Feb 2026 20:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/cloud-azure-enterprise-architecture/</guid><description>&lt;p&gt;在多云（Multi-Cloud）战略日益普及的今天，很多企业在拥有 AWS 的同时，也将业务扩展到了 Microsoft Azure。虽然云的基本概念相通，但 Azure 的资源组织方式和治理模型与 AWS 有显著差异。&lt;/p&gt;
+&lt;p&gt;本文将基于 Microsoft Cloud Adoption Framework (CAF)，深入探讨 Azure Enterprise-Scale Landing Zone 的设计架构。&lt;/p&gt;
+&lt;h2 id="1-资源组织层级azure-的独特之处"&gt;1. 资源组织层级：Azure 的独特之处&lt;/h2&gt;
+&lt;p&gt;与 AWS 扁平的 Account 结构不同，Azure 提供了更丰富的层级管理能力，这对大型企业极其友好。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Tenant (租户)&lt;/strong&gt;: 对应企业的 Azure AD 实例，身份认证的边界。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Management Group (管理组)&lt;/strong&gt;: Azure 治理的核心。可以嵌套（Root -&amp;gt; Prod -&amp;gt; App1），策略（Policy）和权限（RBAC）可以从上级继承。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Subscription (订阅)&lt;/strong&gt;: 计费和配额的单元。相当于 AWS Account。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resource Group (资源组)&lt;/strong&gt;: 资源的逻辑容器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;最佳实践&lt;/strong&gt;：
+构建基于 Management Group 的层级结构，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Contoso Root&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Platform&lt;/strong&gt; (共享服务)
+&lt;ul&gt;
+&lt;li&gt;Identity (AD DS, DNS)&lt;/li&gt;
+&lt;li&gt;Management (Log Analytics, Monitor)&lt;/li&gt;
+&lt;li&gt;Connectivity (vWAN, ExpressRoute)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Landing Zones&lt;/strong&gt; (业务负载)
+&lt;ul&gt;
+&lt;li&gt;Online-Corp (生产业务)&lt;/li&gt;
+&lt;li&gt;Sandbox (沙盒)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decommissioned&lt;/strong&gt; (待回收)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-身份与访问管理-iam"&gt;2. 身份与访问管理 (IAM)&lt;/h2&gt;
+&lt;h3 id="21-azure-ad-entra-id"&gt;2.1 Azure AD (Entra ID)&lt;/h3&gt;
+&lt;p&gt;Azure AD 是 Azure 的基石。利用 &lt;strong&gt;PIM (Privileged Identity Management)&lt;/strong&gt; 实现 JIT (Just-In-Time) 权限管理。管理员默认没有权限，需要操作时申请，审批通过后赋予 2 小时的高权限，并记录审计日志。&lt;/p&gt;</description></item></channel></rss>

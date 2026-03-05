@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Performance on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/performance/</link><description>Recent content in Performance on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 31 Dec 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/performance/index.xml" rel="self" type="application/rss+xml"/><item><title>Database Performance Optimization Strategies: From Query Tuning to System Architecture</title><link>https://www.dishuihengxin.com/posts/database-performance-optimization/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-performance-optimization/</guid><description>&lt;h1 id="database-performance-optimization-strategies-from-query-tuning-to-system-architecture"&gt;Database Performance Optimization Strategies: From Query Tuning to System Architecture&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Performance on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/performance/</link><description>Recent content in Performance on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Tue, 06 Jan 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/performance/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 系统性能分析方法论：超越 top 和 free</title><link>https://www.dishuihengxin.com/posts/ops-linux-performance-analysis-guide/</link><pubDate>Tue, 06 Jan 2026 12:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/ops-linux-performance-analysis-guide/</guid><description>&lt;p&gt;当线上服务响应变慢，或者服务器负载飙升时，很多人的第一反应是输入 &lt;code&gt;top&lt;/code&gt;，看看哪个进程 CPU 高，或者输入 &lt;code&gt;free&lt;/code&gt; 看看内存剩多少。这当然没错，但这只是性能分析的冰山一角。&lt;/p&gt;
+&lt;p&gt;作为一名专业的运维或系统工程师，我们需要更科学的方法论和更深度的工具，来透过现象看本质。本文将带你从宏观方法论到微观工具链，全面掌握 Linux 性能分析技巧。&lt;/p&gt;
+&lt;h2 id="1-方法论use-method"&gt;1. 方法论：USE Method&lt;/h2&gt;
+&lt;p&gt;在开始敲命令之前，我们需要一个指导思想。Brendan Gregg 提出的 &lt;strong&gt;USE 方法论&lt;/strong&gt; (Utilization, Saturation, Errors) 是分析系统资源的黄金法则。&lt;/p&gt;
+&lt;p&gt;对于每一个系统资源（CPU、内存、磁盘 I/O、网络 I/O），我们都应该检查三个指标：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;利用率 (Utilization)&lt;/strong&gt;: 资源被使用的时间百分比（例如 CPU 使用率 80%）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;饱和度 (Saturation)&lt;/strong&gt;: 资源因无法处理而排队等待的工作量（例如 CPU 运行队列长度、磁盘 I/O 等待队列）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;错误 (Errors)&lt;/strong&gt;: 资源处理发生的错误数（例如 网卡丢包、内存 OOM）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;核心思想&lt;/strong&gt;：如果利用率高，检查是否饱和；如果饱和度高，性能必然下降；任何错误都值得警惕。&lt;/p&gt;
+&lt;h2 id="2-cpu-分析深度解读"&gt;2. CPU 分析深度解读&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;top&lt;/code&gt; 看到的 &lt;code&gt;%Ci&lt;/code&gt; (idle) 低并不一定代表 CPU 是瓶颈。&lt;/p&gt;
+&lt;h3 id="21-load-average-的真相"&gt;2.1 Load Average 的真相&lt;/h3&gt;
+&lt;p&gt;Load Average (平均负载) 是一个容易被误解的指标。在 Linux 中，它不仅包含正在运行的进程（Running），还包含&lt;strong&gt;不可中断睡眠&lt;/strong&gt;（Uninterruptible Sleep, D 状态）的进程（通常是等待磁盘 I/O）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 Load 高但 CPU 使用率低 -&amp;gt; &lt;strong&gt;很可能是磁盘 I/O 瓶颈&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;vmstat 1&lt;/code&gt; 查看 &lt;code&gt;r&lt;/code&gt; (运行队列) 和 &lt;code&gt;b&lt;/code&gt; (阻塞队列) 列来区分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="22-用户态-vs-内核态"&gt;2.2 用户态 vs 内核态&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;%us (User)&lt;/strong&gt; 高：应用程序本身逻辑复杂，或者死循环。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;工具&lt;/strong&gt;：&lt;code&gt;perf top&lt;/code&gt;, &lt;code&gt;pidstat -u&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%sy (System)&lt;/strong&gt; 高：频繁的系统调用、上下文切换。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;：过多的 I/O 操作、锁竞争、进程/线程创建销毁。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工具&lt;/strong&gt;：&lt;code&gt;strace&lt;/code&gt;, &lt;code&gt;perf trace&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="23-软中断-softirq"&gt;2.3 软中断 (Softirq)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;%si&lt;/strong&gt; 高：通常与网络高流量有关（网卡中断处理）。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;检查&lt;/strong&gt;：&lt;code&gt;/proc/softirqs&lt;/code&gt;，确认是 NET_RX 还是其他。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3-内存分析不仅仅是-free"&gt;3. 内存分析：不仅仅是 Free&lt;/h2&gt;
+&lt;p&gt;Linux 的内存管理哲学是“此时不用，更待何时”。因此，空闲内存（Free）少并不代表内存不足，要看 &lt;strong&gt;Available&lt;/strong&gt;（包含可回收的 Cache/Buffer）。&lt;/p&gt;</description></item><item><title>Database Performance Optimization Strategies: From Query Tuning to System Architecture</title><link>https://www.dishuihengxin.com/posts/database-performance-optimization/</link><pubDate>Wed, 31 Dec 2025 22:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-performance-optimization/</guid><description>&lt;h1 id="database-performance-optimization-strategies-from-query-tuning-to-system-architecture"&gt;Database Performance Optimization Strategies: From Query Tuning to System Architecture&lt;/h1&gt;
 &lt;p&gt;Database performance optimization is a critical aspect of modern application development. As data volumes grow and user expectations increase, the ability to efficiently query and manipulate data becomes paramount. This comprehensive guide explores various strategies and techniques for optimizing database performance, from basic query tuning to advanced architectural considerations.&lt;/p&gt;
 &lt;h2 id="table-of-contents"&gt;Table of Contents&lt;/h2&gt;
 &lt;ol&gt;

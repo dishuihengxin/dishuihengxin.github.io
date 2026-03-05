@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Aws on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/aws/</link><description>Recent content in Aws on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Fri, 16 Jan 2026 15:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS 生产环境架构设计：从 Landing Zone 到高可用服务</title><link>https://www.dishuihengxin.com/posts/cloud-aws-production-best-practices/</link><pubDate>Fri, 16 Jan 2026 15:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/cloud-aws-production-best-practices/</guid><description>&lt;p&gt;随着企业上云的深入，仅仅在 AWS 上“开几台 EC2”已经远远不能满足安全、合规和可扩展性的需求。一个健壮的生产环境架构需要从地基（Foundation）开始规划。本文将分享我在构建企业级 AWS 环境时的核心设计思路和最佳实践。&lt;/p&gt;
+&lt;h2 id="1-多账号策略与-landing-zone"&gt;1. 多账号策略与 Landing Zone&lt;/h2&gt;
+&lt;p&gt;永远不要在单个 AWS 账号中运行所有环境（Dev/Test/Prod）。&lt;strong&gt;多账号架构&lt;/strong&gt;是隔离风险、简化计费和权限管理的最佳实践。&lt;/p&gt;
+&lt;h3 id="11-组织结构-aws-organizations"&gt;1.1 组织结构 (AWS Organizations)&lt;/h3&gt;
+&lt;p&gt;建议采用如下 OU（Organizational Unit）结构：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Root&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Security OU&lt;/strong&gt;: 存放安全相关账号（Log Archive, Security Audit）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Infrastructure OU&lt;/strong&gt;: 存放共享服务（Shared Services, Networking）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Workloads OU&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Prod&lt;/strong&gt;: 生产环境账号。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Non-Prod&lt;/strong&gt;: 开发与测试账号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sandbox OU&lt;/strong&gt;: 开发者个人沙盒，限制消费额度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="12-身份管理-iam-identity-center"&gt;1.2 身份管理 (IAM Identity Center)&lt;/h3&gt;
+&lt;p&gt;放弃使用长期的 IAM User (Access Key/Secret Key)。启用 &lt;strong&gt;IAM Identity Center (原 AWS SSO)&lt;/strong&gt;，与企业 IDP（如 Azure AD, Okta, Google Workspace）集成。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;原则&lt;/strong&gt;：用户登录 SSO 门户，获取短期凭证访问对应账号。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限&lt;/strong&gt;：使用 Permission Sets 定义角色（如 &lt;code&gt;ViewOnly&lt;/code&gt;, &lt;code&gt;PowerUser&lt;/code&gt;, &lt;code&gt;NetworkAdmin&lt;/code&gt;），遵循最小权限原则（Least Privilege）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-网络架构规划-vpc-design"&gt;2. 网络架构规划 (VPC Design)&lt;/h2&gt;
+&lt;p&gt;网络是云上架构的血管。一个糟糕的 VPC 设计会导致后期扩展极为痛苦。&lt;/p&gt;</description></item></channel></rss>

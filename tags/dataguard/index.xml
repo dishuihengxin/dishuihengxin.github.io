@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dataguard on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/dataguard/</link><description>Recent content in Dataguard on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Tue, 27 Jan 2026 08:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/dataguard/index.xml" rel="self" type="application/rss+xml"/><item><title>Oracle RAC 与 DataGuard 高可用架构实战：从部署到灾备切换</title><link>https://www.dishuihengxin.com/posts/database-oracle-rac-dataguard-best-practices/</link><pubDate>Tue, 27 Jan 2026 08:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/database-oracle-rac-dataguard-best-practices/</guid><description>&lt;p&gt;在去 IOE 的浪潮下，虽然 MySQL 和 PostgreSQL 正在崛起，但在金融、电信等核心交易场景中，Oracle RAC (Real Application Clusters) 依然是高可用数据库的“皇冠明珠”。它提供了无与伦比的实例级高可用和透明的应用切换能力。&lt;/p&gt;
+&lt;p&gt;本文将复盘我在维护一套核心交易系统（Oracle 19c RAC + ADG）时的实战经验，涵盖架构设计、稳定性优化及灾难恢复。&lt;/p&gt;
+&lt;h2 id="1-oracle-rac-架构稳定性优化"&gt;1. Oracle RAC 架构稳定性优化&lt;/h2&gt;
+&lt;p&gt;RAC 虽然提供了高可用，但如果配置不当，Cache Fusion 产生的内联通信（Interconnect）反而会成为性能杀手。&lt;/p&gt;
+&lt;h3 id="11-私有网络private-network"&gt;1.1 私有网络（Private Network）&lt;/h3&gt;
+&lt;p&gt;私网是 RAC 的生命线。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;巨型帧 (Jumbo Frames)&lt;/strong&gt;: 务必在私网网卡和交换机上开启 Jumbo Frames (MTU 9000)。实测在重负载下，能降低 CPU 中断并提升 15% 以上的吞吐量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HAIP (Highly Available IP)&lt;/strong&gt;: 11gR2 引入的特性，允许私网多网卡负载均衡和故障转移。建议配置至少两块物理网卡绑定，确保私网带宽充足（万兆起步）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="12-共享存储与-asm"&gt;1.2 共享存储与 ASM&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;多路径 (Multipath)&lt;/strong&gt;: 必须配置多路径软件（如 DM-Multipath 或存储厂商自带软件），防止单条光纤故障导致磁盘掉线。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ASM 磁盘组规划&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;+OCR_VOTE&lt;/code&gt;: 存放 OCR 和 Voting Disk，配置 Normal Redundancy（3个 Failure Groups）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+DATA&lt;/code&gt;: 存放数据文件，External Redundancy（依赖底层存储 RAID）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+FRA&lt;/code&gt;: 存放归档日志和 Flashback Logs。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="13-避免节点驱逐-node-eviction"&gt;1.3 避免节点驱逐 (Node Eviction)&lt;/h3&gt;
+&lt;p&gt;RAC 最怕的就是节点脑裂（Split-Brain）导致的重启。&lt;/p&gt;</description></item></channel></rss>
