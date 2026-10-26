@@ -1741,7 +1741,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     class="group text-center backdrop-blur-md bg-white/10 hover:bg-white/20 rounded-xl px-6 py-4 border border-white/20 hover:border-cyan-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
                     <div
                         class="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:scale-110 transition-transform duration-300">
-                        397
+                        41
                     </div>
                     <div class="text-white/90 text-xs uppercase tracking-wider">
                         文章
@@ -1751,7 +1751,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     class="group text-center backdrop-blur-md bg-white/10 hover:bg-white/20 rounded-xl px-6 py-4 border border-white/20 hover:border-purple-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
                     <div
                         class="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:scale-110 transition-transform duration-300">
-                        21
+                        15
                     </div>
                     <div class="text-white/90 text-xs uppercase tracking-wider">
                         分类
@@ -1761,7 +1761,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     class="group text-center backdrop-blur-md bg-white/10 hover:bg-white/20 rounded-xl px-6 py-4 border border-white/20 hover:border-pink-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
                     <div
                         class="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:scale-110 transition-transform duration-300">
-                        1255
+                        165
                     </div>
                     <div class="text-white/90 text-xs uppercase tracking-wider">
                         标签
@@ -1813,22 +1813,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </button>
                                 
                                 <button
-                                    @click="filterByCategory('架构设计'); selectedCategory = '架构设计'; open = false"
+                                    @click="filterByCategory('云架构'); selectedCategory = '云架构'; open = false"
                                     class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
                                     <div class="flex items-center justify-between">
-                                        <span>架构设计</span>
+                                        <span>云架构</span>
                                         <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">105</span>
-                                    </div>
-                                </button>
-                                
-                                <button
-                                    @click="filterByCategory('安全'); selectedCategory = '安全'; open = false"
-                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
-                                    <div class="flex items-center justify-between">
-                                        <span>安全</span>
-                                        <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">62</span>
+                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">8</span>
                                     </div>
                                 </button>
                                 
@@ -1838,17 +1828,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <div class="flex items-center justify-between">
                                         <span>数据库</span>
                                         <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">58</span>
-                                    </div>
-                                </button>
-                                
-                                <button
-                                    @click="filterByCategory('可观测性'); selectedCategory = '可观测性'; open = false"
-                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
-                                    <div class="flex items-center justify-between">
-                                        <span>可观测性</span>
-                                        <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">38</span>
+                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">8</span>
                                     </div>
                                 </button>
                                 
@@ -1858,57 +1838,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <div class="flex items-center justify-between">
                                         <span>运维</span>
                                         <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">35</span>
-                                    </div>
-                                </button>
-                                
-                                <button
-                                    @click="filterByCategory('云原生'); selectedCategory = '云原生'; open = false"
-                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
-                                    <div class="flex items-center justify-between">
-                                        <span>云原生</span>
-                                        <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">27</span>
-                                    </div>
-                                </button>
-                                
-                                <button
-                                    @click="filterByCategory('云架构'); selectedCategory = '云架构'; open = false"
-                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
-                                    <div class="flex items-center justify-between">
-                                        <span>云架构</span>
-                                        <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">20</span>
-                                    </div>
-                                </button>
-                                
-                                <button
-                                    @click="filterByCategory('devops'); selectedCategory = 'devops'; open = false"
-                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
-                                    <div class="flex items-center justify-between">
-                                        <span>devops</span>
-                                        <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">15</span>
-                                    </div>
-                                </button>
-                                
-                                <button
-                                    @click="filterByCategory('消息队列'); selectedCategory = '消息队列'; open = false"
-                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
-                                    <div class="flex items-center justify-between">
-                                        <span>消息队列</span>
-                                        <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">11</span>
-                                    </div>
-                                </button>
-                                
-                                <button
-                                    @click="filterByCategory('微服务'); selectedCategory = '微服务'; open = false"
-                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
-                                    <div class="flex items-center justify-between">
-                                        <span>微服务</span>
-                                        <span
-                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">10</span>
+                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">6</span>
                                     </div>
                                 </button>
                                 
@@ -1927,6 +1857,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                     class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
                                     <div class="flex items-center justify-between">
                                         <span>cloud</span>
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">3</span>
+                                    </div>
+                                </button>
+                                
+                                <button
+                                    @click="filterByCategory('devops'); selectedCategory = 'devops'; open = false"
+                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors duration-200">
+                                    <div class="flex items-center justify-between">
+                                        <span>devops</span>
                                         <span
                                             class="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full">3</span>
                                     </div>
@@ -2268,26 +2208,15 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="space-y-3">
             
-            <a href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1" 
+            <a href="/categories/%E4%BA%91%E6%9E%B6%E6%9E%84" 
                class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
                 <div class="flex items-center">
                     <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
                     <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                        架构设计
+                        云架构
                     </span>
                 </div>
-                <span class="badge badge-primary">105</span>
-            </a>
-            
-            <a href="/categories/%E5%AE%89%E5%85%A8" 
-               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
-                <div class="flex items-center">
-                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                        安全
-                    </span>
-                </div>
-                <span class="badge badge-primary">62</span>
+                <span class="badge badge-primary">8</span>
             </a>
             
             <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93" 
@@ -2298,18 +2227,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         数据库
                     </span>
                 </div>
-                <span class="badge badge-primary">58</span>
-            </a>
-            
-            <a href="/categories/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7" 
-               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
-                <div class="flex items-center">
-                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                        可观测性
-                    </span>
-                </div>
-                <span class="badge badge-primary">38</span>
+                <span class="badge badge-primary">8</span>
             </a>
             
             <a href="/categories/%E8%BF%90%E7%BB%B4" 
@@ -2320,29 +2238,29 @@ document.addEventListener('DOMContentLoaded', function() {
                         运维
                     </span>
                 </div>
-                <span class="badge badge-primary">35</span>
+                <span class="badge badge-primary">6</span>
             </a>
             
-            <a href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F" 
+            <a href="/categories/ops" 
                class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
                 <div class="flex items-center">
                     <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
                     <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                        云原生
+                        Ops
                     </span>
                 </div>
-                <span class="badge badge-primary">27</span>
+                <span class="badge badge-primary">4</span>
             </a>
             
-            <a href="/categories/%E4%BA%91%E6%9E%B6%E6%9E%84" 
+            <a href="/categories/cloud" 
                class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
                 <div class="flex items-center">
                     <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
                     <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                        云架构
+                        Cloud
                     </span>
                 </div>
-                <span class="badge badge-primary">20</span>
+                <span class="badge badge-primary">3</span>
             </a>
             
             <a href="/categories/devops" 
@@ -2353,7 +2271,29 @@ document.addEventListener('DOMContentLoaded', function() {
                         Devops
                     </span>
                 </div>
-                <span class="badge badge-primary">15</span>
+                <span class="badge badge-primary">3</span>
+            </a>
+            
+            <a href="/categories/database" 
+               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
+                <div class="flex items-center">
+                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                        Database
+                    </span>
+                </div>
+                <span class="badge badge-primary">2</span>
+            </a>
+            
+            <a href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97" 
+               class="group flex items-center justify-between p-3 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300">
+                <div class="flex items-center">
+                    <div class="w-2 h-2 bg-primary-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                        云计算
+                    </span>
+                </div>
+                <span class="badge badge-primary">2</span>
             </a>
             
         </div>
@@ -2380,99 +2320,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 kubernetes
             </a>
             
-            <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" 
+            <a href="/tags/devops" 
                class="tag hover:scale-105 transition-transform duration-200">
-                性能优化
+                devops
             </a>
             
-            <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1" 
+            <a href="/tags/security" 
                class="tag hover:scale-105 transition-transform duration-200">
-                架构设计
+                security
             </a>
             
-            <a href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8" 
+            <a href="/tags/%E4%BA%91%E6%9E%B6%E6%9E%84" 
                class="tag hover:scale-105 transition-transform duration-200">
-                高可用
-            </a>
-            
-            <a href="/tags/mysql" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                mysql
-            </a>
-            
-            <a href="/tags/sre" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                sre
-            </a>
-            
-            <a href="/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                故障排查
-            </a>
-            
-            <a href="/tags/%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                架构演进
-            </a>
-            
-            <a href="/tags/linux" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                linux
-            </a>
-            
-            <a href="/tags/%E7%A8%B3%E5%AE%9A%E6%80%A7" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                稳定性
-            </a>
-            
-            <a href="/tags/%E9%99%8D%E6%9C%AC" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                降本
-            </a>
-            
-            <a href="/tags/%E6%80%A7%E8%83%BD" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                性能
-            </a>
-            
-            <a href="/tags/postgresql" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                postgresql
-            </a>
-            
-            <a href="/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                可观测性
-            </a>
-            
-            <a href="/tags/dba" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                dba
-            </a>
-            
-            <a href="/tags/finops" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                finops
-            </a>
-            
-            <a href="/tags/redis" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                redis
-            </a>
-            
-            <a href="/tags/%E5%AE%B9%E7%81%BE" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                容灾
-            </a>
-            
-            <a href="/tags/%E5%AE%89%E5%85%A8" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                安全
-            </a>
-            
-            <a href="/tags/%E6%9E%B6%E6%9E%84%E6%B2%BB%E7%90%86" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                架构治理
+                云架构
             </a>
             
             <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1" 
@@ -2480,44 +2340,79 @@ document.addEventListener('DOMContentLoaded', function() {
                 微服务
             </a>
             
-            <a href="/tags/%E6%80%A7%E8%83%BD%E6%8E%92%E6%9F%A5" 
+            <a href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8" 
                class="tag hover:scale-105 transition-transform duration-200">
-                性能排查
+                高可用
             </a>
             
-            <a href="/tags/devops" 
+            <a href="/tags/linux" 
                class="tag hover:scale-105 transition-transform duration-200">
-                devops
+                linux
             </a>
             
-            <a href="/tags/prometheus" 
+            <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" 
                class="tag hover:scale-105 transition-transform duration-200">
-                prometheus
+                性能优化
             </a>
             
-            <a href="/tags/%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5" 
+            <a href="/tags/architecture" 
                class="tag hover:scale-105 transition-transform duration-200">
-                安全运营
+                architecture
             </a>
             
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8" 
+            <a href="/tags/cloud-native" 
                class="tag hover:scale-105 transition-transform duration-200">
-                数据安全
+                cloud native
             </a>
             
-            <a href="/tags/%E8%BF%90%E7%BB%B4" 
+            <a href="/tags/database" 
                class="tag hover:scale-105 transition-transform duration-200">
-                运维
+                database
             </a>
             
-            <a href="/tags/ai%E6%9E%B6%E6%9E%84" 
+            <a href="/tags/docker" 
                class="tag hover:scale-105 transition-transform duration-200">
-                ai架构
+                docker
             </a>
             
-            <a href="/tags/kafka" 
+            <a href="/tags/%E6%95%85%E9%9A%9C%E8%BD%AC%E7%A7%BB" 
                class="tag hover:scale-105 transition-transform duration-200">
-                kafka
+                故障转移
+            </a>
+            
+            <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                架构设计
+            </a>
+            
+            <a href="/tags/ansible" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                ansible
+            </a>
+            
+            <a href="/tags/automation" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                automation
+            </a>
+            
+            <a href="/tags/best-practices" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                best-practices
+            </a>
+            
+            <a href="/tags/containers" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                containers
+            </a>
+            
+            <a href="/tags/jenkins" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                jenkins
+            </a>
+            
+            <a href="/tags/k8s" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                k8s
             </a>
             
             <a href="/tags/mongodb" 
@@ -2525,34 +2420,79 @@ document.addEventListener('DOMContentLoaded', function() {
                 mongodb
             </a>
             
-            <a href="/tags/web%E5%AE%89%E5%85%A8" 
+            <a href="/tags/mysql" 
                class="tag hover:scale-105 transition-transform duration-200">
-                web安全
+                mysql
+            </a>
+            
+            <a href="/tags/optimization" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                optimization
+            </a>
+            
+            <a href="/tags/performance" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                performance
+            </a>
+            
+            <a href="/tags/postgresql" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                postgresql
+            </a>
+            
+            <a href="/tags/prometheus" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                prometheus
+            </a>
+            
+            <a href="/tags/react" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                react
+            </a>
+            
+            <a href="/tags/troubleshooting" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                troubleshooting
+            </a>
+            
+            <a href="/tags/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                主从复制
+            </a>
+            
+            <a href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                云原生
+            </a>
+            
+            <a href="/tags/%E4%BA%91%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                云基础设施
+            </a>
+            
+            <a href="/tags/%E4%BA%91%E5%AE%89%E5%85%A8" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                云安全
+            </a>
+            
+            <a href="/tags/%E4%BA%91%E6%B2%BB%E7%90%86" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                云治理
+            </a>
+            
+            <a href="/tags/%E4%BA%91%E7%AE%A1%E7%90%86" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                云管理
+            </a>
+            
+            <a href="/tags/%E4%BC%81%E4%B8%9A%E6%9E%B6%E6%9E%84" 
+               class="tag hover:scale-105 transition-transform duration-200">
+                企业架构
             </a>
             
             <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F" 
                class="tag hover:scale-105 transition-transform duration-200">
                 分布式系统
-            </a>
-            
-            <a href="/tags/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                应用安全
-            </a>
-            
-            <a href="/tags/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                性能调优
-            </a>
-            
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                数据架构
-            </a>
-            
-            <a href="/tags/%E7%9B%91%E6%8E%A7" 
-               class="tag hover:scale-105 transition-transform duration-200">
-                监控
             </a>
             
         </div>
@@ -3130,7 +3070,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul class="space-y-3">
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/2026-08-25-continuous-learning/"
+                        <a href="https://www.dishuihengxin.com/posts/cloud-azure-enterprise-architecture/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -3138,13 +3078,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">持续的技术输入：系列之后，日常怎么跟上</span>
+                                <span class="truncate">Azure 企业级 Landing Zone 设计：构建合规的云上数据中心</span>
                             </div>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/2026-08-25-series-finale/"
+                        <a href="https://www.dishuihengxin.com/posts/ops-ansible-automation-guide/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -3152,13 +3092,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">系列收官：178 天，356 篇，一条主线</span>
+                                <span class="truncate">Ansible 自动化运维实战：从 Playbook 编写到大规模集群管理</span>
                             </div>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/2026-08-24-team-architecture-capability/"
+                        <a href="https://www.dishuihengxin.com/posts/devops-docker-image-optimization/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -3166,13 +3106,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">团队的架构能力：从依赖英雄到体系作战</span>
+                                <span class="truncate">Docker 镜像瘦身与安全加固：最佳实践指南</span>
                             </div>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/2026-08-24-architect-working-style/"
+                        <a href="https://www.dishuihengxin.com/posts/ops-linux-network-tuning-troubleshooting/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -3180,13 +3120,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">架构师的日常：决策、沟通与留下痕迹</span>
+                                <span class="truncate">Linux 高性能网络调优与故障排查实战指南</span>
                             </div>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="https://www.dishuihengxin.com/posts/2026-08-23-architecture-gap-analysis/"
+                        <a href="https://www.dishuihengxin.com/posts/database-oracle-rac-dataguard-best-practices/"
                             class="text-gray-400 hover:text-white transition-colors duration-200 text-sm block group">
                             <div class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-0.5 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0"
@@ -3194,7 +3134,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
-                                <span class="truncate">从故障模式反推架构短板：体检报告怎么读</span>
+                                <span class="truncate">Oracle RAC 与 DataGuard 高可用架构实战：从部署到灾备切换</span>
                             </div>
                         </a>
                     </li>
@@ -3319,7 +3259,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <script src="/js/analytics.min.e9c247ba215787d5828ba98cca7bb28ca42f0527f6054bc2f640f59a99a94aa7.js?v=1792995800" defer></script>
+    <script src="/js/analytics.min.e9c247ba215787d5828ba98cca7bb28ca42f0527f6054bc2f640f59a99a94aa7.js?v=1792996496" defer></script>
     
 
     
@@ -3354,7 +3294,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <script src="/js/main.min.1db3c2db630282d627f674c53069de74db16f4265e72ab68e0a15e1477917e8c.js?v=1792995800" defer></script>
+    <script src="/js/main.min.1db3c2db630282d627f674c53069de74db16f4265e72ab68e0a15e1477917e8c.js?v=1792996496" defer></script>
     
 
     
