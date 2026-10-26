@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MVCC on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/mvcc/</link><description>Recent content in MVCC on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Sun, 01 Mar 2026 09:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/mvcc/index.xml" rel="self" type="application/rss+xml"/><item><title>事务里读不到自己刚看到的数据？聊聊 InnoDB 的 MVCC</title><link>https://www.dishuihengxin.com/posts/2026-03-01-mysql-innodb-mvcc-deep-dive/</link><pubDate>Sun, 01 Mar 2026 09:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/2026-03-01-mysql-innodb-mvcc-deep-dive/</guid><description>&lt;p&gt;去年有个业务同学在群里 @ 我，说他们的页面刷新时数据时有时无，怀疑数据库出了问题。远程看了半天，代码里是这样的：开一个事务，先查一次配置表，中间做了几百毫秒的业务处理，再查一次同一张表。第一次查到的是刚改过的值，第二次又变回旧的了。他问我，是不是数据库抽风。&lt;/p&gt;
+&lt;p&gt;数据库没抽风，抽风的是我们对隔离级别的理解。这篇文章把这事背后的机制完整讲一遍，因为后来我发现，把 MVCC 真正搞懂的人，比自以为懂的多不了几个。&lt;/p&gt;
+&lt;h2 id="版本链一行数据的多个前世"&gt;版本链：一行数据的多个前世&lt;/h2&gt;
+&lt;p&gt;InnoDB 存一行数据时多带两个隐藏列：&lt;code&gt;DB_TRX_ID&lt;/code&gt;（最后修改这行的事务号，单调递增，指向 undo log 里旧版本的指针和 &lt;code&gt;DB_ROLL_PTR&lt;/code&gt;）。每次更新，旧版本被抄进回滚段，新行指回它，串成链：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;( trx_id=102, val=&amp;#39;C&amp;#39; ) ← 表里的当前行
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↑ roll_ptr
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;( trx_id=98, val=&amp;#39;B&amp;#39; ) ── undo log
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↑ roll_ptr
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;( trx_id=90, val=&amp;#39;A&amp;#39; ) ── undo log
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意 update 走的是&amp;quot;抄旧写新&amp;quot;，行不搬地方；而 &lt;code&gt;DELETE&lt;/code&gt; 是先打删除标记（也带 trx_id，作为活跃号的上界，事务提交后由 purge 线程真正回收。这个细节后面讲长事务时会用到。&lt;/p&gt;
+&lt;h2 id="readview拍快照与四条判断规则"&gt;ReadView：拍快照与四条判断规则&lt;/h2&gt;
+&lt;p&gt;ReadView 是查询开始时拍下的快照，核心字段四个：创建者自己的 trx_id、生成时刻仍活跃的事务号集合 &lt;code&gt;m_ids&lt;/code&gt;、其中最小的 &lt;code&gt;min_trx_id&lt;/code&gt;、以及即将分配的下一个事务号 &lt;code&gt;next_trx_id&lt;/code&gt;）。拿它去比对版本链上每行的 &lt;code&gt;DB_TRX_ID&lt;/code&gt;，规则四条：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;trx_id &amp;lt; min_trx_id&lt;/code&gt;：修改者早已提交，可见；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;trx_id == 自己的&lt;/code&gt;：本事务改的，可见；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;min_trx_id &amp;lt;= trx_id &amp;lt; next_trx_id&lt;/code&gt; 且在 &lt;code&gt;m_ids&lt;/code&gt; 里：未提交，不可见，顺链走旧一格重判；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;trx_id &amp;gt;= next_trx_id&lt;/code&gt;：快照之后才开启的事务，不可见。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;拿一组真实号推一遍就再也不会忘。假设 100 已提交、101 和 102 活跃，我是 101，此刻查询：&lt;/p&gt;</description></item></channel></rss>

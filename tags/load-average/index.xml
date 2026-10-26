@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Load Average on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/load-average/</link><description>Recent content in Load Average on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 04 Mar 2026 20:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/load-average/index.xml" rel="self" type="application/rss+xml"/><item><title>凌晨两点的 load：一次 CPU 排查的完整记录</title><link>https://www.dishuihengxin.com/posts/2026-03-04-linux-cpu-troubleshooting/</link><pubDate>Wed, 04 Mar 2026 20:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/2026-03-04-linux-cpu-troubleshooting/</guid><description>&lt;p&gt;记录一次去年冬天的值班，那天学到的东西比之前半年都多。&lt;/p&gt;
+&lt;p&gt;凌晨一点四十，手机响了。告警说订单服务所在的机器 load 冲到了 24。四核的机器，这个数字意味着排队的人是干活的六倍。我半梦半醒地登上去，第一反应敲了 top：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;top - 22:41:03 up 212 days, load average: 23.8, 19.2, 11.5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Tasks: 487 total, 5 running
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;%Cpu(s): 62.3 us, 30.1 sy, 0.0 ni, 4.9 id, 0.1 wa, 0.0 hi, 2.6 si
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;us 高，sy 也不低，wa 几乎没有。看到 wa 低我心里先松了半口气，至少不是磁盘的事。但接下来我犯了个错，盯着 top 里 CPU 最高的那个 Java 进程看了五分钟，心想是不是代码里死循环了。五分钟后我承认这条路走不通：进程 CPU 高是废话，问题是它为什么高。&lt;/p&gt;
+&lt;p&gt;冷静下来补了 vmstat 1：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ vmstat 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; r b swpd free buff cache si so bi bo in cs us sy id wa st
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;25 0 0 281032 312408 6892032 0 0 0 12 96234 412877 61 31 5 0 3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;23 0 0 280118 312408 6892510 0 0 0 28 94881 431252 63 30 4 0 3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;r 列常年二十多，cs 每秒四十多万次。cs 这个数字单独看没意义，配合 sy 高就有点意思了：CPU 的大量时间花在了内核态的调度上，八成是锁或者线程在空转。这里有个我后来才想明白的细节：如果线程都在踏踏实实干活，cs 不会这么高，是大量的唤醒、等待、再唤醒把 CPU 耗掉的。&lt;/p&gt;</description></item></channel></rss>

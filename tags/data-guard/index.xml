@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Guard on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/data-guard/</link><description>Recent content in Data Guard on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Sun, 29 Mar 2026 09:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/data-guard/index.xml" rel="self" type="application/rss+xml"/><item><title>Oracle Data Guard 日常巡检：DBA 的必修基本功</title><link>https://www.dishuihengxin.com/posts/2026-03-29-oracle-dataguard-inspection/</link><pubDate>Sun, 29 Mar 2026 09:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/2026-03-29-oracle-dataguard-inspection/</guid><description>&lt;p&gt;Data Guard 的架构图人人会画：主库、备库、日志传输、应用进程。但容灾系统的成色不在架构图上，在巡检记录里，真出事的那一刻，所有没被巡检覆盖的隐患都会一起爆发。&lt;/p&gt;
+&lt;h2 id="每日必看延迟与进程"&gt;每日必看：延迟与进程&lt;/h2&gt;
+&lt;p&gt;核心视图是 v$dataguard_stats：transport lag（日志传输延迟，主库最新日志与备库已接收的差距，应用延迟，已接收与已应用的差距与 apply lag，取决于日志传输模式。两个数值都该接近零，持续增长说明链路或应用进程有问题。&lt;/p&gt;
+&lt;p&gt;进程状态查 v$dataguard_status 与具体进程视图：主库的 LGWR/ARCH，接收与备库的 RFS，托管恢复进程，物理备库、MRP，比如 15 分钟。MRP 挂掉是最常见的&amp;quot;悄悄失效&amp;quot;，传输还在、应用停了，apply lag 持续上涨，等到故障切换那天才发现备库落后几个小时。告警必须覆盖 apply lag 阈值，如 delete archivelog until time 且确认已传输，不是靠人眼巡检。&lt;/p&gt;
+&lt;p&gt;日志链路的另一个隐患是归档删除策略：主库的归档被清理策略删掉、备库还没收到的场景，直接产生 GAP。RMAN 的删除配置要加条件，GAP，或者用 FRA 空间告警兜底。&lt;/p&gt;
+&lt;h2 id="gap处理流程要熟练"&gt;GAP：处理流程要熟练&lt;/h2&gt;
+&lt;p&gt;备库断网或停机超过主库归档保留窗口后，重新同步会发现缺日志，v$archive_gap 或告警日志。标准处理：确定缺失的日志序号，catalog start with→ 从主库备份或其他备库把归档拷到备库注册，哪些序号、从哪拿的、耗时多久→ MRP 自动应用补齐。处理的前提是&amp;quot;缺的日志还找得到&amp;quot;，这就是归档备份策略重要的原因：删除策略永远要晚于&amp;quot;全部备库确认接收&amp;quot;。GAP 处理做一次全流程记录，异步传输，默认，这是容灾预案的实战数据。&lt;/p&gt;
+&lt;h2 id="保护模式知道自己在哪一档"&gt;保护模式：知道自己在哪一档&lt;/h2&gt;
+&lt;p&gt;Maximum Performance，同步传输但故障时不阻塞主库牺牲数据安全换性能，宕机可能丢秒级数据；Maximum Availability，同步且故障时停主库，绝不丢数据；Maximum Protection，网络 RTT 直接进事务路径。巡检要确认当前模式与业务预期一致，很多系统以为自己配了高安全模式，实际跑在 Performance 上，这种&amp;quot;认知错位&amp;quot;只有巡检能暴露。同步模式的延迟，计划内切换，角色互换，无数据丢失也要监控，跨机房同步的 RTT 变化会悄悄拖慢主库事务。&lt;/p&gt;
+&lt;h2 id="切换与演练一年两次起步"&gt;切换与演练：一年两次起步&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Switchover&lt;/strong&gt;，故障切换，可能丢数据，旧主库需要重建或 flashback 回收与 &lt;strong&gt;failover&lt;/strong&gt;，客户端 TNS 或中间件配置。两者的操作步骤完全不同，都要有成文手册。用了 broker 的环境切换是一两条命令，但手册要包含 broker 没覆盖的部分：应用连接串的切换，应与保护模式承诺一致、切换后的备份策略调整、旧主库的回收流程。&lt;/p&gt;
+&lt;p&gt;演练的验收标准不是&amp;quot;切换成功了&amp;quot;，是&amp;quot;应用在 X 分钟内恢复、数据丢失为 Y，应用连接串指向单 IP、备库的密码文件过期、DG 断开后没告警&amp;quot;。演练发现的问题，延迟、进程、GAP、告警日志错误码每一条都是白捡的改进。&lt;/p&gt;
+&lt;h2 id="清单化"&gt;清单化&lt;/h2&gt;
+&lt;p&gt;把上述内容固化成日检，保护模式、空间趋势、配置漂移+ 周检，switchover 与 failover 各一轮+ 半年演练）的三级制度。Data Guard 的投入在平时，回报在那一刻。&lt;/p&gt;</description></item></channel></rss>

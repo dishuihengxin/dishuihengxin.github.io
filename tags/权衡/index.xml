@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>权衡 on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/%E6%9D%83%E8%A1%A1/</link><description>Recent content in 权衡 on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 29 Jul 2026 09:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/%E6%9D%83%E8%A1%A1/index.xml" rel="self" type="application/rss+xml"/><item><title>性能与成本的平衡：什么时候该为快付费，什么时候该为省降级</title><link>https://www.dishuihengxin.com/posts/2026-07-29-performance-cost-balance/</link><pubDate>Wed, 29 Jul 2026 09:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/2026-07-29-performance-cost-balance/</guid><description>&lt;p&gt;技术团队最常见的争执行，本质都是同一道题：为 100ms 的延迟改善，值得付多少。把这道题变成能算的，争吵就变成了讨论。&lt;/p&gt;
+&lt;p&gt;框架很简单，就三行：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;性能投入的成本 = 开发工时 × 人力单价 + 新增资源成本 + 复杂度引入的长期维护成本&lt;/li&gt;
+&lt;li&gt;性能产出的收益 = 该指标改善 × 它对业务指标的影响（转化、留存、流失，首页快 200ms 转化率变多少，电商类有不少公开研究证明毫秒级与转化的正相关，但自家业务要自己测&lt;/li&gt;
+&lt;li&gt;投入产出比 = 收益 / 成本，排序做&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;难的是第二行，&amp;ldquo;延迟对业务的影响&amp;quot;怎么量化。三种务实做法，按可信度排：一是自己 A/B 实验，Walmart、Amazon 公开过的数据：每 100ms 改善约 1% 转化，拿来当先验，有实测就覆盖；二是用行业经验数，SLA 篇的违约成本就是性能的价钱；三是无法关联业务时，用代理指标，错误预算、SLA 承诺，约两个人月。&lt;/p&gt;
+&lt;p&gt;有了账本，几类典型决策就有了答案。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优化代码 vs 加机器&lt;/strong&gt;：优化花两周开发，缓存篇的一堆坑，加机器每月多花八千块。只要优化不引入显著复杂度，两个月就回本，选优化。反过来，如果优化的方案要引入新组件、新缓存层、新的一致性问题，比如半年回不了本，维护成本远超八千块/月，老实加机器。复杂度是这里面最容易被低估的一项，建议给&amp;quot;引入新组件&amp;quot;这类决策乘个 2 到 3 的成本系数，实践证明不过分。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;降级换省钱&lt;/strong&gt;：把 P99 目标从 500ms 放宽到 800ms，容量需求降四成。这笔交易能不能做，回到业务：如果是推荐、搜索这类体验型场景，800ms 仍在体感良好区间，做；如果是交易链路且 SLA 承诺了 500ms，不做。很多服务的性能目标从来没被业务确认过，是技术侧自我加码，容量篇和单位成本篇都点过这个现象，这里就是它的决策入口。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;过度优化识别&lt;/strong&gt;：投入产出比低于某个门槛，成本分摊的可见性，FinOps 篇的性能项目，无论技术上多优雅都该停。反过来说，方法论篇的&amp;quot;停止条件&amp;quot;在这里有了财务定义。&lt;/p&gt;
+&lt;p&gt;最后是组织层面的建议：让这个框架跑起来，需要性能团队知道成本数据，单位成本责任制篇的角色融合、成本团队理解技术权衡）。两边各说各话时，用同一张表算账，多数技术争论其实是口径之争，表一拉就没了。&lt;/p&gt;</description></item></channel></rss>

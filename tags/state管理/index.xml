@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>State管理 on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/state%E7%AE%A1%E7%90%86/</link><description>Recent content in State管理 on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Tue, 03 Mar 2026 20:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/state%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>Terraform state：我经历过一次两个人同时 apply</title><link>https://www.dishuihengxin.com/posts/2026-03-03-terraform-state-management/</link><pubDate>Tue, 03 Mar 2026 20:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/2026-03-03-terraform-state-management/</guid><description>&lt;p&gt;用 Terraform 的第三天，同事在他电脑上 apply 了一次，我在自己电脑上的 state 立刻成了废纸：云端资源和他记录的对不上，我的下一次 plan 满屏 diff。那次折腾到晚上十点。后来想明白了，问题不在同事，在我们把 state 放在本地。&lt;/p&gt;
+&lt;p&gt;state 是 Terraform 的唯一事实记录，明文存着资源清单和敏感属性，它必须集中存、加锁、控权限。三样对应三件事：远端 backend、锁机制、权限边界。AWS 上的标准做法是 S3 存 state、DynamoDB 做锁，配置长这样：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-hcl" data-lang="hcl"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;terraform&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;backend&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;s3&amp;#34;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt; bucket&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;tfstate-prod&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt; key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;network/terraform.tfstate&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt; region&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;cn-north-1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt; dynamodb_table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;tf-locks&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt; encrypt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;较新的 Terraform 版本支持 S3 原生锁，可以省掉 DynamoDB，但两种形态我都用过，锁必须有，没有锁的那次教训已经交过学费了。锁防的是同时 apply，但防不了另一种更隐蔽的问题：两个人先后 apply，后者的老代码覆盖前者的变更。所以还有一条纪律要立：apply 只允许在 CI 里执行，人只在本地跑 plan。这条规矩推行时有人不习惯，直到有一次它真的拦住了一次带错别字的变量名。&lt;/p&gt;
+&lt;p&gt;环境管理我们踩过 workspace 的坑。workspace 切换 state 很轻，但所有环境共享同一套变量结构，某次有人以为自己在预发 workspace，实际在生产，改了个安全组。后来迁到了目录隔离：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;envs/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; prod/ # main.tf 引 module，固定 tag 版本
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; prod.tfvars
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; staging/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; main.tf
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;modules/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; network/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;环境间靠 module 的版本号对齐，预发先升 v1.3.0 验证，生产稳定后跟。module 单独仓库打 tag 引用，禁止跨环境用相对路径互相指。&lt;/p&gt;</description></item></channel></rss>

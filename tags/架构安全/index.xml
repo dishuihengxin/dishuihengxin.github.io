@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>架构安全 on 滴水恒心</title><link>https://www.dishuihengxin.com/tags/%E6%9E%B6%E6%9E%84%E5%AE%89%E5%85%A8/</link><description>Recent content in 架构安全 on 滴水恒心</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Sun, 29 Mar 2026 20:00:00 +0800</lastBuildDate><atom:link href="https://www.dishuihengxin.com/tags/%E6%9E%B6%E6%9E%84%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>零信任落地路径：从收缩暴露面开始，而不是买产品</title><link>https://www.dishuihengxin.com/posts/2026-03-29-zero-trust-implementation-path/</link><pubDate>Sun, 29 Mar 2026 20:00:00 +0800</pubDate><guid>https://www.dishuihengxin.com/posts/2026-03-29-zero-trust-implementation-path/</guid><description>&lt;p&gt;&amp;ldquo;零信任&amp;quot;这个词被营销用坏了两层意思：好像买个 ZTNA 盒子就算零信任，或者它是个有终点的项目。NIST 800-207 把它定义得很朴素：不再有默认可信的网络位置，每次访问都基于身份、设备状态与上下文做决策。按这个定义，零信任是一组能力的渐进建设，次序错了就会变成昂贵的摆设。&lt;/p&gt;
+&lt;h2 id="第一阶段身份与暴露面收益最大oidcsaml"&gt;第一阶段：身份与暴露面（收益最大，OIDC/SAML&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;统一身份源 + MFA&lt;/strong&gt;。所有内部系统对接 SSO，这个清单通常比想象的长的多：堡垒机、管理后台、 forgotten 的测试环境，消灭各系统独立的账号体系，身份是零信任一切决策的输入，输入碎片化则全盘空谈。MFA 从管理员与远程访问开始强制，钓鱼泛滥的今天，密码单独作为凭证已不构成安全边界。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;收缩暴露面&lt;/strong&gt;。盘点全部对公网开放的入口，ZTNA/SDP 按身份动态放行替代 VPN 全网互通。原则：能不对公网开放的收进内网，WAF + 网关 + 认证，必须开放的收敛到统一的接入层，条件访问策略：不合规设备只能访问低敏应用。VPN 的问题不是技术落后，是语义落后：接入即全通，违背最小权限的初衷。ZTNA 的差别在&amp;quot;每个应用独立授权、用户到应用直连&amp;rdquo;，替换 VPN 是零信任最常见的第一步落地。&lt;/p&gt;
+&lt;h2 id="第二阶段设备与分段"&gt;第二阶段：设备与分段&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;设备信任&lt;/strong&gt;。接入的设备是否公司管控、是否打了补丁、有没有磁盘加密，这些信号进入访问决策，云安全组细化、K8s NetworkPolicy、代理式方案。移动设备用 MDM，服务器与办公终端用设备管理 agent，信号接入决策点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;微分段&lt;/strong&gt;。内网&amp;quot;默认互通&amp;quot;改为&amp;quot;按工作负载身份通信&amp;quot;：同类服务可以互通、跨类必须显式允许。实现载体从传统防火墙到基于身份的策略，记录实际流量成画像。落地的现实路径：先观察，拒绝未被画像覆盖的流量再收紧，IP 突变、设备状态劣化、行为异常触发重新认证或降权，一步到位的收紧必然造成大面积业务中断，然后策略被永久放开。&lt;/p&gt;
+&lt;h2 id="第三阶段持续验证与数据侧"&gt;第三阶段：持续验证与数据侧&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;持续验证&lt;/strong&gt;。访问决策不是一次性的登录检查，而是会话期间持续评估，产品只是载体，策略与流程才是本体。会话时长从&amp;quot;登录一次用一天&amp;quot;向风险自适应演进。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据分类分级&lt;/strong&gt;。知道哪些是敏感数据、它们在哪里流动，才能给不同数据配不同强度的访问策略。这是零信任里最不性感也最不可跳过的一步，保护对象都没定义清楚，策略无从谈起。&lt;/p&gt;
+&lt;h2 id="避坑清单"&gt;避坑清单&lt;/h2&gt;
+&lt;p&gt;三条常见弯路：把零信任当采购项目，业务中断后的回退会透支安全团队的信用，渐进试点才是可持续路径；一次性大改造，单一维度的信任在横向移动面前形同虚设；只做身份不做设备与网络）。&lt;/p&gt;
+&lt;p&gt;度量进度用这几个问题：离职员工 5 分钟内还能访问几个系统？一台失陷的办公机能横扫多少内网服务？新增一个内部应用的默认暴露范围多大？答案的变化比任何成熟度评分都诚实。&lt;/p&gt;</description></item></channel></rss>
